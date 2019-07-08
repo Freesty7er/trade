@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Folders</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ГруппаПродукта" id="69">
+			<DataPath>Объект.ГруппаПродукта</DataPath>
+			<ContextMenu name="ГруппаПродуктаКонтекстноеМеню" id="70"/>
+			<ExtendedTooltip name="ГруппаПродуктаРасширеннаяПодсказка" id="71"/>
+		</InputField>
+		<InputField name="КаналСбыта" id="10">
+			<DataPath>Объект.КаналСбыта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КаналСбытаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КаналСбытаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ТипСтандарта" id="13">
+			<DataPath>Объект.ТипСтандарта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипСтандартаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТипСтандартаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Pages name="Страницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="ГруппаПриоритеты" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритеты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПриоритетыРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<Table name="Приоритеты" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Приоритеты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПриоритетыКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="ПриоритетыКоманднаяПанель" id="22"/>
+							<ExtendedTooltip name="ПриоритетыРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="ПриоритетыСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ПриоритетыСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриоритетыСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="ПриоритетыСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриоритетыУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>Приоритеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ПриоритетыУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПриоритетыНомерСтроки" id="33">
+									<DataPath>Объект.Приоритеты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыНомерСтрокиКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ПриоритетыНомерСтрокиРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<InputField name="ПриоритетыПриоритет" id="36">
+									<DataPath>Объект.Приоритеты.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыПриоритетКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ПриоритетыПриоритетРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="ПриоритетыSKUмакс" id="66">
+									<DataPath>Объект.Приоритеты.SKUмакс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Родитель</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПриоритетыSKUмаксКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ПриоритетыSKUмаксРасширеннаяПодсказка" id="68"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПриоритетыПоКатегориям" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритеты по категориям</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПриоритетыПоКатегориямРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="ПриоритетыПоКатегориям" id="41">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПриоритетыПоКатегориям</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПриоритетыПоКатегориямКонтекстноеМеню" id="42"/>
+							<AutoCommandBar name="ПриоритетыПоКатегориямКоманднаяПанель" id="43"/>
+							<ExtendedTooltip name="ПриоритетыПоКатегориямРасширеннаяПодсказка" id="44"/>
+							<SearchStringAddition name="ПриоритетыПоКатегориямСтрокаПоиска" id="45">
+								<AdditionSource>
+									<Item>ПриоритетыПоКатегориям</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыПоКатегориямСтрокаПоискаКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ПриоритетыПоКатегориямСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПриоритетыПоКатегориямСостояниеПросмотра" id="48">
+								<AdditionSource>
+									<Item>ПриоритетыПоКатегориям</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыПоКатегориямСостояниеПросмотраКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ПриоритетыПоКатегориямСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПриоритетыПоКатегориямУправлениеПоиском" id="51">
+								<AdditionSource>
+									<Item>ПриоритетыПоКатегориям</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПриоритетыПоКатегориямУправлениеПоискомКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ПриоритетыПоКатегориямУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПриоритетыПоКатегориямНомерСтроки" id="54">
+									<DataPath>Объект.ПриоритетыПоКатегориям.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыПоКатегориямНомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ПриоритетыПоКатегориямНомерСтрокиРасширеннаяПодсказка" id="56"/>
+								</LabelField>
+								<InputField name="ПриоритетыПоКатегориямКатегорияТТ" id="57">
+									<DataPath>Объект.ПриоритетыПоКатегориям.КатегорияТТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Родитель</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПриоритетыПоКатегориямКатегорияТТКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ПриоритетыПоКатегориямКатегорияТТРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ПриоритетыПоКатегориямПриоритет" id="60">
+									<DataPath>Объект.ПриоритетыПоКатегориям.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыПоКатегориямПриоритетКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ПриоритетыПоКатегориямПриоритетРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="ПриоритетыПоКатегориямТипПриоритета" id="63">
+									<DataPath>Объект.ПриоритетыПоКатегориям.ТипПриоритета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПриоритетыПоКатегориямТипПриоритетаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ПриоритетыПоКатегориямТипПриоритетаРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КД_КатегорииТТ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

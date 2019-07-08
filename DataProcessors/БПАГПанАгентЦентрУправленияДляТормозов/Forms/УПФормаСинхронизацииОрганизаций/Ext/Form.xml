@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пан Агент - Организации</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ОбщаяГруппа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбщаяГруппаExtendedTooltip" id="136"/>
+			<ChildItems>
+				<Table name="ТаблицаБПАГОрганизаций" id="2">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокБПАГОрганизаций</DataPath>
+					<RowPictureDataPath>СписокБПАГОрганизаций.DefaultPicture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Create</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ТаблицаБПАГОрганизацийКонтекстноеМеню" id="3"/>
+					<AutoCommandBar name="ТаблицаБПАГОрганизацийКоманднаяПанель" id="4"/>
+					<ExtendedTooltip name="ТаблицаБПАГОрганизацийExtendedTooltip" id="137"/>
+					<SearchStringAddition name="ТаблицаБПАГОрганизацийСтрокаПоиска" id="197">
+						<AdditionSource>
+							<Item>ТаблицаБПАГОрганизаций</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГОрганизацийСтрокаПоискаКонтекстноеМеню" id="198"/>
+						<ExtendedTooltip name="ТаблицаБПАГОрганизацийСтрокаПоискаРасширеннаяПодсказка" id="199"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаБПАГОрганизацийСостояниеПросмотра" id="200">
+						<AdditionSource>
+							<Item>ТаблицаБПАГОрганизаций</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГОрганизацийСостояниеПросмотраКонтекстноеМеню" id="201"/>
+						<ExtendedTooltip name="ТаблицаБПАГОрганизацийСостояниеПросмотраРасширеннаяПодсказка" id="202"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаБПАГОрганизацийУправлениеПоиском" id="203">
+						<AdditionSource>
+							<Item>ТаблицаБПАГОрганизаций</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГОрганизацийУправлениеПоискомКонтекстноеМеню" id="204"/>
+						<ExtendedTooltip name="ТаблицаБПАГОрганизацийУправлениеПоискомРасширеннаяПодсказка" id="205"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТаблицаБПАГОрганизацийВыбор</Event>
+						<Event name="DragStart">ТаблицаБПАГОрганизацийНачалоПеретаскивания</Event>
+						<Event name="Drag">ТаблицаБПАГОрганизацийПеретаскивание</Event>
+						<Event name="OnStartEdit">ТаблицаБПАГОрганизацийПриНачалеРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ТаблицаБПАГОрганизацийНаименование" id="5">
+							<DataPath>СписокБПАГОрганизаций.Description</DataPath>
+							<ContextMenu name="ТаблицаБПАГОрганизацийНаименованиеКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ТаблицаБПАГОрганизацийНаименованиеExtendedTooltip" id="138"/>
+						</LabelField>
+						<LabelField name="ТаблицаБПАГОрганизацийКод" id="7">
+							<DataPath>СписокБПАГОрганизаций.Code</DataPath>
+							<ContextMenu name="ТаблицаБПАГОрганизацийКодКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТаблицаБПАГОрганизацийКодExtendedTooltip" id="139"/>
+						</LabelField>
+						<LabelField name="ТаблицаБПАГОрганизацийОрганизация" id="9">
+							<DataPath>СписокБПАГОрганизаций.Организация</DataPath>
+							<ContextMenu name="ТаблицаБПАГОрганизацийОрганизацияКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ТаблицаБПАГОрганизацийОрганизацияExtendedTooltip" id="140"/>
+						</LabelField>
+						<LabelField name="ТаблицаБПАГОрганизацийСтавкаНДС" id="11">
+							<DataPath>СписокБПАГОрганизаций.СтавкаНДС</DataPath>
+							<ContextMenu name="ТаблицаБПАГОрганизацийСтавкаНДСКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ТаблицаБПАГОрганизацийСтавкаНДСExtendedTooltip" id="141"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<Table name="ТаблицаОрганизаций" id="25">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>СписокОрганизаций</DataPath>
+					<RowPictureDataPath>СписокОрганизаций.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ТаблицаОрганизацийКонтекстноеМеню" id="26"/>
+					<AutoCommandBar name="ТаблицаОрганизацийКоманднаяПанель" id="27"/>
+					<ExtendedTooltip name="ТаблицаОрганизацийExtendedTooltip" id="142"/>
+					<SearchStringAddition name="ТаблицаОрганизацийСтрокаПоиска" id="206">
+						<AdditionSource>
+							<Item>ТаблицаОрганизаций</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаОрганизацийСтрокаПоискаКонтекстноеМеню" id="207"/>
+						<ExtendedTooltip name="ТаблицаОрганизацийСтрокаПоискаРасширеннаяПодсказка" id="208"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаОрганизацийСостояниеПросмотра" id="209">
+						<AdditionSource>
+							<Item>ТаблицаОрганизаций</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаОрганизацийСостояниеПросмотраКонтекстноеМеню" id="210"/>
+						<ExtendedTooltip name="ТаблицаОрганизацийСостояниеПросмотраРасширеннаяПодсказка" id="211"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаОрганизацийУправлениеПоиском" id="212">
+						<AdditionSource>
+							<Item>ТаблицаОрганизаций</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаОрганизацийУправлениеПоискомКонтекстноеМеню" id="213"/>
+						<ExtendedTooltip name="ТаблицаОрганизацийУправлениеПоискомРасширеннаяПодсказка" id="214"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТаблицаОрганизацийНаименование" id="28">
+							<DataPath>СписокОрганизаций.Description</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеExtendedTooltip" id="143"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКод" id="30">
+							<DataPath>СписокОрганизаций.Code</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодExtendedTooltip" id="144"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийПрефикс" id="32">
+							<DataPath>СписокОрганизаций.Префикс</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийПрефиксКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийПрефиксExtendedTooltip" id="145"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийИНН" id="34">
+							<DataPath>СписокОрганизаций.ИНН</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийИННКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийИННExtendedTooltip" id="146"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКПП" id="36">
+							<DataPath>СписокОрганизаций.КПП</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКППКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКППExtendedTooltip" id="147"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийРегистрационныйНомерПФР" id="38">
+							<DataPath>3/58</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийРегистрационныйНомерПФРКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийРегистрационныйНомерПФРExtendedTooltip" id="148"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийГоловнаяОрганизация" id="40">
+							<DataPath>3/21</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийГоловнаяОрганизацияКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийГоловнаяОрганизацияExtendedTooltip" id="149"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеПолное" id="42">
+							<DataPath>СписокОрганизаций.НаименованиеПолное</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеПолноеКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеПолноеExtendedTooltip" id="150"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодПоОКПО" id="44">
+							<DataPath>СписокОрганизаций.КодПоОКПО</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодПоОКПОКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодПоОКПОExtendedTooltip" id="151"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодПоОКАТО" id="46">
+							<DataPath>СписокОрганизаций.КодПоОКАТО</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодПоОКАТОКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодПоОКАТОExtendedTooltip" id="152"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодИМНС" id="48">
+							<DataPath>3/28</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодИМНСКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодИМНСExtendedTooltip" id="153"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийРайонныйКоэффициент" id="50">
+							<DataPath>3/56</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийРайонныйКоэффициентКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийРайонныйКоэффициентExtendedTooltip" id="154"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийЮрФизЛицо" id="52">
+							<DataPath>СписокОрганизаций.ЮрФизЛицо</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийЮрФизЛицоКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийЮрФизЛицоExtendedTooltip" id="155"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийТерриториальныеУсловияПФР" id="54">
+							<DataPath>3/66</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийТерриториальныеУсловияПФРКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийТерриториальныеУсловияПФРExtendedTooltip" id="156"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийОсновнойБанковскийСчет" id="56">
+							<DataPath>3/53</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийОсновнойБанковскийСчетКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОсновнойБанковскийСчетExtendedTooltip" id="157"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийВидСтавокЕСНиПФР" id="58">
+							<DataPath>3/20</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийВидСтавокЕСНиПФРКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийВидСтавокЕСНиПФРExtendedTooltip" id="158"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеПлательщикаПриПеречисленииНалогов" id="60">
+							<DataPath>СписокОрганизаций.НаименованиеПлательщикаПриПеречисленииНалогов</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеПлательщикаПриПеречисленииНалоговКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеПлательщикаПриПеречисленииНалоговExtendedTooltip" id="159"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаОрганизацийИностраннаяОрганизация" id="62">
+							<DataPath>3/26</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаОрганизацийИностраннаяОрганизацияКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийИностраннаяОрганизацияExtendedTooltip" id="160"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаОрганизацийДатаРегистрации" id="64">
+							<DataPath>3/22</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийДатаРегистрацииКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийДатаРегистрацииExtendedTooltip" id="161"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодОКОПФ" id="66">
+							<DataPath>3/32</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодОКОПФКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодОКОПФExtendedTooltip" id="162"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеОКОПФ" id="68">
+							<DataPath>3/42</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеОКОПФКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеОКОПФExtendedTooltip" id="163"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодОКФС" id="70">
+							<DataPath>3/33</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодОКФСКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодОКФСExtendedTooltip" id="164"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеОКФС" id="72">
+							<DataPath>3/43</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеОКФСКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеОКФСExtendedTooltip" id="165"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСвидетельствоСерияНомер" id="74">
+							<DataPath>СписокОрганизаций.СвидетельствоСерияНомер</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСвидетельствоСерияНомерКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСвидетельствоСерияНомерExtendedTooltip" id="166"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСвидетельствоДатаВыдачи" id="76">
+							<DataPath>СписокОрганизаций.СвидетельствоДатаВыдачи</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСвидетельствоДатаВыдачиКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСвидетельствоДатаВыдачиExtendedTooltip" id="167"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСвидетельствоНаименованиеОргана" id="78">
+							<DataPath>3/62</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСвидетельствоНаименованиеОрганаКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСвидетельствоНаименованиеОрганаExtendedTooltip" id="168"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСвидетельствоКодОргана" id="80">
+							<DataPath>3/61</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСвидетельствоКодОрганаКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСвидетельствоКодОрганаExtendedTooltip" id="169"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСтранаРегистрации" id="82">
+							<DataPath>3/65</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСтранаРегистрацииКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСтранаРегистрацииExtendedTooltip" id="170"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийСтранаПостоянногоМестонахождения" id="84">
+							<DataPath>3/64</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийСтранаПостоянногоМестонахожденияКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийСтранаПостоянногоМестонахожденияExtendedTooltip" id="171"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодВСтранеРегистрации" id="86">
+							<DataPath>3/27</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодВСтранеРегистрацииКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодВСтранеРегистрацииExtendedTooltip" id="172"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийОГРН" id="88">
+							<DataPath>3/52</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийОГРНКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОГРНExtendedTooltip" id="173"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеИнострОрганизации" id="90">
+							<DataPath>3/40</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеИнострОрганизацииКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеИнострОрганизацииExtendedTooltip" id="174"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийРегистрационныйНомерФСС" id="92">
+							<DataPath>3/59</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийРегистрационныйНомерФССКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийРегистрационныйНомерФССExtendedTooltip" id="175"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеИМНС" id="94">
+							<DataPath>3/39</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеИМНСКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеИМНСExtendedTooltip" id="176"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодОКВЭД" id="96">
+							<DataPath>3/30</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодОКВЭДКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодОКВЭДExtendedTooltip" id="177"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеОКВЭД" id="98">
+							<DataPath>3/41</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеОКВЭДКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеОКВЭДExtendedTooltip" id="178"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодОКОНХ" id="100">
+							<DataPath>3/31</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодОКОНХКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодОКОНХExtendedTooltip" id="179"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийИндивидуальныйПредприниматель" id="102">
+							<DataPath>3/24</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийИндивидуальныйПредпринимательКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийИндивидуальныйПредпринимательExtendedTooltip" id="180"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаОрганизацийУдалитьОбменЗадействован" id="104">
+							<DataPath>3/67</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаОрганизацийУдалитьОбменЗадействованКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийУдалитьОбменЗадействованExtendedTooltip" id="181"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаОрганизацийОбменКодАбонента" id="106">
+							<DataPath>3/51</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийОбменКодАбонентаКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОбменКодАбонентаExtendedTooltip" id="182"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийОбменКаталогОтправкиДанныхОтчетности" id="108">
+							<DataPath>3/49</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийОбменКаталогОтправкиДанныхОтчетностиКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОбменКаталогОтправкиДанныхОтчетностиExtendedTooltip" id="183"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийОбменКаталогПрограммыЭлектроннойПочты" id="110">
+							<DataPath>3/50</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийОбменКаталогПрограммыЭлектроннойПочтыКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОбменКаталогПрограммыЭлектроннойПочтыExtendedTooltip" id="184"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийРайонныйКоэффициентРФ" id="112">
+							<DataPath>3/57</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийРайонныйКоэффициентРФКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийРайонныйКоэффициентРФExtendedTooltip" id="185"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаОрганизацийОтражатьВРегламентированномУчете" id="114">
+							<DataPath>3/54</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаОрганизацийОтражатьВРегламентированномУчетеКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийОтражатьВРегламентированномУчетеExtendedTooltip" id="186"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаОрганизацийКодИФНСПолучателя" id="116">
+							<DataPath>3/29</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодИФНСПолучателяКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодИФНСПолучателяExtendedTooltip" id="187"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаПФР" id="118">
+							<DataPath>3/47</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаПФРКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаПФРExtendedTooltip" id="188"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеСокращенное" id="120">
+							<DataPath>3/46</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеСокращенноеКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеСокращенноеExtendedTooltip" id="189"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийВидОбменаСКонтролирующимиОрганами" id="122">
+							<DataPath>3/19</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийВидОбменаСКонтролирующимиОрганамиКонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийВидОбменаСКонтролирующимиОрганамиExtendedTooltip" id="190"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийУчетнаяЗаписьОбмена" id="124">
+							<DataPath>3/68</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийУчетнаяЗаписьОбменаКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийУчетнаяЗаписьОбменаExtendedTooltip" id="191"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодОрганаПФР" id="126">
+							<DataPath>3/34</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодОрганаПФРКонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодОрганаПФРExtendedTooltip" id="192"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийДополнительныйКодФСС" id="128">
+							<DataPath>3/23</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийДополнительныйКодФССКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийДополнительныйКодФССExtendedTooltip" id="193"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийКодПодчиненностиФСС" id="130">
+							<DataPath>3/35</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийКодПодчиненностиФССКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийКодПодчиненностиФССExtendedTooltip" id="194"/>
+						</LabelField>
+						<LabelField name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаФСС" id="132">
+							<DataPath>3/48</DataPath>
+							<ContextMenu name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаФССКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="ТаблицаОрганизацийНаименованиеТерриториальногоОрганаФССExtendedTooltip" id="195"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="134">
+			<Width>60</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перетаскивайте организации из правой таблицы в левую. Допускается перетаскивание групп целиком. Удерживая Ctrl, выделяйте несколько элементов сразу.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="135"/>
+			<ExtendedTooltip name="Декорация1ExtendedTooltip" id="196"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокБПАГОрганизаций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.БПАГОрганизации</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокОрганизаций" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Организации</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

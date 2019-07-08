@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКнопкаЗагрузитьДанные" id="52">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаЗагрузитьДанныеExtendedTooltip" id="53"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="Автовыгрузка" id="1">
+			<DataPath>Объект.Автовыгрузка</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтовыгрузкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="АвтовыгрузкаExtendedTooltip" id="54"/>
+		</CheckBoxField>
+		<CheckBoxField name="Автозагрузка" id="3">
+			<DataPath>Объект.Автозагрузка</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтозагрузкаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="АвтозагрузкаExtendedTooltip" id="55"/>
+		</CheckBoxField>
+		<InputField name="Версия" id="5">
+			<DataPath>Объект.Версия</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВерсияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВерсияExtendedTooltip" id="56"/>
+		</InputField>
+		<InputField name="КаталогОбмена" id="7">
+			<DataPath>Объект.КаталогОбмена</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КаталогОбменаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КаталогОбменаExtendedTooltip" id="57"/>
+		</InputField>
+		<Pages name="Страницы" id="9">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="58"/>
+			<ChildItems>
+				<Page name="ГруппаНастройкиАгентов" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки агентов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНастройкиАгентовExtendedTooltip" id="59"/>
+					<ChildItems>
+						<Table name="НастройкиАгентов" id="11">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НастройкиАгентов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НастройкиАгентовКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="НастройкиАгентовКоманднаяПанель" id="13"/>
+							<ExtendedTooltip name="НастройкиАгентовExtendedTooltip" id="60"/>
+							<SearchStringAddition name="НастройкиАгентовСтрокаПоиска" id="80">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовСтрокаПоискаКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="НастройкиАгентовСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкиАгентовСостояниеПросмотра" id="83">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовСостояниеПросмотраКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="НастройкиАгентовСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкиАгентовУправлениеПоиском" id="86">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовУправлениеПоискомКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="НастройкиАгентовУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+							</SearchControlAddition>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОбменАгенты" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен агенты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОбменАгентыExtendedTooltip" id="61"/>
+					<ChildItems>
+						<Table name="ОбменАгенты" id="17">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОбменАгенты</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбменАгентыКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="ОбменАгентыКоманднаяПанель" id="19"/>
+							<ExtendedTooltip name="ОбменАгентыExtendedTooltip" id="62"/>
+							<SearchStringAddition name="ОбменАгентыСтрокаПоиска" id="89">
+								<AdditionSource>
+									<Item>ОбменАгенты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбменАгентыСтрокаПоискаКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ОбменАгентыСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбменАгентыСостояниеПросмотра" id="92">
+								<AdditionSource>
+									<Item>ОбменАгенты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбменАгентыСостояниеПросмотраКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="ОбменАгентыСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбменАгентыУправлениеПоиском" id="95">
+								<AdditionSource>
+									<Item>ОбменАгенты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбменАгентыУправлениеПоискомКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ОбменАгентыУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбменАгентыНомерСтроки" id="20">
+									<DataPath>Объект.ОбменАгенты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыНомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ОбменАгентыНомерСтрокиExtendedTooltip" id="63"/>
+								</LabelField>
+								<CheckBoxField name="ОбменАгентыФлаг" id="22">
+									<DataPath>Объект.ОбменАгенты.Флаг</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбменАгентыФлагКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ОбменАгентыФлагExtendedTooltip" id="64"/>
+								</CheckBoxField>
+								<InputField name="ОбменАгентыКод" id="24">
+									<DataPath>Объект.ОбменАгенты.Код</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыКодКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ОбменАгентыКодExtendedTooltip" id="65"/>
+								</InputField>
+								<InputField name="ОбменАгентыАгент" id="26">
+									<DataPath>Объект.ОбменАгенты.Агент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыАгентКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ОбменАгентыАгентExtendedTooltip" id="66"/>
+								</InputField>
+								<InputField name="ОбменАгентыИнформация" id="28">
+									<DataPath>Объект.ОбменАгенты.Информация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыИнформацияКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ОбменАгентыИнформацияExtendedTooltip" id="67"/>
+								</InputField>
+								<InputField name="ОбменАгентыВерсия" id="30">
+									<DataPath>Объект.ОбменАгенты.Версия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыВерсияКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ОбменАгентыВерсияExtendedTooltip" id="68"/>
+								</InputField>
+								<InputField name="ОбменАгентыВерсияОС" id="32">
+									<DataPath>Объект.ОбменАгенты.ВерсияОС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыВерсияОСКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ОбменАгентыВерсияОСExtendedTooltip" id="69"/>
+								</InputField>
+								<InputField name="ОбменАгентыМодельУстройства" id="34">
+									<DataPath>Объект.ОбменАгенты.МодельУстройства</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыМодельУстройстваКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ОбменАгентыМодельУстройстваExtendedTooltip" id="70"/>
+								</InputField>
+								<InputField name="ОбменАгентыUDID" id="36">
+									<DataPath>Объект.ОбменАгенты.UDID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбменАгентыUDIDКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ОбменАгентыUDIDExtendedTooltip" id="71"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗаполнениеМаршрутов" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнение маршрутов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЗаполнениеМаршрутовExtendedTooltip" id="72"/>
+					<ChildItems>
+						<Table name="ЗаполнениеМаршрутов" id="39">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЗаполнениеМаршрутов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗаполнениеМаршрутовКонтекстноеМеню" id="40"/>
+							<AutoCommandBar name="ЗаполнениеМаршрутовКоманднаяПанель" id="41"/>
+							<ExtendedTooltip name="ЗаполнениеМаршрутовExtendedTooltip" id="73"/>
+							<SearchStringAddition name="ЗаполнениеМаршрутовСтрокаПоиска" id="98">
+								<AdditionSource>
+									<Item>ЗаполнениеМаршрутов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаполнениеМаршрутовСтрокаПоискаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ЗаполнениеМаршрутовСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗаполнениеМаршрутовСостояниеПросмотра" id="101">
+								<AdditionSource>
+									<Item>ЗаполнениеМаршрутов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаполнениеМаршрутовСостояниеПросмотраКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ЗаполнениеМаршрутовСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗаполнениеМаршрутовУправлениеПоиском" id="104">
+								<AdditionSource>
+									<Item>ЗаполнениеМаршрутов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаполнениеМаршрутовУправлениеПоискомКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ЗаполнениеМаршрутовУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗаполнениеМаршрутовНомерСтроки" id="42">
+									<DataPath>Объект.ЗаполнениеМаршрутов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаполнениеМаршрутовНомерСтрокиКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ЗаполнениеМаршрутовНомерСтрокиExtendedTooltip" id="74"/>
+								</LabelField>
+								<InputField name="ЗаполнениеМаршрутовДень" id="44">
+									<DataPath>Объект.ЗаполнениеМаршрутов.День</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаполнениеМаршрутовДеньКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ЗаполнениеМаршрутовДеньExtendedTooltip" id="75"/>
+								</InputField>
+								<InputField name="ЗаполнениеМаршрутовГруппаКонтрагентов" id="46">
+									<DataPath>Объект.ЗаполнениеМаршрутов.ГруппаКонтрагентов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаполнениеМаршрутовГруппаКонтрагентовКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ЗаполнениеМаршрутовГруппаКонтрагентовExtendedTooltip" id="76"/>
+								</InputField>
+								<InputField name="ЗаполнениеМаршрутовНомерДня" id="48">
+									<DataPath>Объект.ЗаполнениеМаршрутов.НомерДня</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаполнениеМаршрутовНомерДняКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ЗаполнениеМаршрутовНомерДняExtendedTooltip" id="77"/>
+								</InputField>
+								<InputField name="ЗаполнениеМаршрутовДата" id="50">
+									<DataPath>Объект.ЗаполнениеМаршрутов.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаполнениеМаршрутовДатаКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ЗаполнениеМаршрутовДатаExtendedTooltip" id="78"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="СообщениеДня" id="14">
+			<DataPath>Объект.СообщениеДня</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СообщениеДняКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="СообщениеДняExtendedTooltip" id="79"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.БПАГПанАгентЦентрУправленияРевизоры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДанные</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="fd3d1fb9-0c16-4c4b-a17f-cd9dc4ec6a90">
+		<Properties>
+			<Name>ДополнительныеПрава</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные права</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеДнейОтсрочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеНоменклатурыОграниченныеПрава</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.УстановкаМаксимальныхСкидок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрПеремещенийТорговых</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрОстатков_ЦО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДоступКЗарплатеРаботников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеПоставщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АнализПоказателейПодразделения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДоступКЗарплатеТорговых</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеВзаиморасчетыСПокупателями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеЦенВДокументах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Удалить_СозданиеИзменениеПлановПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Удалить_ЧтениеСтандартовПрисутствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Удалить_СозданиеИзменениеСтандартовПрисутствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПравоЗапускаВебКлиента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеУдалениеОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.РазрешениеНаИзменениеТипаЦенВДокументахОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.УстановкаЦенообразования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.РедактированиеШтрихкодыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрШтрихкодыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.РазрешениеНаГрупповуюОбработкуСправочников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеЦенВВозвратахПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПодписатьДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ВсеФункции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСОграничениямиСправочникКонтрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСОграничениямиСправочникКонтрагентыДляЛогистов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеСкладаВДокументахОтгрузки</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

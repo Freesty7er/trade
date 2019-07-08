@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пан Агент - Номенклатура</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ОбщаяГруппа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбщаяГруппаExtendedTooltip" id="256"/>
+			<ChildItems>
+				<Table name="ТаблицаБПАГНоменклатуры" id="2">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокБПАГНоменклатуры</DataPath>
+					<RowPictureDataPath>СписокБПАГНоменклатуры.DefaultPicture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Create</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ТаблицаБПАГНоменклатурыКонтекстноеМеню" id="3"/>
+					<AutoCommandBar name="ТаблицаБПАГНоменклатурыКоманднаяПанель" id="4"/>
+					<ExtendedTooltip name="ТаблицаБПАГНоменклатурыExtendedTooltip" id="257"/>
+					<SearchStringAddition name="ТаблицаБПАГНоменклатурыСтрокаПоиска" id="303">
+						<AdditionSource>
+							<Item>ТаблицаБПАГНоменклатуры</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГНоменклатурыСтрокаПоискаКонтекстноеМеню" id="304"/>
+						<ExtendedTooltip name="ТаблицаБПАГНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="305"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаБПАГНоменклатурыСостояниеПросмотра" id="306">
+						<AdditionSource>
+							<Item>ТаблицаБПАГНоменклатуры</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="307"/>
+						<ExtendedTooltip name="ТаблицаБПАГНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="308"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаБПАГНоменклатурыУправлениеПоиском" id="309">
+						<AdditionSource>
+							<Item>ТаблицаБПАГНоменклатуры</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаБПАГНоменклатурыУправлениеПоискомКонтекстноеМеню" id="310"/>
+						<ExtendedTooltip name="ТаблицаБПАГНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="311"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТаблицаБПАГНоменклатурыВыбор</Event>
+						<Event name="BeforeAddRow">ТаблицаБПАГНоменклатурыПередНачаломДобавления</Event>
+						<Event name="DragStart">ТаблицаБПАГНоменклатурыНачалоПеретаскивания</Event>
+						<Event name="Drag">ТаблицаБПАГНоменклатурыПеретаскивание</Event>
+						<Event name="OnStartEdit">ТаблицаБПАГНоменклатурыПриНачалеРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ТаблицаБПАГНоменклатурыНаименование" id="156">
+							<DataPath>СписокБПАГНоменклатуры.Description</DataPath>
+							<ContextMenu name="ТаблицаБПАГНоменклатурыНаименованиеКонтекстноеМеню" id="157"/>
+							<ExtendedTooltip name="ТаблицаБПАГНоменклатурыНаименованиеExtendedTooltip" id="258"/>
+						</LabelField>
+						<LabelField name="ТаблицаБПАГНоменклатурыКратность" id="254">
+							<DataPath>СписокБПАГНоменклатуры.Кратность</DataPath>
+							<ContextMenu name="ТаблицаБПАГНоменклатурыКратностьКонтекстноеМеню" id="255"/>
+							<ExtendedTooltip name="ТаблицаБПАГНоменклатурыКратностьExtendedTooltip" id="259"/>
+						</LabelField>
+						<LabelField name="ТаблицаБПАГНоменклатурыКод" id="158">
+							<DataPath>СписокБПАГНоменклатуры.Code</DataPath>
+							<ContextMenu name="ТаблицаБПАГНоменклатурыКодКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ТаблицаБПАГНоменклатурыКодExtendedTooltip" id="260"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<Table name="ТаблицаНоменклатуры" id="25">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокНоменклатуры</DataPath>
+					<RowPictureDataPath>СписокНоменклатуры.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ТаблицаНоменклатурыКонтекстноеМеню" id="26"/>
+					<AutoCommandBar name="ТаблицаНоменклатурыКоманднаяПанель" id="27"/>
+					<ExtendedTooltip name="ТаблицаНоменклатурыExtendedTooltip" id="261"/>
+					<SearchStringAddition name="ТаблицаНоменклатурыСтрокаПоиска" id="312">
+						<AdditionSource>
+							<Item>ТаблицаНоменклатуры</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНоменклатурыСтрокаПоискаКонтекстноеМеню" id="313"/>
+						<ExtendedTooltip name="ТаблицаНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="314"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаНоменклатурыСостояниеПросмотра" id="315">
+						<AdditionSource>
+							<Item>ТаблицаНоменклатуры</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="316"/>
+						<ExtendedTooltip name="ТаблицаНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="317"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаНоменклатурыУправлениеПоиском" id="318">
+						<AdditionSource>
+							<Item>ТаблицаНоменклатуры</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНоменклатурыУправлениеПоискомКонтекстноеМеню" id="319"/>
+						<ExtendedTooltip name="ТаблицаНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="320"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТаблицаНоменклатурыНаименование" id="162">
+							<DataPath>СписокНоменклатуры.Description</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНаименованиеКонтекстноеМеню" id="163"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНаименованиеExtendedTooltip" id="262"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыКод" id="164">
+							<DataPath>СписокНоменклатуры.Code</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыКодКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыКодExtendedTooltip" id="263"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыАртикул" id="166">
+							<DataPath>СписокНоменклатуры.Артикул</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыАртикулКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыАртикулExtendedTooltip" id="264"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыБазоваяЕдиницаИзмерения" id="168">
+							<DataPath>3/89</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыБазоваяЕдиницаИзмеренияКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыБазоваяЕдиницаИзмеренияExtendedTooltip" id="265"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаНоменклатурыВесовой" id="170">
+							<DataPath>СписокНоменклатуры.Весовой</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВесовойКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВесовойExtendedTooltip" id="266"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаНоменклатурыВесовойКоэффициентВхождения" id="172">
+							<DataPath>3/91</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыВесовойКоэффициентВхожденияКонтекстноеМеню" id="173"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВесовойКоэффициентВхожденияExtendedTooltip" id="267"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиОперативныйУчетОстатковНЗП" id="174">
+							<DataPath>3/92</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиОперативныйУчетОстатковНЗПКонтекстноеМеню" id="175"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиОперативныйУчетОстатковНЗПExtendedTooltip" id="268"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиПартионныйУчетПоСериям" id="176">
+							<DataPath>3/93</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиПартионныйУчетПоСериямКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиПартионныйУчетПоСериямExtendedTooltip" id="269"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиУчетПоСериям" id="178">
+							<DataPath>3/95</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиУчетПоСериямКонтекстноеМеню" id="179"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиУчетПоСериямExtendedTooltip" id="270"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиУчетПоСериямВНЗП" id="180">
+							<DataPath>3/96</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиУчетПоСериямВНЗПКонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиУчетПоСериямВНЗПExtendedTooltip" id="271"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиУчетПоХарактеристикам" id="182">
+							<DataPath>3/97</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиУчетПоХарактеристикамКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиУчетПоХарактеристикамExtendedTooltip" id="272"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаНоменклатурыВидВоспроизводства" id="184">
+							<DataPath>3/98</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыВидВоспроизводстваКонтекстноеМеню" id="185"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВидВоспроизводстваExtendedTooltip" id="273"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыВидНоменклатуры" id="186">
+							<DataPath>СписокНоменклатуры.ВидНоменклатуры</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыВидНоменклатурыКонтекстноеМеню" id="187"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВидНоменклатурыExtendedTooltip" id="274"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыЕдиницаДляОтчетов" id="188">
+							<DataPath>3/101</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыЕдиницаДляОтчетовКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыЕдиницаДляОтчетовExtendedTooltip" id="275"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыЕдиницаХраненияОстатков" id="190">
+							<DataPath>3/103</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыЕдиницаХраненияОстатковКонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыЕдиницаХраненияОстатковExtendedTooltip" id="276"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыКомментарий" id="192">
+							<DataPath>3/77</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыКомментарийКонтекстноеМеню" id="193"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыКомментарийExtendedTooltip" id="277"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаНоменклатурыНабор" id="194">
+							<DataPath>3/105</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыНаборКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНаборExtendedTooltip" id="278"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаНоменклатурыНазначениеИспользования" id="196">
+							<DataPath>3/106</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНазначениеИспользованияКонтекстноеМеню" id="197"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНазначениеИспользованияExtendedTooltip" id="279"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыНаименованиеПолное" id="198">
+							<DataPath>СписокНоменклатуры.НаименованиеПолное</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНаименованиеПолноеКонтекстноеМеню" id="199"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНаименованиеПолноеExtendedTooltip" id="280"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыНоменклатурнаяГруппа" id="200">
+							<DataPath>3/109</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНоменклатурнаяГруппаКонтекстноеМеню" id="201"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНоменклатурнаяГруппаExtendedTooltip" id="281"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыНоменклатурнаяГруппаЗатрат" id="202">
+							<DataPath>3/110</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНоменклатурнаяГруппаЗатратКонтекстноеМеню" id="203"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНоменклатурнаяГруппаЗатратExtendedTooltip" id="282"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыНомерГТД" id="204">
+							<DataPath>3/111</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНомерГТДКонтекстноеМеню" id="205"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНомерГТДExtendedTooltip" id="283"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыОсновноеИзображение" id="206">
+							<DataPath>3/113</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыОсновноеИзображениеКонтекстноеМеню" id="207"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыОсновноеИзображениеExtendedTooltip" id="284"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыОсновнойПоставщик" id="208">
+							<DataPath>3/114</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыОсновнойПоставщикКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыОсновнойПоставщикExtendedTooltip" id="285"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыОтветственныйМенеджерЗаПокупки" id="210">
+							<DataPath>3/115</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыОтветственныйМенеджерЗаПокупкиКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыОтветственныйМенеджерЗаПокупкиExtendedTooltip" id="286"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыСтавкаНДС" id="212">
+							<DataPath>СписокНоменклатуры.СтавкаНДС</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыСтавкаНДСКонтекстноеМеню" id="213"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыСтавкаНДСExtendedTooltip" id="287"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыСтатьяЗатрат" id="214">
+							<DataPath>СписокНоменклатуры.СтатьяЗатрат</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыСтатьяЗатратКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыСтатьяЗатратExtendedTooltip" id="288"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыСтранаПроисхождения" id="216">
+							<DataPath>3/118</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыСтранаПроисхожденияКонтекстноеМеню" id="217"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыСтранаПроисхожденияExtendedTooltip" id="289"/>
+						</LabelField>
+						<CheckBoxField name="ТаблицаНоменклатурыТребуетсяВнешняяСертификация" id="218">
+							<DataPath>3/119</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыТребуетсяВнешняяСертификацияКонтекстноеМеню" id="219"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыТребуетсяВнешняяСертификацияExtendedTooltip" id="290"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыТребуетсяВнутренняяСертификация" id="220">
+							<DataPath>3/120</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыТребуетсяВнутренняяСертификацияКонтекстноеМеню" id="221"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыТребуетсяВнутренняяСертификацияExtendedTooltip" id="291"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыУслуга" id="222">
+							<DataPath>СписокНоменклатуры.Услуга</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыУслугаКонтекстноеМеню" id="223"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыУслугаExtendedTooltip" id="292"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыВестиСерийныеНомера" id="224">
+							<DataPath>3/94</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыВестиСерийныеНомераКонтекстноеМеню" id="225"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыВестиСерийныеНомераExtendedTooltip" id="293"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТаблицаНоменклатурыКомплект" id="226">
+							<DataPath>3/104</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаНоменклатурыКомплектКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыКомплектExtendedTooltip" id="294"/>
+						</CheckBoxField>
+						<LabelField name="ТаблицаНоменклатурыНаправлениеВыпуска" id="228">
+							<DataPath>3/107</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНаправлениеВыпускаКонтекстноеМеню" id="229"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНаправлениеВыпускаExtendedTooltip" id="295"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыНаправлениеСписанияВыпущеннойПродукции" id="230">
+							<DataPath>3/108</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыНаправлениеСписанияВыпущеннойПродукцииКонтекстноеМеню" id="231"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыНаправлениеСписанияВыпущеннойПродукцииExtendedTooltip" id="296"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыПорядокПрисвоенияСерийногоНомера" id="232">
+							<DataPath>3/116</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыПорядокПрисвоенияСерийногоНомераКонтекстноеМеню" id="233"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыПорядокПрисвоенияСерийногоНомераExtendedTooltip" id="297"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыЦеноваяГруппа" id="234">
+							<DataPath>СписокНоменклатуры.ЦеноваяГруппа</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыЦеноваяГруппаКонтекстноеМеню" id="235"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыЦеноваяГруппаExtendedTooltip" id="298"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыОКП" id="236">
+							<DataPath>3/112</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыОКПКонтекстноеМеню" id="237"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыОКПExtendedTooltip" id="299"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыЕдиницаИзмеренияМест" id="238">
+							<DataPath>3/102</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыЕдиницаИзмеренияМестКонтекстноеМеню" id="239"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыЕдиницаИзмеренияМестExtendedTooltip" id="300"/>
+						</LabelField>
+						<LabelField name="ТаблицаНоменклатурыДополнительноеОписаниеНоменклатуры" id="240">
+							<DataPath>3/100</DataPath>
+							<ContextMenu name="ТаблицаНоменклатурыДополнительноеОписаниеНоменклатурыКонтекстноеМеню" id="241"/>
+							<ExtendedTooltip name="ТаблицаНоменклатурыДополнительноеОписаниеНоменклатурыExtendedTooltip" id="301"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияПодсказка" id="242">
+			<Width>40</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перетаскивайте номенклатуру из правой таблицы в левую. Допускается перетаскивание групп целиком. Удерживая Ctrl, выделяйте несколько элементов сразу.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="243"/>
+			<ExtendedTooltip name="ДекорацияПодсказкаExtendedTooltip" id="302"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокБПАГНоменклатуры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.БПАГНоменклатура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокНоменклатуры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Номенклатура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

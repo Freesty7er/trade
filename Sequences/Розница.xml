@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Sequence uuid="f034d257-418e-4cd7-8197-eb5ea672f8df">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.Розница" category="Record">
+				<xr:TypeId>e68839ea-8e00-4346-8e23-00aaad3e4747</xr:TypeId>
+				<xr:ValueId>ebcac8b0-2c46-4471-98de-d8d343abbfaa</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.Розница" category="Manager">
+				<xr:TypeId>e0ac6ce2-720d-4127-99ba-be39c0abea21</xr:TypeId>
+				<xr:ValueId>146f0bde-6621-41d8-b3e2-b5a3931ff3b3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.Розница" category="RecordSet">
+				<xr:TypeId>61f36121-770b-4c61-9a12-960d2659687b</xr:TypeId>
+				<xr:ValueId>6108dfdf-e42f-4c2c-93a1-0556c624dbce</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Розница</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розница</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>Move</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДневнойОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОстатковПоМагазину</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Управленческий</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Managed</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="821b3e33-6118-41a0-ba4b-8cfd7ef04d19">
+				<Properties>
+					<Name>Подразделение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+					</Type>
+					<DocumentMap>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ДневнойОтчет.Attribute.Подразделение</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОстатковПоМагазину.Attribute.Подразделение</xr:Item>
+					</DocumentMap>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Управленческий.Dimension.Подразделение</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="abc9e44e-9568-407a-8637-7856f3090020">
+				<Properties>
+					<Name>Магазин</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+					<DocumentMap>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ДневнойОтчет.Attribute.Магазин</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОстатковПоМагазину.Attribute.Магазин</xr:Item>
+					</DocumentMap>
+					<RegisterRecordsMap/>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Sequence>
+</MetaDataObject>

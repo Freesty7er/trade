@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Configuration.Конфигурация</name>
+		<right>
+			<name>ThinClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SaveUserData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Output</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратОтПокупателя.Command.ВозвратОтПокупателя</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.БПАГАссортименты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Номенклатура</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.Продажи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ЦеныНоменклатуры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратОтПокупателя</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапке("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ВозвратОтПокупателя ИЗ Документ.ВозвратОтПокупателя КАК ВозвратОтПокупателя, Константы КАК Константы
+ГДЕ ВозвратОтПокупателя.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ВозвратОтПокупателя ИЗ Документ.ВозвратОтПокупателя КАК ВозвратОтПокупателя, Константы КАК Константы
+ГДЕ ВозвратОтПокупателя.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)
+	И ВозвратОтПокупателя.ОтметкаБухгалтераОПроверке = ЛОЖЬ
+
+И ВЫБОР КОГДА ВозвратОтПокупателя.Подразделение.Код = "000000021" ТОГДА ВозвратОтПокупателя.Автор = &amp;ТекущийПользователь
+	  ИНАЧЕ ИСТИНА
+	  КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.БПАГАгенты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапке("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Приложение2КНалоговойНакладной</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапке("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Приложение2КНалоговойНакладной ИЗ Документ.Приложение2КНалоговойНакладной КАК Приложение2КНалоговойНакладной, Константы КАК Константы
+ГДЕ Приложение2КНалоговойНакладной.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Приложение2КНалоговойНакладной ИЗ Документ.Приложение2КНалоговойНакладной КАК Приложение2КНалоговойНакладной, Константы КАК Константы
+ГДЕ Приложение2КНалоговойНакладной.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ТипыЦен</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ПартииТоваровНаСкладах</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.НалоговаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапке("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.РеестрВозвратовПокупателей</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.БПАГНоменклатура</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ИзменениеДанныхДокументы</name>
+		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица, Константы КАК Константы
+ГДЕ ТекущаяТаблица.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПодразделениеВШапке</name>
+		<condition>    ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ГруппыПользователей.Состав КАК ГруппыПользователейСостав
+        ПО (ГруппыПользователейСостав.Пользователь = &amp;ТекущийПользователь)
+ГДЕ
+    1 В
+            (ВЫБРАТЬ ПЕРВЫЕ 1
+                1
+            ИЗ
+                Справочник.ГруппыПользователей.Подразделения КАК ГруппыПользователейПодразделения
+            ГДЕ
+                ГруппыПользователейПодразделения.Ссылка = ГруппыПользователейСостав.Ссылка
+                И ГруппыПользователейПодразделения.Подразделение = ТекущаяТаблица.#Параметр(1))</condition>
+	</restrictionTemplate>
+</Rights>

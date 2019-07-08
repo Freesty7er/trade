@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаОбъекты" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбъектыРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Table name="ОбъектыВыгрузки" id="4">
+					<Representation>Tree</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>ОбъектыВыгрузки</DataPath>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ОбъектыВыгрузкиКонтекстноеМеню" id="5"/>
+					<AutoCommandBar name="ОбъектыВыгрузкиКоманднаяПанель" id="6">
+						<ChildItems>
+							<Button name="ОбъектыВыгрузкиУстановитьВсеПометкиОбъектыВыгрузки" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьВсеПометкиОбъектыВыгрузки</CommandName>
+								<ExtendedTooltip name="ОбъектыВыгрузкиУстановитьВсеПометкиОбъектыВыгрузкиРасширеннаяПодсказка" id="51"/>
+							</Button>
+							<Button name="ОбъектыВыгрузкиСнятьВсеПометкиОбъектыВыгрузки" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СнятьВсеПометкиОбъектыВыгрузки</CommandName>
+								<ExtendedTooltip name="ОбъектыВыгрузкиСнятьВсеПометкиОбъектыВыгрузкиРасширеннаяПодсказка" id="49"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ОбъектыВыгрузкиРасширеннаяПодсказка" id="7"/>
+					<SearchStringAddition name="ОбъектыВыгрузкиСтрокаПоиска" id="8">
+						<AdditionSource>
+							<Item>ОбъектыВыгрузки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыВыгрузкиСтрокаПоискаКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ОбъектыВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОбъектыВыгрузкиСостояниеПросмотра" id="11">
+						<AdditionSource>
+							<Item>ОбъектыВыгрузки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ОбъектыВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОбъектыВыгрузкиУправлениеПоиском" id="14">
+						<AdditionSource>
+							<Item>ОбъектыВыгрузки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыВыгрузкиУправлениеПоискомКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ОбъектыВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<ColumnGroup name="ОбъектыВыгрузкиГруппаКолонки" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ОбъектыВыгрузкиГруппаКолонкиРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<CheckBoxField name="ОбъектыВыгрузкиПометка" id="17">
+									<DataPath>ОбъектыВыгрузки.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбъектыВыгрузкиПометкаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ОбъектыВыгрузкиПометкаРасширеннаяПодсказка" id="19"/>
+								</CheckBoxField>
+								<InputField name="ОбъектыВыгрузкиОбъект" id="20">
+									<DataPath>ОбъектыВыгрузки.Объект</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыВыгрузкиОбъектКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ОбъектыВыгрузкиОбъектРасширеннаяПодсказка" id="22"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+				<Table name="ОбъектыЗагрузки" id="23">
+					<Representation>Tree</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>ОбъектыЗагрузки</DataPath>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ОбъектыЗагрузкиКонтекстноеМеню" id="24"/>
+					<AutoCommandBar name="ОбъектыЗагрузкиКоманднаяПанель" id="25">
+						<ChildItems>
+							<Button name="ОбъектыЗагрузкиУстановитьВсеПометкиОбъектыЗагрузки" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьВсеПометкиОбъектыЗагрузки</CommandName>
+								<ExtendedTooltip name="ОбъектыЗагрузкиУстановитьВсеПометкиОбъектыЗагрузкиРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="ОбъектыЗагрузкиСнятьВсеПометкиОбъектыЗагрузки" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СнятьВсеПометкиОбъектыЗагрузки</CommandName>
+								<ExtendedTooltip name="ОбъектыЗагрузкиСнятьВсеПометкиОбъектыЗагрузкиРасширеннаяПодсказка" id="53"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ОбъектыЗагрузкиРасширеннаяПодсказка" id="26"/>
+					<SearchStringAddition name="ОбъектыЗагрузкиСтрокаПоиска" id="27">
+						<AdditionSource>
+							<Item>ОбъектыЗагрузки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыЗагрузкиСтрокаПоискаКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ОбъектыЗагрузкиСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОбъектыЗагрузкиСостояниеПросмотра" id="30">
+						<AdditionSource>
+							<Item>ОбъектыЗагрузки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыЗагрузкиСостояниеПросмотраКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="ОбъектыЗагрузкиСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОбъектыЗагрузкиУправлениеПоиском" id="33">
+						<AdditionSource>
+							<Item>ОбъектыЗагрузки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбъектыЗагрузкиУправлениеПоискомКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ОбъектыЗагрузкиУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<ColumnGroup name="ОбъектыЗагрузкиГруппаКолонки" id="46">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Колонки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ОбъектыЗагрузкиГруппаКолонкиРасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<CheckBoxField name="ОбъектыЗагрузкиПометка" id="36">
+									<DataPath>ОбъектыЗагрузки.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбъектыЗагрузкиПометкаКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ОбъектыЗагрузкиПометкаРасширеннаяПодсказка" id="38"/>
+								</CheckBoxField>
+								<InputField name="ОбъектыЗагрузкиОбъект" id="39">
+									<DataPath>ОбъектыЗагрузки.Объект</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыЗагрузкиОбъектКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ОбъектыЗагрузкиОбъектРасширеннаяПодсказка" id="41"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПанАгентПрофилиОбменаДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбъектыВыгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Объект" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ПанАгентВидыОбъектовОбмена</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектыЗагрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Объект" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ПанАгентВидыОбъектовОбмена</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьВсеПометкиОбъектыВыгрузки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки списка объектов выгрузки.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеПометкиОбъектыВыгрузки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СнятьВсеПометкиОбъектыВыгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки списка объектов выгрузки.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеПометкиОбъектыВыгрузки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="УстановитьВсеПометкиОбъектыЗагрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки списка объектов загрузки.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеПометкиОбъектыЗагрузки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СнятьВсеПометкиОбъектыЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки списка объектов загрузки.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеПометкиОбъектыЗагрузки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

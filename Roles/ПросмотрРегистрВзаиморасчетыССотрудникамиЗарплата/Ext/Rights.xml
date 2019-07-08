@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>AccumulationRegister.ВзаиморасчетыССотрудниками</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ТекущаяТаблица ГДЕ #УсловиеПоДоступнымПодразделениям("Подразделение") 
+И #УсловиеПоДоступнымКатегориямРаботников("Сотрудник.КатегорияРаботника")
+И #УсловиеПоДоступнымСчетамУчета("СчетУчета")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>УсловиеПоДоступнымКатегориямРаботников</name>
+		<condition>ТекущаяТаблица.#Параметр(1) В (&amp;ДоступныеКатегорииРаботников)</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>УсловиеПоДоступнымПодразделениям</name>
+		<condition>ТекущаяТаблица.#Параметр(1) В (&amp;ДоступныеПодразделения)</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>УсловиеПоДоступнымСчетамУчета</name>
+		<condition>ТекущаяТаблица.#Параметр(1) = ЗНАЧЕНИЕ(ПланСчетов.Внутренний.Зарплата)</condition>
+	</restrictionTemplate>
+</Rights>

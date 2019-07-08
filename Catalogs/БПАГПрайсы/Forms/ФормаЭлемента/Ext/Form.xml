@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="14"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="15"/>
+		</InputField>
+		<InputField name="ТипЦен" id="5">
+			<DataPath>Объект.ТипЦен</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипЦенКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ТипЦенExtendedTooltip" id="16"/>
+		</InputField>
+		<Table name="ОграничениеДоступности" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ОграничениеДоступности</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОграничениеДоступностиКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ОграничениеДоступностиКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ОграничениеДоступностиExtendedTooltip" id="17"/>
+			<SearchStringAddition name="ОграничениеДоступностиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>ОграничениеДоступности</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОграничениеДоступностиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ОграничениеДоступностиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОграничениеДоступностиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>ОграничениеДоступности</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОграничениеДоступностиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ОграничениеДоступностиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОграничениеДоступностиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ОграничениеДоступности</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОграничениеДоступностиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ОграничениеДоступностиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОграничениеДоступностиНомерСтроки" id="10">
+					<DataPath>Объект.ОграничениеДоступности.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОграничениеДоступностиНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОграничениеДоступностиНомерСтрокиExtendedTooltip" id="18"/>
+				</LabelField>
+				<InputField name="ОграничениеДоступностиАгентПрофиль" id="12">
+					<DataPath>Объект.ОграничениеДоступности.АгентПрофиль</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОграничениеДоступностиАгентПрофильКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОграничениеДоступностиАгентПрофильExtendedTooltip" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БПАГПрайсы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

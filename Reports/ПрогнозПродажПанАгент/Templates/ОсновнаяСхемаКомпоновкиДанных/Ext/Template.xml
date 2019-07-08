@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяТочка</dataPath>
+			<field>ТорговаяТочка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Посещение</dataPath>
+			<field>Посещение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПосещения</dataPath>
+			<field>ДатаПосещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата посещения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПланируемогоПосещения</dataPath>
+			<field>ДатаПланируемогоПосещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата планируемого посещения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаПродукта</dataPath>
+			<field>ГруппаПродукта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияТТ</dataPath>
+			<field>КатегорияТТ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинимальныйОстаток</dataPath>
+			<field>МинимальныйОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПриоритета</dataPath>
+			<field>ТипПриоритета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСтандарта</dataPath>
+			<field>ДатаСтандарта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата стандарта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОтгрузок</dataPath>
+			<field>КоличествоОтгрузок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отгрузок</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПродано</dataPath>
+			<field>КоличествоПродано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество продано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОстаток</dataPath>
+			<field>КоличествоОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КратностьУпаковки</dataPath>
+			<field>КратностьУпаковки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кратность упаковки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗаказано</dataPath>
+			<field>КоличествоЗаказано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество заказано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПроданоСреднее</dataPath>
+			<field>КоличествоПроданоСреднее</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество продано среднее</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоэффициентВыравниванияВЗаказе</dataPath>
+			<field>КоэффициентВыравниванияВЗаказе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэфф выравнивания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоэффициентРекомендуемогоЗапаса</dataPath>
+			<field>КоэффициентРекомендуемогоЗапаса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэфф рек запаса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВозврат</dataPath>
+			<field>КоличествоВозврат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество возврат</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОтгрузка</dataPath>
+			<field>КоличествоОтгрузка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отгрузка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер КАК Менеджер,
+	БПАГПланПосещенийДни.Контрагент КАК ТорговаяТочка,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д1 = 1
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ДеньНедели
+ПОМЕСТИТЬ ВТ_ПланыПосещений
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен
+	И БПАГПланПосещенийДни.Д1 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д2 = 1
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д2 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д3 = 1
+			ТОГДА 3
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д3 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д4 = 1
+			ТОГДА 4
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д4 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д5 = 1
+			ТОГДА 5
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д5 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д6 = 1
+			ТОГДА 6
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д6 = 1
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БПАГПланПосещенийДни.Ссылка.Подразделение,
+	БПАГПланПосещенийДни.Ссылка.Агент.Менеджер,
+	БПАГПланПосещенийДни.Контрагент,
+	ВЫБОР
+		КОГДА БПАГПланПосещенийДни.Д7 = 1
+			ТОГДА 7
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Документ.БПАГПланПосещений.Дни КАК БПАГПланПосещенийДни
+ГДЕ
+	БПАГПланПосещенийДни.Ссылка.Проведен = ИСТИНА
+	И БПАГПланПосещенийДни.Д7 = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПланыПосещений.Подразделение,
+	ВТ_ПланыПосещений.Менеджер,
+	ВТ_ПланыПосещений.ТорговаяТочка,
+	ФактическиеПосещения.ДеньНедели КАК Посещение,
+	ДОБАВИТЬКДАТЕ(&amp;ТекущаяДата, ДЕНЬ, -ФактическиеПосещения.ДеньНедели - ДЕНЬНЕДЕЛИ(&amp;ТекущаяДата) + 1) КАК ДатаПосещения,
+	&amp;ТекущаяДата КАК ДатаПланируемогоПосещения,
+	КонтрагентыМенеджерыГруппаПродукта.ГруппаПродукта,
+	КД_КатегорииТорговыхТочекСрезПоследних.КатегорияТТ
+ПОМЕСТИТЬ ВТ_МаршрутныйЛистТорговогоПредставителя
+ИЗ
+	ВТ_ПланыПосещений КАК ВТ_ПланыПосещений
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВТ_ПланыПосещений.Подразделение КАК Подразделение,
+			ВТ_ПланыПосещений.Менеджер КАК Менеджер,
+			ВТ_ПланыПосещений.ТорговаяТочка КАК ТорговаяТочка,
+			МАКСИМУМ(ВТ_ПланыПосещений.ДеньНедели) КАК ДеньНедели
+		ИЗ
+			ВТ_ПланыПосещений КАК ВТ_ПланыПосещений
+		ГДЕ
+			ВТ_ПланыПосещений.ДеньНедели &lt;&gt; ДЕНЬНЕДЕЛИ(&amp;ТекущаяДата)
+		
+		СГРУППИРОВАТЬ ПО
+			ВТ_ПланыПосещений.Менеджер,
+			ВТ_ПланыПосещений.Подразделение,
+			ВТ_ПланыПосещений.ТорговаяТочка) КАК ФактическиеПосещения
+		ПО ВТ_ПланыПосещений.Подразделение = ФактическиеПосещения.Подразделение
+			И ВТ_ПланыПосещений.Менеджер = ФактическиеПосещения.Менеджер
+			И ВТ_ПланыПосещений.ТорговаяТочка = ФактическиеПосещения.ТорговаяТочка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.Менеджеры КАК КонтрагентыМенеджерыГруппаПродукта
+		ПО ВТ_ПланыПосещений.ТорговаяТочка = КонтрагентыМенеджерыГруппаПродукта.Ссылка
+			И ВТ_ПланыПосещений.Менеджер = КонтрагентыМенеджерыГруппаПродукта.Менеджер
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КД_КатегорииТорговыхТочек.СрезПоследних({(&amp;ТекущаяДата)}, ) КАК КД_КатегорииТорговыхТочекСрезПоследних
+		ПО ВТ_ПланыПосещений.Подразделение = КД_КатегорииТорговыхТочекСрезПоследних.Подразделение
+			И ВТ_ПланыПосещений.ТорговаяТочка = КД_КатегорииТорговыхТочекСрезПоследних.ТорговаяТочка
+			И (КонтрагентыМенеджерыГруппаПродукта.ГруппаПродукта = КД_КатегорииТорговыхТочекСрезПоследних.ГруппаПродукции)
+ГДЕ
+	ВТ_ПланыПосещений.ДеньНедели = ДЕНЬНЕДЕЛИ(&amp;ТекущаяДата)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ГруппаПродукта,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Посещение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПланируемогоПосещения,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.КатегорияТТ,
+	КД_СтандартПрисутствия.Номенклатура,
+	КД_СтандартПрисутствия.ТипПриоритета,
+	МИНИМУМ(КД_СтандартПрисутствия.МинимальныйОстаток) КАК МинимальныйОстаток,
+	КД_СтандартПрисутствия.Номенклатура.КД_Вид КАК КД_ВидНоменклатуры
+ПОМЕСТИТЬ вт_ассортиментПродаж
+ИЗ
+	ВТ_МаршрутныйЛистТорговогоПредставителя КАК ВТ_МаршрутныйЛистТорговогоПредставителя
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КД_СтандартПрисутствия КАК КД_СтандартПрисутствия
+		ПО ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение = КД_СтандартПрисутствия.Подразделение
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.КатегорияТТ = КД_СтандартПрисутствия.КатегорияТТ
+			И (НАЧАЛОПЕРИОДА(&amp;ТекущаяДата, МЕСЯЦ) = КД_СтандартПрисутствия.Период)
+
+СГРУППИРОВАТЬ ПО
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПланируемогоПосещения,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.КатегорияТТ,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ГруппаПродукта,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Посещение,
+	КД_СтандартПрисутствия.ТипПриоритета,
+	КД_СтандартПрисутствия.Номенклатура,
+	КД_СтандартПрисутствия.Номенклатура.КД_Вид
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	БПАГМерчандайзингТовары.Номенклатура,
+	СРЕДНЕЕ(БПАГМерчандайзингТовары.Количество) КАК Количество
+ПОМЕСТИТЬ вт_Мерчандайзанги
+ИЗ
+	ВТ_МаршрутныйЛистТорговогоПредставителя КАК ВТ_МаршрутныйЛистТорговогоПредставителя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.БПАГМерчандайзинг.Товары КАК БПАГМерчандайзингТовары
+		ПО ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка = БПАГМерчандайзингТовары.Ссылка.Контрагент
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер = БПАГМерчандайзингТовары.Ссылка.Агент.Менеджер
+			И (НАЧАЛОПЕРИОДА(ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения, ДЕНЬ) = НАЧАЛОПЕРИОДА(БПАГМерчандайзингТовары.Ссылка.Дата, ДЕНЬ))
+ГДЕ
+	БПАГМерчандайзингТовары.Ссылка.Проведен
+
+СГРУППИРОВАТЬ ПО
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	БПАГМерчандайзингТовары.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	КпкЗаявкаЗапасы.Номенклатура,
+	СУММА(КпкЗаявкаЗапасы.Количество) КАК Количество
+ПОМЕСТИТЬ вт_ЗаказыПокупателей
+ИЗ
+	ВТ_МаршрутныйЛистТорговогоПредставителя КАК ВТ_МаршрутныйЛистТорговогоПредставителя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.КпкЗаявка.Запасы КАК КпкЗаявкаЗапасы
+		ПО ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение = КпкЗаявкаЗапасы.Ссылка.Подразделение
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер = КпкЗаявкаЗапасы.Ссылка.Менеджер
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка = КпкЗаявкаЗапасы.Ссылка.Контрагент
+			И (НАЧАЛОПЕРИОДА(ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения, ДЕНЬ) = НАЧАЛОПЕРИОДА(КпкЗаявкаЗапасы.Ссылка.Дата, ДЕНЬ))
+			И (КпкЗаявкаЗапасы.Ссылка.Проведен = ИСТИНА)
+
+СГРУППИРОВАТЬ ПО
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	КпкЗаявкаЗапасы.Номенклатура,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	ВозвратОтПокупателяЗапасы.Номенклатура,
+	СУММА(ВозвратОтПокупателяЗапасы.Количество) КАК КоличествоВозврат
+ПОМЕСТИТЬ вт_ВозвратыПокупателей
+ИЗ
+	ВТ_МаршрутныйЛистТорговогоПредставителя КАК ВТ_МаршрутныйЛистТорговогоПредставителя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ВозвратОтПокупателя.Запасы КАК ВозвратОтПокупателяЗапасы
+		ПО ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение = ВозвратОтПокупателяЗапасы.Ссылка.Подразделение
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер = ВозвратОтПокупателяЗапасы.Ссылка.Менеджер
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка = ВозвратОтПокупателяЗапасы.Ссылка.Контрагент
+			И (ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения &lt;= ВозвратОтПокупателяЗапасы.Ссылка.Дата
+				И ВозвратОтПокупателяЗапасы.Ссылка.Дата &lt; &amp;ТекущаяДата)
+			И (ВозвратОтПокупателяЗапасы.Ссылка.ПометкаУдаления = ЛОЖЬ)
+
+СГРУППИРОВАТЬ ПО
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВозвратОтПокупателяЗапасы.Номенклатура,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер,
+	ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка,
+	РасходнаяНакладнаяЗапасы.Номенклатура,
+	РасходнаяНакладнаяЗапасы.Количество КАК КоличествоОтгрузка
+ПОМЕСТИТЬ вт_РасходныеНакладные
+ИЗ
+	ВТ_МаршрутныйЛистТорговогоПредставителя КАК ВТ_МаршрутныйЛистТорговогоПредставителя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.РасходнаяНакладная.Запасы КАК РасходнаяНакладнаяЗапасы
+		ПО ВТ_МаршрутныйЛистТорговогоПредставителя.Подразделение = РасходнаяНакладнаяЗапасы.Ссылка.Подразделение
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.Менеджер = РасходнаяНакладнаяЗапасы.Ссылка.Менеджер
+			И ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка = РасходнаяНакладнаяЗапасы.Ссылка.Контрагент
+			И (НАЧАЛОПЕРИОДА(ВТ_МаршрутныйЛистТорговогоПредставителя.ДатаПосещения, ДЕНЬ) = НАЧАЛОПЕРИОДА(РасходнаяНакладнаяЗапасы.Ссылка.Дата, ДЕНЬ))
+			И (РасходнаяНакладнаяЗапасы.Ссылка.Проведен = ИСТИНА)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_ассортиментПродаж.Подразделение,
+	вт_ассортиментПродаж.ТорговаяТочка,
+	вт_ассортиментПродаж.Менеджер,
+	вт_ассортиментПродаж.ГруппаПродукта,
+	вт_ассортиментПродаж.Посещение,
+	вт_ассортиментПродаж.ДатаПосещения,
+	вт_ассортиментПродаж.ДатаПланируемогоПосещения,
+	вт_ассортиментПродаж.КатегорияТТ,
+	вт_ассортиментПродаж.Номенклатура,
+	вт_ассортиментПродаж.ТипПриоритета,
+	вт_ассортиментПродаж.Номенклатура.БПАГКратностьУпаковки КАК КратностьУпаковки,
+	ЕСТЬNULL(БПАГКоэффициентыВыравниванияВЗаказеСрезПоследних.Коэффициент, 1) КАК КоэффициентВыравниванияВЗаказе,
+	ЕСТЬNULL(БПАГКоэффициентыРекомендуемогоЗапасаСрезПоследних.Коэффициент, 1) КАК КоэффициентРекомендуемогоЗапаса,
+	вт_ассортиментПродаж.МинимальныйОстаток,
+	НАЧАЛОПЕРИОДА(&amp;текущаяДата, МЕСЯЦ) КАК ДатаСтандарта,
+	ЕСТЬNULL(АнализПродажПоПериодам.КоличествоОтгрузок, 0) КАК КоличествоОтгрузок,
+	ЕСТЬNULL(АнализПродажПоПериодам.КоличествоПродано, 0) КАК КоличествоПродано,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(АнализПродажПоПериодам.КоличествоОтгрузок, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ АнализПродажПоПериодам.КоличествоПродано / АнализПродажПоПериодам.КоличествоОтгрузок
+	КОНЕЦ КАК КоличествоПроданоСреднее,
+	вт_Мерчандайзанги.Количество КАК КоличествоОстаток,
+	вт_ЗаказыПокупателей.Количество КАК КоличествоЗаказано,
+	ЕСТЬNULL(вт_ВозвратыПокупателей.КоличествоВозврат, 0) КАК КоличествоВозврат,
+	ЕСТЬNULL(вт_РасходныеНакладные.КоличествоОтгрузка, 0) КАК КоличествоОтгрузка
+ИЗ
+	вт_ассортиментПродаж КАК вт_ассортиментПродаж
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Продажи.Подразделение КАК Подразделение,
+			Продажи.Менеджер КАК Менеджер,
+			Продажи.Контрагент КАК Контрагент,
+			Продажи.Номенклатура КАК Номенклатура,
+			СУММА(Продажи.Количество) КАК КоличествоПродано,
+			КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Продажи.Период) КАК КоличествоОтгрузок
+		ИЗ
+			РегистрНакопления.Продажи КАК Продажи
+		ГДЕ
+			Продажи.Период &gt;= ДОБАВИТЬКДАТЕ(&amp;ТекущаяДата, ДЕНЬ, -7 * (&amp;ГлубинаАнализа + 1))
+			И Продажи.Период &lt; &amp;ТекущаяДата
+			И ДЕНЬНЕДЕЛИ(Продажи.Период) = ДЕНЬНЕДЕЛИ(&amp;ТекущаяДата)
+			И Продажи.Контрагент В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						ВТ_МаршрутныйЛистТорговогоПредставителя.ТорговаяТочка
+					ИЗ
+						ВТ_МаршрутныйЛистТорговогоПредставителя)
+		
+		СГРУППИРОВАТЬ ПО
+			Продажи.Подразделение,
+			Продажи.Менеджер,
+			Продажи.Номенклатура,
+			Продажи.Контрагент) КАК АнализПродажПоПериодам
+		ПО вт_ассортиментПродаж.Подразделение = АнализПродажПоПериодам.Подразделение
+			И вт_ассортиментПродаж.Менеджер = АнализПродажПоПериодам.Менеджер
+			И вт_ассортиментПродаж.ТорговаяТочка = АнализПродажПоПериодам.Контрагент
+			И вт_ассортиментПродаж.Номенклатура = АнализПродажПоПериодам.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_Мерчандайзанги КАК вт_Мерчандайзанги
+		ПО вт_ассортиментПродаж.Подразделение = вт_Мерчандайзанги.Подразделение
+			И вт_ассортиментПродаж.Менеджер = вт_Мерчандайзанги.Менеджер
+			И вт_ассортиментПродаж.ТорговаяТочка = вт_Мерчандайзанги.ТорговаяТочка
+			И вт_ассортиментПродаж.Номенклатура = вт_Мерчандайзанги.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_ЗаказыПокупателей КАК вт_ЗаказыПокупателей
+		ПО вт_ассортиментПродаж.Подразделение = вт_ЗаказыПокупателей.Подразделение
+			И вт_ассортиментПродаж.Менеджер = вт_ЗаказыПокупателей.Менеджер
+			И вт_ассортиментПродаж.ТорговаяТочка = вт_ЗаказыПокупателей.ТорговаяТочка
+			И вт_ассортиментПродаж.Номенклатура = вт_ЗаказыПокупателей.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.БПАГКоэффициентыРекомендуемогоЗапаса.СрезПоследних({(&amp;ТекущаяДата)}, ) КАК БПАГКоэффициентыРекомендуемогоЗапасаСрезПоследних
+		ПО вт_ассортиментПродаж.ТорговаяТочка = БПАГКоэффициентыРекомендуемогоЗапасаСрезПоследних.Контрагент
+			И вт_ассортиментПродаж.КД_ВидНоменклатуры = БПАГКоэффициентыРекомендуемогоЗапасаСрезПоследних.НоменклатурнаяГруппа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.БПАГКоэффициентыВыравниванияВЗаказе.СрезПоследних({(&amp;ТекущаяДата)}, ) КАК БПАГКоэффициентыВыравниванияВЗаказеСрезПоследних
+		ПО вт_ассортиментПродаж.КД_ВидНоменклатуры = БПАГКоэффициентыВыравниванияВЗаказеСрезПоследних.НоменклатурнаяГруппа
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_ВозвратыПокупателей КАК вт_ВозвратыПокупателей
+		ПО вт_ассортиментПродаж.Подразделение = вт_ВозвратыПокупателей.Подразделение
+			И вт_ассортиментПродаж.Менеджер = вт_ВозвратыПокупателей.Менеджер
+			И вт_ассортиментПродаж.ТорговаяТочка = вт_ВозвратыПокупателей.ТорговаяТочка
+			И вт_ассортиментПродаж.Номенклатура = вт_ВозвратыПокупателей.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_РасходныеНакладные КАК вт_РасходныеНакладные
+		ПО вт_ассортиментПродаж.Подразделение = вт_РасходныеНакладные.Подразделение
+			И вт_ассортиментПродаж.Менеджер = вт_РасходныеНакладные.Менеджер
+			И вт_ассортиментПродаж.ТорговаяТочка = вт_РасходныеНакладные.ТорговаяТочка
+			И вт_ассортиментПродаж.Номенклатура = вт_РасходныеНакладные.Номенклатура</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Остаток</dataPath>
+		<expression>выбор когда (КоличествоОстаток-КоличествоВозврат) &gt; МинимальныйОстаток тогда (КоличествоОстаток-КоличествоВозврат) иначе МинимальныйОстаток конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Остаток</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоВозврат</dataPath>
+		<expression>Сумма(КоличествоВозврат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗаказано</dataPath>
+		<expression>Сумма(КоличествоЗаказано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОстаток</dataPath>
+		<expression>Сумма(КоличествоОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОтгрузка</dataPath>
+		<expression>Сумма(КоличествоОтгрузка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОтгрузок</dataPath>
+		<expression>Сумма(КоличествоОтгрузок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПродано</dataPath>
+		<expression>Сумма(КоличествоПродано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПроданоСреднее</dataPath>
+		<expression>Сумма(КоличествоПроданоСреднее)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МинимальныйОстаток</dataPath>
+		<expression>Сумма(МинимальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Остаток</dataPath>
+		<expression>Сумма(Остаток)</expression>
+	</totalField>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>ГлубинаАнализа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Глубина анализа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1-неделя</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>2-недели</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">3</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>3-недели</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КатегорияТТ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипПриоритета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КратностьУпаковки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоэффициентВыравниванияВЗаказе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоэффициентРекомендуемогоЗапаса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВозврат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>МинимальныйОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Остаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗаказано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОтгрузка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПроданоСреднее</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПродано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОтгрузок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Посещение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаСтандарта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаПланируемогоПосещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаПосещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8ce9df11-a8e4-40cb-9ffd-cfb4085d54f9</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяТочка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string">4b025bdb-bd53-11e6-9c20-00259038eef1</dcsset:right>
+					<dcsset:userSettingID>6813e8e9-5c6f-4d4f-b5fa-7977ccf034fc</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>50f34d1b-8277-4aa1-b33f-ac69aaf59003</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>7d1c94de-43a8-4cd1-9b50-c11ede7c2b0d</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущаяДата</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>2018-04-02T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>080c7f3a-b0ba-4a93-a39e-0419fe2cd93a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГлубинаАнализа</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>1c8eb583-e635-451d-9839-a57e15f8c963</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>068f1a4a-1116-4c4f-adab-ecc7b400cbf4</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>275bf461-21fa-43f1-8969-c64d8ad318e8</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ГруппаПродукта</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Менеджер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ТорговаяТочка</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>cf9bad5b-35f9-4fe6-aa41-312dcc178e3e</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Контрагент" id="1">
+					<DataPath>ОтборКонтрагент</DataPath>
+					<ClearButton>true</ClearButton>
+					<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Менеджер" id="4">
+					<DataPath>ОтборМенеджер</DataPath>
+					<ClearButton>true</ClearButton>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ContextMenu name="МенеджерКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКнопок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКнопокExtendedTooltip" id="8"/>
+			<ChildItems>
+				<Button name="ОК" id="9">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.КомандаОК</CommandName>
+					<ExtendedTooltip name="ОКExtendedTooltip" id="10"/>
+				</Button>
+				<Button name="Закрыть" id="11">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<SkipOnInput>true</SkipOnInput>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="12"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОтборМенеджер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Менеджеры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборКонтрагент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+		</Command>
+	</Commands>
+</Form>

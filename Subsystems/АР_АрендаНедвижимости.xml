@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="6e7de14b-fa8f-4ee3-b80d-96a5b8a806b4">
+		<Properties>
+			<Name>АР_АрендаНедвижимости</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Недвижимость</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.АР_ПодсистемаНедвижимость</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодсистемуАрендаНедвижимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПодсистемуАрендаНедвижимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АР_Руководителю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АР_ПодсистемаНедвижимость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АР_ЗначокНедвижимость32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.АР_ЗначокНедвижимость16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_ВидыОперацийАктСнятияПоказанийСчетчика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_ВидыОперацийСчетНаАренду</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_ВидыПравНаНедвижимость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_КатегорииОбъектовНедвижимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособРасчетаЗалога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыНачисленияПени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыПогашенияПени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыРасчетаКурсаВалюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыРасчетаПросрочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыУчетаНДСПриНачисленииПеней</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СпособыРасчетаУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СтатусыЗаявокНаОбслуживание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_СтатусыОбъектовАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_ТипыДокументовПечатныхФорм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АР_ТипыОбслуживанияОбъектовАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ОсновнаяУслугаПоАренде</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ОсновнаяУслугаДляНачисленияДепозита</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ОбрабатыватьШаблоныИПланировкиНаКлиенте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ИспользоватьСхемуОпределенияСтавокНДСПоАрендеНаОсновеДоговора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ИспользоватьСреднийМесяц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ИспользоватьСправочникЗданияИЭтажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ИспользоватьНесколькоСчетчиковДляУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ИспользоватьГрафикИзмененияСтавокВДоговорахАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ВестиУчетТарифицируемыхУслугПоСчетчикам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ГрафикиИзмененияСтавокНаУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ГрафикиОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_КатегорииЗемель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_КатегорииЦенАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_НазначенияОбъектовНедвижимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ОбъектыАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ЭлементыОбъектовАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ШаблоныДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ТипыОбъектовАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ТехнологическиеОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ТехнологическиеКартыТехОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ТелефоныКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_Счетчики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_СобственникиОбъектовНедвижимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_СценарииПланирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_СтруктураАссортимента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_СпособыНачисленияАренднойПлаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_СпискиСчетчиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ПоказателиВыработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АР_ПланировкиПомещенийИПлощадей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ТипЦенПлановойСебестоимостиМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ТипОбъектаАренды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_СреднийМесяц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_СпособУчетаНДСПриНачисленииПеней</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ПриРасчетеПениСрокОплатыРабочийДень</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ПериодНачисленияАренднойПлаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ОсновнойСпособНачисленияАрендойПлаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АР_ОсновнойПроизводственныйКалендарьАренды</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>АР_УправлениеОбъектами</Subsystem>
+			<Subsystem>АР_УправлениеДоговорами</Subsystem>
+			<Subsystem>АР_УправлениеВзаиморасчетами</Subsystem>
+			<Subsystem>АР_УправлениеЭксплуатацией</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРасчета</dataPath>
+			<field>ВидРасчета</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Ссылка.Дата КАК Период,
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Ссылка КАК Регистратор,
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеПлановПоTQM.РасчетЗарплаты КАК Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеПлановПоTQMРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Ссылка.Дата,
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Ссылка,
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеПлановПоДолеПолки.РасчетЗарплаты КАК Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеПлановПоДолеПолкиРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Ссылка.Дата,
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Ссылка,
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеЛистаЗадач.РасчетЗарплаты КАК Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеЛистаЗадачРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Ссылка.Дата,
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Ссылка,
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеПлановПоАКБ.РасчетЗарплаты КАК Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеПлановПоАКБРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Ссылка.Дата,
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Ссылка,
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеПлановПоЗаносуДенег.РасчетЗарплаты КАК Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеПлановПоЗаносуДенегРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Ссылка.Дата,
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Ссылка,
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Ссылка.Подразделение,
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Сотрудник,
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.ВидРасчета,
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Результат
+ИЗ
+	Документ.Планирование_ВыполнениеПлановПоПродажам.РасчетЗарплаты КАК Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты
+ГДЕ
+	Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Планирование_ВыполнениеПлановПоПродажамРасчетЗарплаты.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Результат</dataPath>
+		<expression>Сумма(Результат)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>9d3b97ee-466d-4801-9ac0-a6c61a1accd5</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2018-12-01T00:00:00</v8:startDate>
+						<v8:endDate>2018-12-31T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>3605c135-9bcb-4f91-8ac8-dbf0f5d8a302</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидРасчета</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотрудник.Должность</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Сотрудник</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:columnsViewMode>Normal</dcsset:columnsViewMode>
+				<dcsset:columnsUserSettingID>bfb87327-1dc6-4ddb-8b03-73de22d9a960</dcsset:columnsUserSettingID>
+				<dcsset:rowsViewMode>Normal</dcsset:rowsViewMode>
+				<dcsset:rowsUserSettingID>4915983a-34b4-4169-ba4e-0b644a87eabd</dcsset:rowsUserSettingID>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

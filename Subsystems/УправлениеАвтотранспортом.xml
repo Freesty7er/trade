@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="e1be7540-35aa-48b3-b096-a9d90e0cde2f">
+		<Properties>
+			<Name>УправлениеАвтотранспортом</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автотранспорт</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаУправлениеАвтотранспортом</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПутевойЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РемонтыАвтомобилей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Машины</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.МаршрутыРазвоза</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПоказанияСпидометра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаданиеВодителю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныНаПеревозки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыТранспортныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоПутевымЛистам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СводныйПутевойЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.УправлениеАвтотранспортомПросмотр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.УправлениеАвтотранспортом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияВПодотчете</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыдачаВПодотчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоСводнымПутевымЛистам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратИзПодотчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетов_УправлениеАвтотранспортом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыРемонтовАвтотранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыРаботПоРемонтуАвтотранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Страны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Производители</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Качество</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АудитПорогиПоВидамРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатусыТранспортныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДоступностьТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоРемонтамТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрОтчетовМеханика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаУправлениеАвтотранспортом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетПоПутевымЛистам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетПоРемонтамТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетПоСводнымПутевымЛистам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоРасчетнойРентабельностиМаршрутовДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСправочникВидыРаботПоРемонтуАвтотранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСправочникВидыРемонтовАвтотранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодсистемуУправлениеАвтотранспортом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АТ_СтатьяЗатратПоЗарплате</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>МуравьинаяЛогистика</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

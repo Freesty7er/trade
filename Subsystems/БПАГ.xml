@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="01f95d09-19ea-4280-81e9-72ed45e658a9">
+		<Properties>
+			<Name>БПАГ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пан Агент</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.БПАГПанАгентИконка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.БПАГ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГСклады</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГНоменклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГАгенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГКонтрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГТорговыеТочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГВариантыМаршрутов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.БПАГПоискКартинокВИнтернете</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГОстаткиТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГДолгиКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГМаршруты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГАссортименты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГПрайсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГКлиентура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГНастройкиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БПАГАдминистратор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВидыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГАвтомобили</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГМаркиАвтомобилей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВариантыСортировкиТиповЦен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГУчетныеСистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВариантыЗагрузкиЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГНастройкиЗаполненияМаршрутовПоПапкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКатегорииТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКатегорииДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГТипыСвойствИКатегорий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.БПАГВыгрузкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.БПАГЗагрузкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.БПАГПанАгентЦентрУправления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГВидыПланов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГПланы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГНастройкиАгентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГПрофилиАгентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГВидыНастроекАгентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГРежимыКонтроляВзаиморасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГПечатныеФормы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГВидыАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГВопросыАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВидыВыравниванияПоГоризонтали</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГТипыВопросовАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВариантыВыгрузкиФактическихПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БПАГПанАгентИконка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.БПАГСинхронизацияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.БПАГСинхронизацияКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанАгентЦентрУправления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УдалитьБПАГДокументыАгентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УдалитьБПАГОтчетПоПосещениям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОбменСКПК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Удалить_ПросмотрОтчетовПоАгентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанАгентЦентрУправленияТест</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОбменСКПКТест</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВзаиморасчетыСПокупателями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.БПАГАгенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.БПАГАссортименты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УдалитьБПАГПрофили</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПросмотрПеремещенийТорговых</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКоэффициентыРекомендуемогоЗапаса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКоэффициентыВыравниванияВЗаказе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКатегорииКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанАгентЦентрУправленияСупера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПанАгентПрофилиОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПанАгентФормированиеОчередиОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПанАгентНаправленияОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГФотоДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГКатегорииСтрокДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГЗначенияКатегорийСтрокДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ПанАгентОбменДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПанАгентВидыОбъектовОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПанАгентВыполнениеОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.БПАГПорогиПоКонтрагентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеСторчеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаПанАгент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГТипыПриоритетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГСтандартыПрисутствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетВыполнениеСтандартов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГВариантыЗагрузкиМерчандайзингов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.БПАГТипыАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.БПАГПанАгентЦентрУправленияРевизоры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанАгентЦентрУправленияРевизоры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОбменСКПКРевизоры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетВыполнениеСтандартов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеСправочникБПАГВидыАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеСправочникБПАГВопросыАнкет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БПАГУстановкаКоэффициентовРекомендуемогоЗапаса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоАнкетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПодсистемуПанАгент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодсистемуПанАгент</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Документы</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

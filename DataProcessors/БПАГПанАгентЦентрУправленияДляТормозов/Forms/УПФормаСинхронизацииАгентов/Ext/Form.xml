@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пан Агент - Агенты</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаТаблиц" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблиц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблиц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицExtendedTooltip" id="85"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаБПАГ" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БПАГ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БПАГ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБПАГExtendedTooltip" id="86"/>
+					<ChildItems>
+						<Table name="СписокБПАГАгентов" id="1">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокБПАГАгентов</DataPath>
+							<RowPictureDataPath>СписокБПАГАгентов.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокБПАГАгентовКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СписокБПАГАгентовКоманднаяПанель" id="3"/>
+							<ExtendedTooltip name="СписокБПАГАгентовExtendedTooltip" id="87"/>
+							<SearchStringAddition name="СписокБПАГАгентовСтрокаПоиска" id="119">
+								<AdditionSource>
+									<Item>СписокБПАГАгентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовСтрокаПоискаКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="СписокБПАГАгентовСтрокаПоискаРасширеннаяПодсказка" id="121"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокБПАГАгентовСостояниеПросмотра" id="122">
+								<AdditionSource>
+									<Item>СписокБПАГАгентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовСостояниеПросмотраКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="СписокБПАГАгентовСостояниеПросмотраРасширеннаяПодсказка" id="124"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокБПАГАгентовУправлениеПоиском" id="125">
+								<AdditionSource>
+									<Item>СписокБПАГАгентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовУправлениеПоискомКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="СписокБПАГАгентовУправлениеПоискомРасширеннаяПодсказка" id="127"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">СписокФизическихЛицПроверкаПеретаскивания</Event>
+								<Event name="Selection">СписокБПАГАгентовВыбор</Event>
+								<Event name="Drag">СписокФизическихЛицПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокБПАГАгентовНаименование" id="4">
+									<DataPath>СписокБПАГАгентов.Description</DataPath>
+									<ContextMenu name="СписокБПАГАгентовНаименованиеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="СписокБПАГАгентовНаименованиеExtendedTooltip" id="88"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовКод" id="6">
+									<DataPath>СписокБПАГАгентов.Code</DataPath>
+									<ContextMenu name="СписокБПАГАгентовКодКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="СписокБПАГАгентовКодExtendedTooltip" id="89"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовФизЛицо" id="8">
+									<DataPath>СписокБПАГАгентов.ФизЛицо</DataPath>
+									<ContextMenu name="СписокБПАГАгентовФизЛицоКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="СписокБПАГАгентовФизЛицоExtendedTooltip" id="90"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовАссортимент" id="10">
+									<DataPath>СписокБПАГАгентов.Ассортимент</DataPath>
+									<ContextMenu name="СписокБПАГАгентовАссортиментКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="СписокБПАГАгентовАссортиментExtendedTooltip" id="91"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовКлиентура" id="12">
+									<DataPath>СписокБПАГАгентов.Клиентура</DataPath>
+									<ContextMenu name="СписокБПАГАгентовКлиентураКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="СписокБПАГАгентовКлиентураExtendedTooltip" id="92"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовПрофиль" id="14">
+									<DataPath>СписокБПАГАгентов.Профиль</DataPath>
+									<ContextMenu name="СписокБПАГАгентовПрофильКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СписокБПАГАгентовПрофильExtendedTooltip" id="93"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовВерсия" id="75">
+									<DataPath>СписокБПАГАгентов.Версия</DataPath>
+									<ContextMenu name="СписокБПАГАгентовВерсияКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СписокБПАГАгентовВерсияExtendedTooltip" id="94"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовВерсияОС" id="77">
+									<DataPath>СписокБПАГАгентов.ВерсияОС</DataPath>
+									<ContextMenu name="СписокБПАГАгентовВерсияОСКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="СписокБПАГАгентовВерсияОСExtendedTooltip" id="95"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовМодельУстройства" id="79">
+									<DataPath>СписокБПАГАгентов.МодельУстройства</DataPath>
+									<ContextMenu name="СписокБПАГАгентовМодельУстройстваКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="СписокБПАГАгентовМодельУстройстваExtendedTooltip" id="96"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовUDID" id="81">
+									<DataPath>СписокБПАГАгентов.UDID</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер лицензии</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокБПАГАгентовUDIDКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокБПАГАгентовUDIDExtendedTooltip" id="97"/>
+								</LabelField>
+								<LabelField name="СписокБПАГАгентовЛицензияДо" id="83">
+									<DataPath>СписокБПАГАгентов.ЛицензияДо</DataPath>
+									<ContextMenu name="СписокБПАГАгентовЛицензияДоКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="СписокБПАГАгентовЛицензияДоExtendedTooltip" id="98"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаНастроек" id="148">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроек</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроек</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<Button name="КнопкаНастройки" id="50">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОткрытьФормуНастроек</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть настройки агента</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаНастройкиExtendedTooltip" id="99"/>
+								</Button>
+								<Button name="КнопкаНастройкиДокументов" id="146">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОткрытьФормуНастроекДокументов</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть настройки документов агента</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаНастройкиДокументовРасширеннаяПодсказка" id="147"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьКассыОрганизаций" id="150">
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>У каждого агента может быть своя касса для удобства контроля прихода и расхода денежных средств. Касса привязана к организации, поэтому в следующем списке можно указать организации, от лица которых работает агент, и соответствующие кассы. Для изменения этого списка откройте форму агента.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьКассыОрганизацийКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="НадписьКассыОрганизацийРасширеннаяПодсказка" id="152"/>
+						</LabelDecoration>
+						<Table name="СписокБПАГАгентовКассы" id="51">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Items.СписокБПАГАгентов.CurrentData.Кассы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кассы агента</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокБПАГАгентовКассыКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="СписокБПАГАгентовКассыКоманднаяПанель" id="53"/>
+							<ExtendedTooltip name="СписокБПАГАгентовКассыExtendedTooltip" id="100"/>
+							<SearchStringAddition name="СписокБПАГАгентовКассыСтрокаПоиска" id="128">
+								<AdditionSource>
+									<Item>СписокБПАГАгентовКассы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовКассыСтрокаПоискаКонтекстноеМеню" id="129"/>
+								<ExtendedTooltip name="СписокБПАГАгентовКассыСтрокаПоискаРасширеннаяПодсказка" id="130"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокБПАГАгентовКассыСостояниеПросмотра" id="131">
+								<AdditionSource>
+									<Item>СписокБПАГАгентовКассы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовКассыСостояниеПросмотраКонтекстноеМеню" id="132"/>
+								<ExtendedTooltip name="СписокБПАГАгентовКассыСостояниеПросмотраРасширеннаяПодсказка" id="133"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокБПАГАгентовКассыУправлениеПоиском" id="134">
+								<AdditionSource>
+									<Item>СписокБПАГАгентовКассы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБПАГАгентовКассыУправлениеПоискомКонтекстноеМеню" id="135"/>
+								<ExtendedTooltip name="СписокБПАГАгентовКассыУправлениеПоискомРасширеннаяПодсказка" id="136"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокБПАГАгентовКассыОрганизация" id="60">
+									<DataPath>Items.СписокБПАГАгентов.CurrentData.Кассы.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокБПАГАгентовКассыОрганизацияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="СписокБПАГАгентовКассыОрганизацияExtendedTooltip" id="101"/>
+								</InputField>
+								<InputField name="СписокБПАГАгентовКассыКасса" id="58">
+									<DataPath>Items.СписокБПАГАгентов.CurrentData.Кассы.Касса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокБПАГАгентовКассыКассаКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="СписокБПАГАгентовКассыКассаExtendedTooltip" id="102"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="СписокФизическихЛиц" id="16">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокФизическихЛиц</DataPath>
+					<RowPictureDataPath>СписокФизическихЛиц.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="СписокФизическихЛицКонтекстноеМеню" id="17"/>
+					<AutoCommandBar name="СписокФизическихЛицКоманднаяПанель" id="18"/>
+					<ExtendedTooltip name="СписокФизическихЛицExtendedTooltip" id="103"/>
+					<SearchStringAddition name="СписокФизическихЛицСтрокаПоиска" id="137">
+						<AdditionSource>
+							<Item>СписокФизическихЛиц</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокФизическихЛицСтрокаПоискаКонтекстноеМеню" id="138"/>
+						<ExtendedTooltip name="СписокФизическихЛицСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокФизическихЛицСостояниеПросмотра" id="140">
+						<AdditionSource>
+							<Item>СписокФизическихЛиц</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокФизическихЛицСостояниеПросмотраКонтекстноеМеню" id="141"/>
+						<ExtendedTooltip name="СписокФизическихЛицСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокФизическихЛицУправлениеПоиском" id="143">
+						<AdditionSource>
+							<Item>СписокФизическихЛиц</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокФизическихЛицУправлениеПоискомКонтекстноеМеню" id="144"/>
+						<ExtendedTooltip name="СписокФизическихЛицУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СписокФизическихЛицПроверкаПеретаскивания</Event>
+						<Event name="Drag">СписокФизическихЛицПеретаскивание</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="СписокФизическихЛицНаименование" id="19">
+							<DataPath>СписокФизическихЛиц.Description</DataPath>
+							<ContextMenu name="СписокФизическихЛицНаименованиеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СписокФизическихЛицНаименованиеExtendedTooltip" id="104"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицКод" id="21">
+							<DataPath>СписокФизическихЛиц.Code</DataPath>
+							<ContextMenu name="СписокФизическихЛицКодКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="СписокФизическихЛицКодExtendedTooltip" id="105"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицДатаРождения" id="23">
+							<DataPath>СписокФизическихЛиц.ДатаРождения</DataPath>
+							<ContextMenu name="СписокФизическихЛицДатаРожденияКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="СписокФизическихЛицДатаРожденияExtendedTooltip" id="106"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицИНН" id="25">
+							<DataPath>2/14</DataPath>
+							<ContextMenu name="СписокФизическихЛицИННКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="СписокФизическихЛицИННExtendedTooltip" id="107"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицКодИМНС" id="27">
+							<DataPath>2/15</DataPath>
+							<ContextMenu name="СписокФизическихЛицКодИМНСКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="СписокФизическихЛицКодИМНСExtendedTooltip" id="108"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицКомментарий" id="29">
+							<DataPath>2/16</DataPath>
+							<ContextMenu name="СписокФизическихЛицКомментарийКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СписокФизическихЛицКомментарийExtendedTooltip" id="109"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицСтраховойНомерПФР" id="31">
+							<DataPath>2/27</DataPath>
+							<ContextMenu name="СписокФизическихЛицСтраховойНомерПФРКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СписокФизическихЛицСтраховойНомерПФРExtendedTooltip" id="110"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицПол" id="33">
+							<DataPath>СписокФизическихЛиц.Пол</DataPath>
+							<ContextMenu name="СписокФизическихЛицПолКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="СписокФизическихЛицПолExtendedTooltip" id="111"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицМестоРождения" id="35">
+							<DataPath>2/18</DataPath>
+							<ContextMenu name="СписокФизическихЛицМестоРожденияКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="СписокФизическихЛицМестоРожденияExtendedTooltip" id="112"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицОсновноеИзображение" id="37">
+							<DataPath>2/22</DataPath>
+							<ContextMenu name="СписокФизическихЛицОсновноеИзображениеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СписокФизическихЛицОсновноеИзображениеExtendedTooltip" id="113"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицМестоРожденияКодПоОКАТО" id="39">
+							<DataPath>2/19</DataPath>
+							<ContextMenu name="СписокФизическихЛицМестоРожденияКодПоОКАТОКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="СписокФизическихЛицМестоРожденияКодПоОКАТОExtendedTooltip" id="114"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицГруппаДоступаФизическогоЛица" id="41">
+							<DataPath>2/9</DataPath>
+							<ContextMenu name="СписокФизическихЛицГруппаДоступаФизическогоЛицаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="СписокФизическихЛицГруппаДоступаФизическогоЛицаExtendedTooltip" id="115"/>
+						</LabelField>
+						<LabelField name="СписокФизическихЛицЛьготаПриНачисленииПособий" id="43">
+							<DataPath>2/17</DataPath>
+							<ContextMenu name="СписокФизическихЛицЛьготаПриНачисленииПособийКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="СписокФизическихЛицЛьготаПриНачисленииПособийExtendedTooltip" id="116"/>
+						</LabelField>
+						<CheckBoxField name="СписокФизическихЛицИмеетНаучныеТруды" id="45">
+							<DataPath>2/13</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокФизическихЛицИмеетНаучныеТрудыКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="СписокФизическихЛицИмеетНаучныеТрудыExtendedTooltip" id="117"/>
+						</CheckBoxField>
+						<CheckBoxField name="СписокФизическихЛицИмеетИзобретения" id="47">
+							<DataPath>2/12</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокФизическихЛицИмеетИзобретенияКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СписокФизическихЛицИмеетИзобретенияExtendedTooltip" id="118"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокФизическихЛиц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список физических лиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ФизическиеЛица</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокБПАГАгентов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список БПАГ агентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.БПАГАгенты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьФормуНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуНастроек</Action>
+		</Command>
+		<Command name="ОткрытьФормуНастроекДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настроек документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настроек документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуНастроекДокументов</Action>
+		</Command>
+	</Commands>
+</Form>

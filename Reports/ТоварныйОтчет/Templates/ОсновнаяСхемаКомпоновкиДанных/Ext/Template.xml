@@ -1,0 +1,1813 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчет</dataPath>
+			<field>КорСчет</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто1</dataPath>
+			<field>КорСубконто1</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто2</dataPath>
+			<field>КорСубконто2</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто3</dataPath>
+			<field>КорСубконто3</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратНаБазу</dataPath>
+			<field>ВозвратНаБазу</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвратПоставщику</dataPath>
+			<field>ВозвратПоставщику</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗакупкаБаза</dataPath>
+			<field>ЗакупкаБаза</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗакупкаПрочие</dataPath>
+			<field>ЗакупкаПрочие</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инкассация</dataPath>
+			<field>Инкассация</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛичныеНужды</dataPath>
+			<field>ЛичныеНужды</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаценкаБаза</dataPath>
+			<field>НаценкаБаза</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаценкаПрочие</dataPath>
+			<field>НаценкаПрочие</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Недостачи</dataPath>
+			<field>Недостачи</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаПрочие</dataPath>
+			<field>ОплатаПрочие</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отдел</dataPath>
+			<field>Отдел</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыПрямые</dataPath>
+			<field>РасходыПрямые</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ движения (регистратор)</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<orderExpression>
+				<dcscom:expression>ПериодСекунда</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<orderExpression>
+				<dcscom:expression>Регистратор</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКонечныйОстаток</dataPath>
+			<field>СуммаКонечныйОстаток</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНачальныйОстаток</dataPath>
+			<field>СуммаНачальныйОстаток</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Уценка</dataPath>
+			<field>Уценка</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСекунда</dataPath>
+			<field>ПериодСекунда</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КредитВыплата</dataPath>
+			<field>КредитВыплата</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КредитПолучение</dataPath>
+			<field>КредитПолучение</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дооценка</dataPath>
+			<field>Дооценка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дооценка</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Баланс</dataPath>
+			<field>Баланс</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Баланс</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Доходы</dataPath>
+			<field>Доходы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расходы</dataPath>
+			<field>Расходы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаБонусами</dataPath>
+			<field>ОплатаБонусами</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата бонусами</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидка</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>Обороты</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КорСчет</dataPath>
+				<field>КорСчет</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КорСубконто1</dataPath>
+				<field>КорСубконто1</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КорСубконто2</dataPath>
+				<field>КорСубконто2</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КорСубконто3</dataPath>
+				<field>КорСубконто3</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто1</dataPath>
+				<field>Субконто1</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто2</dataPath>
+				<field>Субконто2</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто3</dataPath>
+				<field>Субконто3</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВозвратНаБазу</dataPath>
+				<field>ВозвратНаБазу</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВозвратПоставщику</dataPath>
+				<field>ВозвратПоставщику</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗакупкаБаза</dataPath>
+				<field>ЗакупкаБаза</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗакупкаПрочие</dataPath>
+				<field>ЗакупкаПрочие</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Инкассация</dataPath>
+				<field>Инкассация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЛичныеНужды</dataPath>
+				<field>ЛичныеНужды</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Магазин</dataPath>
+				<field>Магазин</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НаценкаБаза</dataPath>
+				<field>НаценкаБаза</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НаценкаПрочие</dataPath>
+				<field>НаценкаПрочие</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Недостачи</dataPath>
+				<field>Недостачи</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплатаПрочие</dataPath>
+				<field>ОплатаПрочие</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Отдел</dataPath>
+				<field>Отдел</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РасходыПрямые</dataPath>
+				<field>РасходыПрямые</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Уценка</dataPath>
+				<field>Уценка</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодСекунда</dataPath>
+				<field>ПериодСекунда</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КредитВыплата</dataPath>
+				<field>КредитВыплата</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КредитПолучение</dataPath>
+				<field>КредитПолучение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дооценка</dataPath>
+				<field>Дооценка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дооценка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Доходы</dataPath>
+				<field>Доходы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Доходы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Расходы</dataPath>
+				<field>Расходы</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расходы</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплатаБонусами</dataPath>
+				<field>ОплатаБонусами</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Оплата бонусами</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Скидка</dataPath>
+				<field>Скидка</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Скидка</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УправленческийОбороты.Субконто1 КАК Магазин,
+	УправленческийОбороты.КорСчет,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ЗакупкаБаза
+				ТОГДА УправленческийОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ЗакупкаБаза,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;НаценкаБаза
+				ТОГДА УправленческийОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК НаценкаБаза,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ЗакупкаПрочие
+				ТОГДА УправленческийОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ЗакупкаПрочие,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;НаценкаПрочие
+				ТОГДА УправленческийОбороты.СуммаОборотДт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК НаценкаПрочие,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;Инкассация
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Инкассация,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ОплатаПрочие
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ОплатаПрочие,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;РасходыПрямые
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК РасходыПрямые,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ЛичныеНужды
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ЛичныеНужды,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ВозвратНаБазу
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ВозвратНаБазу,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;Дооценка
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ КАК Дооценка,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;Уценка
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Уценка,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;ВозвратПоставщику
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ВозвратПоставщику,
+	СУММА(ВЫБОР
+			КОГДА УправленческийОбороты.КорСчет = &amp;Недостачи
+				ТОГДА УправленческийОбороты.СуммаОборотКт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Недостачи,
+	УправленческийОбороты.Подразделение,
+	УправленческийОбороты.Субконто2 КАК Отдел,
+	УправленческийОбороты.Регистратор КАК Регистратор,
+	УправленческийОбороты.ПериодСекунда,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;КредитыПолученные
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ КАК КредитПолучение,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;КредитыПолученные
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ КАК КредитВыплата,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;СчетДоходов
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ КАК Доходы,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;СчетРасходов
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ КАК Расходы,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = ЗНАЧЕНИЕ(ПланСчетов.Внутренний.ОплатаБонусами)
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОплатаБонусами,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = ЗНАЧЕНИЕ(ПланСчетов.Внутренний.Скидка)
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ КАК Скидка
+ИЗ
+	РегистрБухгалтерии.Управленческий.Обороты(, , Авто, , , , , ) КАК УправленческийОбороты
+ГДЕ
+	УправленческийОбороты.Счет = &amp;ТоварыВРознице
+
+СГРУППИРОВАТЬ ПО
+	УправленческийОбороты.Субконто1,
+	УправленческийОбороты.КорСчет,
+	УправленческийОбороты.Подразделение,
+	УправленческийОбороты.Субконто2,
+	УправленческийОбороты.Регистратор,
+	УправленческийОбороты.ПериодСекунда,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;КредитыПолученные
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;КредитыПолученные
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;Дооценка
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;СчетДоходов
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = &amp;СчетРасходов
+			ТОГДА УправленческийОбороты.СуммаОборотДт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = ЗНАЧЕНИЕ(ПланСчетов.Внутренний.ОплатаБонусами)
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА УправленческийОбороты.КорСчет = ЗНАЧЕНИЕ(ПланСчетов.Внутренний.Скидка)
+			ТОГДА УправленческийОбороты.СуммаОборотКт
+		ИНАЧЕ 0
+	КОНЕЦ</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Остатки</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто1</dataPath>
+				<field>Субконто1</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто2</dataPath>
+				<field>Субконто2</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто3</dataPath>
+				<field>Субконто3</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодСекунда</dataPath>
+				<field>ПериодСекунда</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Магазин</dataPath>
+				<field>Магазин</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Отдел</dataPath>
+				<field>Отдел</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаКонечныйОстаток</dataPath>
+				<field>СуммаКонечныйОстаток</field>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаНачальныйОстаток</dataPath>
+				<field>СуммаНачальныйОстаток</field>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УправленческийОстаткиИОбороты.СуммаНачальныйОстаток,
+	УправленческийОстаткиИОбороты.СуммаКонечныйОстаток,
+	УправленческийОстаткиИОбороты.Субконто1 КАК Магазин,
+	УправленческийОстаткиИОбороты.Субконто2 КАК Отдел,
+	УправленческийОстаткиИОбороты.Регистратор,
+	УправленческийОстаткиИОбороты.ПериодСекунда,
+	УправленческийОстаткиИОбороты.Подразделение
+ИЗ
+	РегистрБухгалтерии.Управленческий.ОстаткиИОбороты(, , Авто, Движения, Счет = &amp;ТоварыВРознице, , ) КАК УправленческийОстаткиИОбороты</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Баланс</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто1</dataPath>
+				<field>Субконто1</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто2</dataPath>
+				<field>Субконто2</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Субконто3</dataPath>
+				<field>Субконто3</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодСекунда</dataPath>
+				<field>ПериодСекунда</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Магазин</dataPath>
+				<field>Магазин</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Магазин</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Отдел</dataPath>
+				<field>Отдел</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отдел</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+					<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Баланс</dataPath>
+				<field>Баланс</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Баланс</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УправленческийОстаткиИОбороты.СуммаКонечныйОстаток КАК Баланс,
+	УправленческийОстаткиИОбороты.Субконто1 КАК Магазин,
+	УправленческийОстаткиИОбороты.Субконто2 КАК Отдел,
+	УправленческийОстаткиИОбороты.Регистратор,
+	УправленческийОстаткиИОбороты.ПериодСекунда,
+	УправленческийОстаткиИОбороты.Подразделение
+ИЗ
+	РегистрБухгалтерии.Управленческий.ОстаткиИОбороты(
+			,
+			,
+			Авто,
+			Движения,
+			Счет В ИЕРАРХИИ (&amp;ВзаиморасчетыСПоставщиками)
+				ИЛИ Счет В ИЕРАРХИИ (&amp;Деньги)
+				ИЛИ Счет В ИЕРАРХИИ (&amp;Товары),
+			,
+			) КАК УправленческийОстаткиИОбороты</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>РознБаза</dataPath>
+		<expression>НаценкаБаза+ЗакупкаБаза</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Розн база</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РознПрочие</dataPath>
+		<expression>НаценкаПрочие+ЗакупкаПрочие</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Розн прочие</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентНаценкиБаза2</dataPath>
+		<expression>ВЫБОР КОГДА ЗакупкаБаза=0 ТОГДА 0 ИНАЧЕ (1 - ЗакупкаБаза / (НаценкаБаза+ЗакупкаБаза)  )*100 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент наценки база2</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=5; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентНаценкиПрочие</dataPath>
+		<expression>выбор когда ЗакупкаПрочие=0 тогда 0 иначе (НаценкаПрочие+ЗакупкаПрочие)/ЗакупкаПрочие конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент наценки прочие</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=5; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентНаценкиБаза</dataPath>
+		<expression>ВЫБОР КОГДА ЗакупкаБаза=0 ТОГДА 0 ИНАЧЕ ((НаценкаБаза+ЗакупкаБаза)/ЗакупкаБаза - 1  )*100 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент наценки база</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=5; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Доход</dataPath>
+		<expression>Доходы - Расходы</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Доход</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=5; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВозвратНаБазу</dataPath>
+		<expression>Сумма(ВозвратНаБазу)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвратПоставщику</dataPath>
+		<expression>Сумма(ВозвратПоставщику)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗакупкаБаза</dataPath>
+		<expression>Сумма(ЗакупкаБаза)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗакупкаПрочие</dataPath>
+		<expression>Сумма(ЗакупкаПрочие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Инкассация</dataPath>
+		<expression>Сумма(Инкассация)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КорСчет</dataPath>
+		<expression>Сумма(КорСчет)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЛичныеНужды</dataPath>
+		<expression>Сумма(ЛичныеНужды)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаценкаБаза</dataPath>
+		<expression>Сумма(НаценкаБаза)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаценкаПрочие</dataPath>
+		<expression>Сумма(НаценкаПрочие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Недостачи</dataPath>
+		<expression>Сумма(Недостачи)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаПрочие</dataPath>
+		<expression>Сумма(ОплатаПрочие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНаценкиПрочие</dataPath>
+		<expression>Среднее(ПроцентНаценкиПрочие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РасходыПрямые</dataPath>
+		<expression>Сумма(РасходыПрямые)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РознБаза</dataPath>
+		<expression>Сумма(РознБаза)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РознПрочие</dataPath>
+		<expression>Сумма(РознПрочие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаКонечныйОстаток</dataPath>
+		<expression>Сумма(СуммаКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНачальныйОстаток</dataPath>
+		<expression>Сумма(СуммаНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Уценка</dataPath>
+		<expression>Сумма(Уценка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КредитПолучение</dataPath>
+		<expression>Сумма(КредитПолучение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КредитВыплата</dataPath>
+		<expression>Сумма(КредитВыплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНаценкиБаза</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(ЗакупкаБаза)=0 ТОГДА 0 ИНАЧЕ ( (Сумма(НаценкаБаза)+Сумма(ЗакупкаБаза)) / Сумма(ЗакупкаБаза) - 1  )*100 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Дооценка</dataPath>
+		<expression>Сумма(Дооценка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Баланс</dataPath>
+		<expression>Сумма(Баланс)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Доходы</dataPath>
+		<expression>Сумма(Доходы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Расходы</dataPath>
+		<expression>Сумма(Расходы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Доход</dataPath>
+		<expression>Сумма(Доход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаБонусами</dataPath>
+		<expression>Сумма(ОплатаБонусами)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Скидка</dataPath>
+		<expression>Сумма(Скидка)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВозвратНаБазу</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Возврат на базу</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ВозвратыБаза</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВозвратПоставщику</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Возврат поставщику</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ВозвратыПрочие</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЗакупкаБаза</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Закупка база</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ПоставщикиБаза</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЗакупкаПрочие</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Закупка прочие</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ПоставщикиПрочие</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Инкассация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Инкассация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Инкассация</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЛичныеНужды</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Личные нужды</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ЛичныеНужды</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НаценкаБаза</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Наценка база</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.РозничнаяНаценкаБаза</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НаценкаПрочие</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Наценка прочие</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.РозничнаяНаценкаПрочее</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Недостачи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Недостачи</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Недостачи</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОплатаПрочие</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Оплата прочие</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ПоставщикиБаза</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасходыПрямые</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расходы прямые</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.РасходыПрямые</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТоварыВРознице</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Товары в рознице</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ТоварыВРознице</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Уценка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Уценка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Уценка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КредитыПолученные</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кредиты полученные</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.КредитыПолученные</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Дооценка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дооценка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Дооценка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВзаиморасчетыСПоставщиками</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Взаиморасчеты с поставщиками</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Поставщики</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Деньги</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Деньги</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Инкассация</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Товары</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Товары</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.ТМЦ</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетДоходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет доходов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Доходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетРасходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет расходов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Внутренний</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Внутренний.Расходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Баланс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Доход</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНачальныйОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закупка</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗакупкаБаза</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По накладным</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РознБаза</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В ценах продажи</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентНаценкиБаза</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>% наценки</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВозвратНаБазу</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Инкассация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплатаБонусами</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Скидка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОплатаПрочие</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РасходыПрямые</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переоценка</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Дооценка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Уценка</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Недостачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредиты</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КредитПолучение</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Получение</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КредитВыплата</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выплата</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаКонечныйОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фин. результат</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Доходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Расходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>3381bd1e-a765-460d-a55e-f6b721c250fc</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>c92b2d3e-2c0a-4daa-92e1-b8b2df2318e9</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Магазин</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>12c19a6a-a5ff-49f9-9025-327b4ed80bd9</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>1d2cd26f-e08e-4a0d-871d-e41073bf7017</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>f63e68ae-7894-41a6-bb59-222ccf326b2b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>952f5f82-adde-43c0-ac4e-d2d823199da7</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>7a0aeff4-b64f-409f-a167-f1e51b4661f1</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>3dd427f6-c134-4710-8290-4f782c506572</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>2ccd8dee-7734-470e-b3c7-ece2815d6309</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарный отчет</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Магазин</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Отдел</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>6944ee4a-b94e-4780-b92b-5b9b4e97fb41</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

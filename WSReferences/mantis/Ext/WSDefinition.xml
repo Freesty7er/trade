@@ -1,0 +1,3260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://futureware.biz/mantisconnect"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://schemas.xmlsoap.org/soap/encoding/"
+		xmlns:xsd2="http://futureware.biz/mantisconnect"
+		xmlns:xsd3="http://schemas.xmlsoap.org/wsdl/"
+		targetNamespace="http://futureware.biz/mantisconnect">
+	<types>
+		<xsd:schema xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				targetNamespace="http://futureware.biz/mantisconnect">
+			<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+			<xsd:complexType name="IntegerArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="xsd:integer[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="StringArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="xsd:string[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="ObjectRef">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ObjectRefArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:ObjectRef[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="AccountData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="real_name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="email"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="UserData">
+				<xsd:all>
+					<xsd:element name="account_data"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="access_level"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="timezone"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="AccountDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:AccountData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="AttachmentData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="filename"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="size"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="content_type"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="date_submitted"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="download_url"
+							type="xsd:anyURI"
+							minOccurs="0"/>
+					<xsd:element name="user_id"
+							type="xsd:integer"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="AttachmentDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:AttachmentData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectAttachmentData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="filename"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="title"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="size"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="content_type"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="date_submitted"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="download_url"
+							type="xsd:anyURI"
+							minOccurs="0"/>
+					<xsd:element name="user_id"
+							type="xsd:integer"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectAttachmentDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:ProjectAttachmentData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="RelationshipData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="type"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="target_id"
+							type="xsd:integer"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="RelationshipDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:RelationshipData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="IssueNoteData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="reporter"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="text"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="view_state"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="date_submitted"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="last_modified"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="time_tracking"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="note_type"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="note_attr"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="IssueNoteDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:IssueNoteData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="IssueData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="view_state"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="last_updated"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="project"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="category"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="priority"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="severity"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="status"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="reporter"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="summary"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="version"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="build"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="platform"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="os"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="os_build"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="reproducibility"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="date_submitted"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="sponsorship_total"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="handler"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="projection"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="eta"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="resolution"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="fixed_in_version"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="target_version"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="steps_to_reproduce"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="additional_information"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="attachments"
+							type="xsd2:AttachmentDataArray"
+							minOccurs="0"/>
+					<xsd:element name="relationships"
+							type="xsd2:RelationshipDataArray"
+							minOccurs="0"/>
+					<xsd:element name="notes"
+							type="xsd2:IssueNoteDataArray"
+							minOccurs="0"/>
+					<xsd:element name="custom_fields"
+							type="xsd2:CustomFieldValueForIssueDataArray"
+							minOccurs="0"/>
+					<xsd:element name="due_date"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="monitors"
+							type="xsd2:AccountDataArray"
+							minOccurs="0"/>
+					<xsd:element name="sticky"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="tags"
+							type="xsd2:ObjectRefArray"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="IssueDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:IssueData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="HistoryData">
+				<xsd:all>
+					<xsd:element name="date"
+							type="xsd:integer"/>
+					<xsd:element name="userid"
+							type="xsd:integer"/>
+					<xsd:element name="username"
+							type="xsd:string"/>
+					<xsd:element name="field"
+							type="xsd:string"/>
+					<xsd:element name="type"
+							type="xsd:integer"/>
+					<xsd:element name="old_value"
+							type="xsd:string"/>
+					<xsd:element name="new_value"
+							type="xsd:string"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="HistoryDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:HistoryData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="IssueHeaderData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"/>
+					<xsd:element name="view_state"
+							type="xsd:integer"/>
+					<xsd:element name="last_updated"
+							type="xsd:dateTime"/>
+					<xsd:element name="project"
+							type="xsd:integer"/>
+					<xsd:element name="category"
+							type="xsd:string"/>
+					<xsd:element name="priority"
+							type="xsd:integer"/>
+					<xsd:element name="severity"
+							type="xsd:integer"/>
+					<xsd:element name="status"
+							type="xsd:integer"/>
+					<xsd:element name="reporter"
+							type="xsd:integer"/>
+					<xsd:element name="summary"
+							type="xsd:string"/>
+					<xsd:element name="handler"
+							type="xsd:integer"/>
+					<xsd:element name="resolution"
+							type="xsd:integer"/>
+					<xsd:element name="attachments_count"
+							type="xsd:integer"/>
+					<xsd:element name="notes_count"
+							type="xsd:integer"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="IssueHeaderDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:IssueHeaderData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="status"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="enabled"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="view_state"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="access_min"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="file_path"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="subprojects"
+							type="xsd2:ProjectDataArray"
+							minOccurs="0"/>
+					<xsd:element name="inherit_global"
+							type="xsd:boolean"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:ProjectData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectVersionData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="project_id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="date_order"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="released"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="obsolete"
+							type="xsd:boolean"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ProjectVersionDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:ProjectVersionData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="FilterData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="owner"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="project_id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="is_public"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="filter_string"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="url"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="FilterSearchData">
+				<xsd:all>
+					<xsd:element name="project_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="search"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="category"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="severity_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="status_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="priority_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="reporter_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="handler_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="note_user_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="resolution_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="product_version"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="user_monitor_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="hide_status_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="sort"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="sort_direction"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="sticky"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="view_state_id"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="fixed_in_version"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="target_version"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="platform"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="os"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="os_build"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="start_day"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="start_month"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="start_year"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="end_day"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="end_month"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="end_year"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="tag_string"
+							type="xsd2:StringArray"
+							minOccurs="0"/>
+					<xsd:element name="tag_select"
+							type="xsd2:IntegerArray"
+							minOccurs="0"/>
+					<xsd:element name="custom_fields"
+							type="xsd2:FilterCustomFieldArray"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="FilterDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:FilterData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldDefinitionData">
+				<xsd:all>
+					<xsd:element name="field"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="type"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="possible_values"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="default_value"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="valid_regexp"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="access_level_r"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="access_level_rw"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="length_min"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="length_max"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="advanced"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="display_report"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="display_update"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="display_resolved"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="display_closed"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="require_report"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="require_update"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="require_resolved"
+							type="xsd:boolean"
+							minOccurs="0"/>
+					<xsd:element name="require_closed"
+							type="xsd:boolean"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="FilterCustomField">
+				<xsd:all>
+					<xsd:element name="field"
+							type="xsd2:ObjectRef"
+							minOccurs="1"/>
+					<xsd:element name="value"
+							type="xsd2:StringArray"
+							minOccurs="1"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="FilterCustomFieldArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:FilterCustomField[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldDefinitionDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:CustomFieldDefinitionData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldLinkForProjectData">
+				<xsd:all>
+					<xsd:element name="field"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="sequence"
+							type="xsd:byte"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldLinkForProjectDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:CustomFieldLinkForProjectData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldValueForIssueData">
+				<xsd:all>
+					<xsd:element name="field"
+							type="xsd2:ObjectRef"
+							minOccurs="0"/>
+					<xsd:element name="value"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="CustomFieldValueForIssueDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:CustomFieldValueForIssueData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="TagData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="user_id"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="name"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="date_created"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+					<xsd:element name="date_updated"
+							type="xsd:dateTime"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="TagDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:TagData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="TagDataSearchResult">
+				<xsd:all>
+					<xsd:element name="results"
+							type="xsd2:TagDataArray"
+							minOccurs="0"/>
+					<xsd:element name="total_results"
+							type="xsd:integer"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ProfileData">
+				<xsd:all>
+					<xsd:element name="id"
+							type="xsd:integer"
+							minOccurs="0"/>
+					<xsd:element name="user_id"
+							type="xsd2:AccountData"
+							minOccurs="0"/>
+					<xsd:element name="platform"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="os"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="os_build"
+							type="xsd:string"
+							minOccurs="0"/>
+					<xsd:element name="description"
+							type="xsd:string"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="ProfileDataArray">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd1:Array">
+						<xsd:attribute ref="xsd1:arrayType"
+								wsdl:arrayType="tns:ProfileData[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="ProfileDataSearchResult">
+				<xsd:all>
+					<xsd:element name="results"
+							type="xsd2:ProfileDataArray"
+							minOccurs="0"/>
+					<xsd:element name="total_results"
+							type="xsd:integer"
+							minOccurs="0"/>
+				</xsd:all>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="mc_versionRequest"/>
+	<message name="mc_versionResponse">
+		<part name="return"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_loginRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_loginResponse">
+		<part name="return"
+				type="tns:UserData"/>
+	</message>
+	<message name="mc_enum_statusRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_statusResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_prioritiesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_prioritiesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_severitiesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_severitiesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_reproducibilitiesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_reproducibilitiesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_projectionsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_projectionsResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_etasRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_etasResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_resolutionsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_resolutionsResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_access_levelsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_access_levelsResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_project_statusRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_project_statusResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_project_view_statesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_project_view_statesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_view_statesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_view_statesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_custom_field_typesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_custom_field_typesResponse">
+		<part name="return"
+				type="tns:ObjectRefArray"/>
+	</message>
+	<message name="mc_enum_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="enumeration"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_enum_getResponse">
+		<part name="return"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_issue_existsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_existsResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_getResponse">
+		<part name="return"
+				type="tns:IssueData"/>
+	</message>
+	<message name="mc_issues_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_ids"
+				type="tns:IntegerArray"/>
+	</message>
+	<message name="mc_issues_getResponse">
+		<part name="return"
+				type="tns:IssueDataArray"/>
+	</message>
+	<message name="mc_issues_get_headerRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_ids"
+				type="tns:IntegerArray"/>
+	</message>
+	<message name="mc_issues_get_headerResponse">
+		<part name="return"
+				type="tns:IssueHeaderDataArray"/>
+	</message>
+	<message name="mc_issue_get_historyRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_get_historyResponse">
+		<part name="return"
+				type="tns:HistoryDataArray"/>
+	</message>
+	<message name="mc_issue_get_biggest_idRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_get_biggest_idResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_get_id_from_summaryRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="summary"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_issue_get_id_from_summaryResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue"
+				type="tns:IssueData"/>
+	</message>
+	<message name="mc_issue_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_updateRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issueId"
+				type="xsd:integer"/>
+		<part name="issue"
+				type="tns:IssueData"/>
+	</message>
+	<message name="mc_issue_updateResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_set_tagsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="tags"
+				type="tns:TagDataArray"/>
+	</message>
+	<message name="mc_issue_set_tagsResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_note_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="note"
+				type="tns:IssueNoteData"/>
+	</message>
+	<message name="mc_issue_note_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_note_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_note_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_note_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_note_updateRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="note"
+				type="tns:IssueNoteData"/>
+	</message>
+	<message name="mc_issue_note_updateResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_relationship_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="relationship"
+				type="tns:RelationshipData"/>
+	</message>
+	<message name="mc_issue_relationship_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_relationship_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="relationship_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_relationship_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_attachment_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="name"
+				type="xsd:string"/>
+		<part name="file_type"
+				type="xsd:string"/>
+		<part name="content"
+				type="xsd:base64Binary"/>
+	</message>
+	<message name="mc_issue_attachment_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_attachment_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_attachment_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_attachment_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_attachment_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_attachment_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_issue_attachment_getResponse">
+		<part name="return"
+				type="xsd:base64Binary"/>
+	</message>
+	<message name="mc_project_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project"
+				type="tns:ProjectData"/>
+	</message>
+	<message name="mc_project_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_project_updateRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="project"
+				type="tns:ProjectData"/>
+	</message>
+	<message name="mc_project_updateResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_project_get_id_from_nameRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_name"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_project_get_id_from_nameResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_issues_for_userRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="filter_type"
+				type="xsd:string"/>
+		<part name="target_user"
+				type="tns:AccountData"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_issues_for_userResponse">
+		<part name="return"
+				type="tns:IssueDataArray"/>
+	</message>
+	<message name="mc_project_get_issuesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_issuesResponse">
+		<part name="return"
+				type="tns:IssueDataArray"/>
+	</message>
+	<message name="mc_project_get_issue_headersRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_issue_headersResponse">
+		<part name="return"
+				type="tns:IssueHeaderDataArray"/>
+	</message>
+	<message name="mc_project_get_usersRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="access"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_usersResponse">
+		<part name="return"
+				type="tns:AccountDataArray"/>
+	</message>
+	<message name="mc_projects_get_user_accessibleRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_projects_get_user_accessibleResponse">
+		<part name="return"
+				type="tns:ProjectDataArray"/>
+	</message>
+	<message name="mc_project_get_categoriesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_categoriesResponse">
+		<part name="return"
+				type="tns:StringArray"/>
+	</message>
+	<message name="mc_project_add_categoryRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="p_category_name"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_project_add_categoryResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_delete_categoryRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="p_category_name"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_project_delete_categoryResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_rename_category_by_nameRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="p_category_name"
+				type="xsd:string"/>
+		<part name="p_category_name_new"
+				type="xsd:string"/>
+		<part name="p_assigned_to"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_rename_category_by_nameResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_versionsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_versionsResponse">
+		<part name="return"
+				type="tns:ProjectVersionDataArray"/>
+	</message>
+	<message name="mc_project_version_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="version"
+				type="tns:ProjectVersionData"/>
+	</message>
+	<message name="mc_project_version_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_version_updateRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="version_id"
+				type="xsd:integer"/>
+		<part name="version"
+				type="tns:ProjectVersionData"/>
+	</message>
+	<message name="mc_project_version_updateResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_project_version_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="version_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_version_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_project_get_released_versionsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_released_versionsResponse">
+		<part name="return"
+				type="tns:ProjectVersionDataArray"/>
+	</message>
+	<message name="mc_project_get_unreleased_versionsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_unreleased_versionsResponse">
+		<part name="return"
+				type="tns:ProjectVersionDataArray"/>
+	</message>
+	<message name="mc_project_get_attachmentsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_attachmentsResponse">
+		<part name="return"
+				type="tns:ProjectAttachmentDataArray"/>
+	</message>
+	<message name="mc_project_get_custom_fieldsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_custom_fieldsResponse">
+		<part name="return"
+				type="tns:CustomFieldDefinitionDataArray"/>
+	</message>
+	<message name="mc_project_attachment_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_attachment_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_attachment_getResponse">
+		<part name="return"
+				type="xsd:base64Binary"/>
+	</message>
+	<message name="mc_project_attachment_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="name"
+				type="xsd:string"/>
+		<part name="title"
+				type="xsd:string"/>
+		<part name="description"
+				type="xsd:string"/>
+		<part name="file_type"
+				type="xsd:string"/>
+		<part name="content"
+				type="xsd:base64Binary"/>
+	</message>
+	<message name="mc_project_attachment_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_attachment_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_attachment_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_attachment_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_project_get_all_subprojectsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_project_get_all_subprojectsResponse">
+		<part name="return"
+				type="tns:StringArray"/>
+	</message>
+	<message name="mc_filter_getRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_getResponse">
+		<part name="return"
+				type="tns:FilterDataArray"/>
+	</message>
+	<message name="mc_filter_get_issuesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="filter_id"
+				type="xsd:integer"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_get_issuesResponse">
+		<part name="return"
+				type="tns:IssueDataArray"/>
+	</message>
+	<message name="mc_filter_get_issue_headersRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="filter_id"
+				type="xsd:integer"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_get_issue_headersResponse">
+		<part name="return"
+				type="tns:IssueHeaderDataArray"/>
+	</message>
+	<message name="mc_filter_search_issue_headersRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="filter"
+				type="tns:FilterSearchData"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_search_issue_headersResponse">
+		<part name="return"
+				type="tns:IssueHeaderDataArray"/>
+	</message>
+	<message name="mc_filter_search_issuesRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="filter"
+				type="tns:FilterSearchData"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_search_issuesResponse">
+		<part name="return"
+				type="tns:IssueDataArray"/>
+	</message>
+	<message name="mc_filter_search_issue_idsRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="filter"
+				type="tns:FilterSearchData"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_filter_search_issue_idsResponse">
+		<part name="return"
+				type="tns:IntegerArray"/>
+	</message>
+	<message name="mc_config_get_stringRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="config_var"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_config_get_stringResponse">
+		<part name="return"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_issue_checkinRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="issue_id"
+				type="xsd:integer"/>
+		<part name="comment"
+				type="xsd:string"/>
+		<part name="fixed"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_issue_checkinResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<message name="mc_user_pref_get_prefRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="project_id"
+				type="xsd:integer"/>
+		<part name="pref_name"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_user_pref_get_prefResponse">
+		<part name="return"
+				type="xsd:string"/>
+	</message>
+	<message name="mc_user_profiles_get_allRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_user_profiles_get_allResponse">
+		<part name="return"
+				type="tns:ProfileDataSearchResult"/>
+	</message>
+	<message name="mc_tag_get_allRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="page_number"
+				type="xsd:integer"/>
+		<part name="per_page"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_tag_get_allResponse">
+		<part name="return"
+				type="tns:TagDataSearchResult"/>
+	</message>
+	<message name="mc_tag_addRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="tag"
+				type="tns:TagData"/>
+	</message>
+	<message name="mc_tag_addResponse">
+		<part name="return"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_tag_deleteRequest">
+		<part name="username"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="tag_id"
+				type="xsd:integer"/>
+	</message>
+	<message name="mc_tag_deleteResponse">
+		<part name="return"
+				type="xsd:boolean"/>
+	</message>
+	<portType name="MantisConnectPortType">
+		<operation name="mc_version">
+			<input name="mc_versionRequest"
+					message="tns:mc_versionRequest"/>
+			<output name="mc_versionResponse"
+					message="tns:mc_versionResponse"/>
+		</operation>
+		<operation name="mc_login">
+			<documentation>Log the user in and get their information.</documentation>
+			<input name="mc_loginRequest"
+					message="tns:mc_loginRequest"/>
+			<output name="mc_loginResponse"
+					message="tns:mc_loginResponse"/>
+		</operation>
+		<operation name="mc_enum_status">
+			<documentation>Get the enumeration for statuses.</documentation>
+			<input name="mc_enum_statusRequest"
+					message="tns:mc_enum_statusRequest"/>
+			<output name="mc_enum_statusResponse"
+					message="tns:mc_enum_statusResponse"/>
+		</operation>
+		<operation name="mc_enum_priorities">
+			<documentation>Get the enumeration for priorities.</documentation>
+			<input name="mc_enum_prioritiesRequest"
+					message="tns:mc_enum_prioritiesRequest"/>
+			<output name="mc_enum_prioritiesResponse"
+					message="tns:mc_enum_prioritiesResponse"/>
+		</operation>
+		<operation name="mc_enum_severities">
+			<documentation>Get the enumeration for severities.</documentation>
+			<input name="mc_enum_severitiesRequest"
+					message="tns:mc_enum_severitiesRequest"/>
+			<output name="mc_enum_severitiesResponse"
+					message="tns:mc_enum_severitiesResponse"/>
+		</operation>
+		<operation name="mc_enum_reproducibilities">
+			<documentation>Get the enumeration for reproducibilities.</documentation>
+			<input name="mc_enum_reproducibilitiesRequest"
+					message="tns:mc_enum_reproducibilitiesRequest"/>
+			<output name="mc_enum_reproducibilitiesResponse"
+					message="tns:mc_enum_reproducibilitiesResponse"/>
+		</operation>
+		<operation name="mc_enum_projections">
+			<documentation>Get the enumeration for projections.</documentation>
+			<input name="mc_enum_projectionsRequest"
+					message="tns:mc_enum_projectionsRequest"/>
+			<output name="mc_enum_projectionsResponse"
+					message="tns:mc_enum_projectionsResponse"/>
+		</operation>
+		<operation name="mc_enum_etas">
+			<documentation>Get the enumeration for ETAs.</documentation>
+			<input name="mc_enum_etasRequest"
+					message="tns:mc_enum_etasRequest"/>
+			<output name="mc_enum_etasResponse"
+					message="tns:mc_enum_etasResponse"/>
+		</operation>
+		<operation name="mc_enum_resolutions">
+			<documentation>Get the enumeration for resolutions.</documentation>
+			<input name="mc_enum_resolutionsRequest"
+					message="tns:mc_enum_resolutionsRequest"/>
+			<output name="mc_enum_resolutionsResponse"
+					message="tns:mc_enum_resolutionsResponse"/>
+		</operation>
+		<operation name="mc_enum_access_levels">
+			<documentation>Get the enumeration for access levels.</documentation>
+			<input name="mc_enum_access_levelsRequest"
+					message="tns:mc_enum_access_levelsRequest"/>
+			<output name="mc_enum_access_levelsResponse"
+					message="tns:mc_enum_access_levelsResponse"/>
+		</operation>
+		<operation name="mc_enum_project_status">
+			<documentation>Get the enumeration for project statuses.</documentation>
+			<input name="mc_enum_project_statusRequest"
+					message="tns:mc_enum_project_statusRequest"/>
+			<output name="mc_enum_project_statusResponse"
+					message="tns:mc_enum_project_statusResponse"/>
+		</operation>
+		<operation name="mc_enum_project_view_states">
+			<documentation>Get the enumeration for project view states.</documentation>
+			<input name="mc_enum_project_view_statesRequest"
+					message="tns:mc_enum_project_view_statesRequest"/>
+			<output name="mc_enum_project_view_statesResponse"
+					message="tns:mc_enum_project_view_statesResponse"/>
+		</operation>
+		<operation name="mc_enum_view_states">
+			<documentation>Get the enumeration for view states.</documentation>
+			<input name="mc_enum_view_statesRequest"
+					message="tns:mc_enum_view_statesRequest"/>
+			<output name="mc_enum_view_statesResponse"
+					message="tns:mc_enum_view_statesResponse"/>
+		</operation>
+		<operation name="mc_enum_custom_field_types">
+			<documentation>Get the enumeration for custom field types.</documentation>
+			<input name="mc_enum_custom_field_typesRequest"
+					message="tns:mc_enum_custom_field_typesRequest"/>
+			<output name="mc_enum_custom_field_typesResponse"
+					message="tns:mc_enum_custom_field_typesResponse"/>
+		</operation>
+		<operation name="mc_enum_get">
+			<documentation>Get the enumeration for the specified enumeration type.</documentation>
+			<input name="mc_enum_getRequest"
+					message="tns:mc_enum_getRequest"/>
+			<output name="mc_enum_getResponse"
+					message="tns:mc_enum_getResponse"/>
+		</operation>
+		<operation name="mc_issue_exists">
+			<documentation>Check there exists an issue with the specified id.</documentation>
+			<input name="mc_issue_existsRequest"
+					message="tns:mc_issue_existsRequest"/>
+			<output name="mc_issue_existsResponse"
+					message="tns:mc_issue_existsResponse"/>
+		</operation>
+		<operation name="mc_issue_get">
+			<documentation>Get the issue with the specified id.</documentation>
+			<input name="mc_issue_getRequest"
+					message="tns:mc_issue_getRequest"/>
+			<output name="mc_issue_getResponse"
+					message="tns:mc_issue_getResponse"/>
+		</operation>
+		<operation name="mc_issues_get">
+			<documentation>Get all issues matching the ids.</documentation>
+			<input name="mc_issues_getRequest"
+					message="tns:mc_issues_getRequest"/>
+			<output name="mc_issues_getResponse"
+					message="tns:mc_issues_getResponse"/>
+		</operation>
+		<operation name="mc_issues_get_header">
+			<documentation>Get all issues header matching the ids.</documentation>
+			<input name="mc_issues_get_headerRequest"
+					message="tns:mc_issues_get_headerRequest"/>
+			<output name="mc_issues_get_headerResponse"
+					message="tns:mc_issues_get_headerResponse"/>
+		</operation>
+		<operation name="mc_issue_get_history">
+			<documentation>Get the history of the issue with the specified id.</documentation>
+			<input name="mc_issue_get_historyRequest"
+					message="tns:mc_issue_get_historyRequest"/>
+			<output name="mc_issue_get_historyResponse"
+					message="tns:mc_issue_get_historyResponse"/>
+		</operation>
+		<operation name="mc_issue_get_biggest_id">
+			<documentation>Get the latest submitted issue in the specified project.</documentation>
+			<input name="mc_issue_get_biggest_idRequest"
+					message="tns:mc_issue_get_biggest_idRequest"/>
+			<output name="mc_issue_get_biggest_idResponse"
+					message="tns:mc_issue_get_biggest_idResponse"/>
+		</operation>
+		<operation name="mc_issue_get_id_from_summary">
+			<documentation>Get the id of the issue with the specified summary.</documentation>
+			<input name="mc_issue_get_id_from_summaryRequest"
+					message="tns:mc_issue_get_id_from_summaryRequest"/>
+			<output name="mc_issue_get_id_from_summaryResponse"
+					message="tns:mc_issue_get_id_from_summaryResponse"/>
+		</operation>
+		<operation name="mc_issue_add">
+			<documentation>Submit the specified issue details.</documentation>
+			<input name="mc_issue_addRequest"
+					message="tns:mc_issue_addRequest"/>
+			<output name="mc_issue_addResponse"
+					message="tns:mc_issue_addResponse"/>
+		</operation>
+		<operation name="mc_issue_update">
+			<documentation>Update Issue method.</documentation>
+			<input name="mc_issue_updateRequest"
+					message="tns:mc_issue_updateRequest"/>
+			<output name="mc_issue_updateResponse"
+					message="tns:mc_issue_updateResponse"/>
+		</operation>
+		<operation name="mc_issue_set_tags">
+			<documentation>Sets the tags for a specified issue.</documentation>
+			<input name="mc_issue_set_tagsRequest"
+					message="tns:mc_issue_set_tagsRequest"/>
+			<output name="mc_issue_set_tagsResponse"
+					message="tns:mc_issue_set_tagsResponse"/>
+		</operation>
+		<operation name="mc_issue_delete">
+			<documentation>Delete the issue with the specified id.</documentation>
+			<input name="mc_issue_deleteRequest"
+					message="tns:mc_issue_deleteRequest"/>
+			<output name="mc_issue_deleteResponse"
+					message="tns:mc_issue_deleteResponse"/>
+		</operation>
+		<operation name="mc_issue_note_add">
+			<documentation>Submit a new note.</documentation>
+			<input name="mc_issue_note_addRequest"
+					message="tns:mc_issue_note_addRequest"/>
+			<output name="mc_issue_note_addResponse"
+					message="tns:mc_issue_note_addResponse"/>
+		</operation>
+		<operation name="mc_issue_note_delete">
+			<documentation>Delete the note with the specified id.</documentation>
+			<input name="mc_issue_note_deleteRequest"
+					message="tns:mc_issue_note_deleteRequest"/>
+			<output name="mc_issue_note_deleteResponse"
+					message="tns:mc_issue_note_deleteResponse"/>
+		</operation>
+		<operation name="mc_issue_note_update">
+			<documentation>Update a specific note of a specific issue.</documentation>
+			<input name="mc_issue_note_updateRequest"
+					message="tns:mc_issue_note_updateRequest"/>
+			<output name="mc_issue_note_updateResponse"
+					message="tns:mc_issue_note_updateResponse"/>
+		</operation>
+		<operation name="mc_issue_relationship_add">
+			<documentation>Submit a new relationship.</documentation>
+			<input name="mc_issue_relationship_addRequest"
+					message="tns:mc_issue_relationship_addRequest"/>
+			<output name="mc_issue_relationship_addResponse"
+					message="tns:mc_issue_relationship_addResponse"/>
+		</operation>
+		<operation name="mc_issue_relationship_delete">
+			<documentation>Delete the relationship for the specified issue.</documentation>
+			<input name="mc_issue_relationship_deleteRequest"
+					message="tns:mc_issue_relationship_deleteRequest"/>
+			<output name="mc_issue_relationship_deleteResponse"
+					message="tns:mc_issue_relationship_deleteResponse"/>
+		</operation>
+		<operation name="mc_issue_attachment_add">
+			<documentation>Submit a new issue attachment.</documentation>
+			<input name="mc_issue_attachment_addRequest"
+					message="tns:mc_issue_attachment_addRequest"/>
+			<output name="mc_issue_attachment_addResponse"
+					message="tns:mc_issue_attachment_addResponse"/>
+		</operation>
+		<operation name="mc_issue_attachment_delete">
+			<documentation>Delete the issue attachment with the specified id.</documentation>
+			<input name="mc_issue_attachment_deleteRequest"
+					message="tns:mc_issue_attachment_deleteRequest"/>
+			<output name="mc_issue_attachment_deleteResponse"
+					message="tns:mc_issue_attachment_deleteResponse"/>
+		</operation>
+		<operation name="mc_issue_attachment_get">
+			<documentation>Get the data for the specified issue attachment.</documentation>
+			<input name="mc_issue_attachment_getRequest"
+					message="tns:mc_issue_attachment_getRequest"/>
+			<output name="mc_issue_attachment_getResponse"
+					message="tns:mc_issue_attachment_getResponse"/>
+		</operation>
+		<operation name="mc_project_add">
+			<documentation>Add a new project to the tracker (must have admin privileges)</documentation>
+			<input name="mc_project_addRequest"
+					message="tns:mc_project_addRequest"/>
+			<output name="mc_project_addResponse"
+					message="tns:mc_project_addResponse"/>
+		</operation>
+		<operation name="mc_project_delete">
+			<documentation>Delete a project from the tracker (must have admin privileges)</documentation>
+			<input name="mc_project_deleteRequest"
+					message="tns:mc_project_deleteRequest"/>
+			<output name="mc_project_deleteResponse"
+					message="tns:mc_project_deleteResponse"/>
+		</operation>
+		<operation name="mc_project_update">
+			<documentation>Update a specific project to the tracker (must have admin privileges)</documentation>
+			<input name="mc_project_updateRequest"
+					message="tns:mc_project_updateRequest"/>
+			<output name="mc_project_updateResponse"
+					message="tns:mc_project_updateResponse"/>
+		</operation>
+		<operation name="mc_project_get_id_from_name">
+			<documentation>Get the id of the project with the specified name.</documentation>
+			<input name="mc_project_get_id_from_nameRequest"
+					message="tns:mc_project_get_id_from_nameRequest"/>
+			<output name="mc_project_get_id_from_nameResponse"
+					message="tns:mc_project_get_id_from_nameResponse"/>
+		</operation>
+		<operation name="mc_project_get_issues_for_user">
+			<documentation>Get the issues filtered by the specified user within the specified project. Supported types include "assigned", "monitored", "reported".  Pass "-1" for the per_page parameter to get all issues.  Use project id "0" for all projects.</documentation>
+			<input name="mc_project_get_issues_for_userRequest"
+					message="tns:mc_project_get_issues_for_userRequest"/>
+			<output name="mc_project_get_issues_for_userResponse"
+					message="tns:mc_project_get_issues_for_userResponse"/>
+		</operation>
+		<operation name="mc_project_get_issues">
+			<documentation>Get the issues that match the specified project id and paging details. Pass "-1" for the per_page parameter to get all issues.</documentation>
+			<input name="mc_project_get_issuesRequest"
+					message="tns:mc_project_get_issuesRequest"/>
+			<output name="mc_project_get_issuesResponse"
+					message="tns:mc_project_get_issuesResponse"/>
+		</operation>
+		<operation name="mc_project_get_issue_headers">
+			<documentation>Get the issue headers that match the specified project id and paging details. Pass "-1" for the per_page parameter to get all issues.</documentation>
+			<input name="mc_project_get_issue_headersRequest"
+					message="tns:mc_project_get_issue_headersRequest"/>
+			<output name="mc_project_get_issue_headersResponse"
+					message="tns:mc_project_get_issue_headersResponse"/>
+		</operation>
+		<operation name="mc_project_get_users">
+			<documentation>Get appropriate users assigned to a project by access level.</documentation>
+			<input name="mc_project_get_usersRequest"
+					message="tns:mc_project_get_usersRequest"/>
+			<output name="mc_project_get_usersResponse"
+					message="tns:mc_project_get_usersResponse"/>
+		</operation>
+		<operation name="mc_projects_get_user_accessible">
+			<documentation>Get the list of projects that are accessible to the logged in user.</documentation>
+			<input name="mc_projects_get_user_accessibleRequest"
+					message="tns:mc_projects_get_user_accessibleRequest"/>
+			<output name="mc_projects_get_user_accessibleResponse"
+					message="tns:mc_projects_get_user_accessibleResponse"/>
+		</operation>
+		<operation name="mc_project_get_categories">
+			<documentation>Get the categories belonging to the specified project.</documentation>
+			<input name="mc_project_get_categoriesRequest"
+					message="tns:mc_project_get_categoriesRequest"/>
+			<output name="mc_project_get_categoriesResponse"
+					message="tns:mc_project_get_categoriesResponse"/>
+		</operation>
+		<operation name="mc_project_add_category">
+			<documentation>Add a category of specific project.</documentation>
+			<input name="mc_project_add_categoryRequest"
+					message="tns:mc_project_add_categoryRequest"/>
+			<output name="mc_project_add_categoryResponse"
+					message="tns:mc_project_add_categoryResponse"/>
+		</operation>
+		<operation name="mc_project_delete_category">
+			<documentation>Delete a category of specific project.</documentation>
+			<input name="mc_project_delete_categoryRequest"
+					message="tns:mc_project_delete_categoryRequest"/>
+			<output name="mc_project_delete_categoryResponse"
+					message="tns:mc_project_delete_categoryResponse"/>
+		</operation>
+		<operation name="mc_project_rename_category_by_name">
+			<documentation>Rename a category of specific project.</documentation>
+			<input name="mc_project_rename_category_by_nameRequest"
+					message="tns:mc_project_rename_category_by_nameRequest"/>
+			<output name="mc_project_rename_category_by_nameResponse"
+					message="tns:mc_project_rename_category_by_nameResponse"/>
+		</operation>
+		<operation name="mc_project_get_versions">
+			<documentation>Get the versions belonging to the specified project.</documentation>
+			<input name="mc_project_get_versionsRequest"
+					message="tns:mc_project_get_versionsRequest"/>
+			<output name="mc_project_get_versionsResponse"
+					message="tns:mc_project_get_versionsResponse"/>
+		</operation>
+		<operation name="mc_project_version_add">
+			<documentation>Submit the specified version details.</documentation>
+			<input name="mc_project_version_addRequest"
+					message="tns:mc_project_version_addRequest"/>
+			<output name="mc_project_version_addResponse"
+					message="tns:mc_project_version_addResponse"/>
+		</operation>
+		<operation name="mc_project_version_update">
+			<documentation>Update version method.</documentation>
+			<input name="mc_project_version_updateRequest"
+					message="tns:mc_project_version_updateRequest"/>
+			<output name="mc_project_version_updateResponse"
+					message="tns:mc_project_version_updateResponse"/>
+		</operation>
+		<operation name="mc_project_version_delete">
+			<documentation>Delete the version with the specified id.</documentation>
+			<input name="mc_project_version_deleteRequest"
+					message="tns:mc_project_version_deleteRequest"/>
+			<output name="mc_project_version_deleteResponse"
+					message="tns:mc_project_version_deleteResponse"/>
+		</operation>
+		<operation name="mc_project_get_released_versions">
+			<documentation>Get the released versions that belong to the specified project.</documentation>
+			<input name="mc_project_get_released_versionsRequest"
+					message="tns:mc_project_get_released_versionsRequest"/>
+			<output name="mc_project_get_released_versionsResponse"
+					message="tns:mc_project_get_released_versionsResponse"/>
+		</operation>
+		<operation name="mc_project_get_unreleased_versions">
+			<documentation>Get the unreleased version that belong to the specified project.</documentation>
+			<input name="mc_project_get_unreleased_versionsRequest"
+					message="tns:mc_project_get_unreleased_versionsRequest"/>
+			<output name="mc_project_get_unreleased_versionsResponse"
+					message="tns:mc_project_get_unreleased_versionsResponse"/>
+		</operation>
+		<operation name="mc_project_get_attachments">
+			<documentation>Get the attachments that belong to the specified project.</documentation>
+			<input name="mc_project_get_attachmentsRequest"
+					message="tns:mc_project_get_attachmentsRequest"/>
+			<output name="mc_project_get_attachmentsResponse"
+					message="tns:mc_project_get_attachmentsResponse"/>
+		</operation>
+		<operation name="mc_project_get_custom_fields">
+			<documentation>Get the custom fields that belong to the specified project.</documentation>
+			<input name="mc_project_get_custom_fieldsRequest"
+					message="tns:mc_project_get_custom_fieldsRequest"/>
+			<output name="mc_project_get_custom_fieldsResponse"
+					message="tns:mc_project_get_custom_fieldsResponse"/>
+		</operation>
+		<operation name="mc_project_attachment_get">
+			<documentation>Get the data for the specified project attachment.</documentation>
+			<input name="mc_project_attachment_getRequest"
+					message="tns:mc_project_attachment_getRequest"/>
+			<output name="mc_project_attachment_getResponse"
+					message="tns:mc_project_attachment_getResponse"/>
+		</operation>
+		<operation name="mc_project_attachment_add">
+			<documentation>Submit a new project attachment.</documentation>
+			<input name="mc_project_attachment_addRequest"
+					message="tns:mc_project_attachment_addRequest"/>
+			<output name="mc_project_attachment_addResponse"
+					message="tns:mc_project_attachment_addResponse"/>
+		</operation>
+		<operation name="mc_project_attachment_delete">
+			<documentation>Delete the project attachment with the specified id.</documentation>
+			<input name="mc_project_attachment_deleteRequest"
+					message="tns:mc_project_attachment_deleteRequest"/>
+			<output name="mc_project_attachment_deleteResponse"
+					message="tns:mc_project_attachment_deleteResponse"/>
+		</operation>
+		<operation name="mc_project_get_all_subprojects">
+			<documentation>Get the subprojects ID of a specific project.</documentation>
+			<input name="mc_project_get_all_subprojectsRequest"
+					message="tns:mc_project_get_all_subprojectsRequest"/>
+			<output name="mc_project_get_all_subprojectsResponse"
+					message="tns:mc_project_get_all_subprojectsResponse"/>
+		</operation>
+		<operation name="mc_filter_get">
+			<documentation>Get the filters defined for the specified project.</documentation>
+			<input name="mc_filter_getRequest"
+					message="tns:mc_filter_getRequest"/>
+			<output name="mc_filter_getResponse"
+					message="tns:mc_filter_getResponse"/>
+		</operation>
+		<operation name="mc_filter_get_issues">
+			<documentation>Get the issues that match the specified filter and paging details. Pass "-1" for the per_page parameter to get all issues.</documentation>
+			<input name="mc_filter_get_issuesRequest"
+					message="tns:mc_filter_get_issuesRequest"/>
+			<output name="mc_filter_get_issuesResponse"
+					message="tns:mc_filter_get_issuesResponse"/>
+		</operation>
+		<operation name="mc_filter_get_issue_headers">
+			<documentation>Get the issue headers that match the specified filter and paging details.  Pass "-1" for the per_page parameter to get all issues.</documentation>
+			<input name="mc_filter_get_issue_headersRequest"
+					message="tns:mc_filter_get_issue_headersRequest"/>
+			<output name="mc_filter_get_issue_headersResponse"
+					message="tns:mc_filter_get_issue_headersResponse"/>
+		</operation>
+		<operation name="mc_filter_search_issue_headers">
+			<documentation>Get the issue headers that match the custom filter and paging details.</documentation>
+			<input name="mc_filter_search_issue_headersRequest"
+					message="tns:mc_filter_search_issue_headersRequest"/>
+			<output name="mc_filter_search_issue_headersResponse"
+					message="tns:mc_filter_search_issue_headersResponse"/>
+		</operation>
+		<operation name="mc_filter_search_issues">
+			<documentation>Get the issues that match the custom filter and paging details.</documentation>
+			<input name="mc_filter_search_issuesRequest"
+					message="tns:mc_filter_search_issuesRequest"/>
+			<output name="mc_filter_search_issuesResponse"
+					message="tns:mc_filter_search_issuesResponse"/>
+		</operation>
+		<operation name="mc_filter_search_issue_ids">
+			<documentation>Get the issue ids that match the custom filter and paging details.</documentation>
+			<input name="mc_filter_search_issue_idsRequest"
+					message="tns:mc_filter_search_issue_idsRequest"/>
+			<output name="mc_filter_search_issue_idsResponse"
+					message="tns:mc_filter_search_issue_idsResponse"/>
+		</operation>
+		<operation name="mc_config_get_string">
+			<documentation>Get the value for the specified configuration variable.</documentation>
+			<input name="mc_config_get_stringRequest"
+					message="tns:mc_config_get_stringRequest"/>
+			<output name="mc_config_get_stringResponse"
+					message="tns:mc_config_get_stringResponse"/>
+		</operation>
+		<operation name="mc_issue_checkin">
+			<documentation>Notifies MantisBT of a check-in for the issue with the specified id.</documentation>
+			<input name="mc_issue_checkinRequest"
+					message="tns:mc_issue_checkinRequest"/>
+			<output name="mc_issue_checkinResponse"
+					message="tns:mc_issue_checkinResponse"/>
+		</operation>
+		<operation name="mc_user_pref_get_pref">
+			<documentation>Get the value for the specified user preference.</documentation>
+			<input name="mc_user_pref_get_prefRequest"
+					message="tns:mc_user_pref_get_prefRequest"/>
+			<output name="mc_user_pref_get_prefResponse"
+					message="tns:mc_user_pref_get_prefResponse"/>
+		</operation>
+		<operation name="mc_user_profiles_get_all">
+			<documentation>Get profiles available to the current user.</documentation>
+			<input name="mc_user_profiles_get_allRequest"
+					message="tns:mc_user_profiles_get_allRequest"/>
+			<output name="mc_user_profiles_get_allResponse"
+					message="tns:mc_user_profiles_get_allResponse"/>
+		</operation>
+		<operation name="mc_tag_get_all">
+			<documentation>Gets all the tags.</documentation>
+			<input name="mc_tag_get_allRequest"
+					message="tns:mc_tag_get_allRequest"/>
+			<output name="mc_tag_get_allResponse"
+					message="tns:mc_tag_get_allResponse"/>
+		</operation>
+		<operation name="mc_tag_add">
+			<documentation>Creates a tag.</documentation>
+			<input name="mc_tag_addRequest"
+					message="tns:mc_tag_addRequest"/>
+			<output name="mc_tag_addResponse"
+					message="tns:mc_tag_addResponse"/>
+		</operation>
+		<operation name="mc_tag_delete">
+			<documentation>Deletes a tag.</documentation>
+			<input name="mc_tag_deleteRequest"
+					message="tns:mc_tag_deleteRequest"/>
+			<output name="mc_tag_deleteResponse"
+					message="tns:mc_tag_deleteResponse"/>
+		</operation>
+	</portType>
+	<binding name="MantisConnectBinding"
+			type="tns:MantisConnectPortType">
+		<soapbind:binding style="rpc"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="mc_version">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_version"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_login">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_login"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_status">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_status"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_priorities">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_priorities"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_severities">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_severities"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_reproducibilities">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_reproducibilities"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_projections">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_projections"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_etas">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_etas"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_resolutions">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_resolutions"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_access_levels">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_access_levels"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_project_status">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_project_status"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_project_view_states">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_project_view_states"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_view_states">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_view_states"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_custom_field_types">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_custom_field_types"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_enum_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_enum_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_exists">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_exists"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issues_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issues_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issues_get_header">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issues_get_header"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_get_history">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_get_history"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_get_biggest_id">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_get_biggest_id"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_get_id_from_summary">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_get_id_from_summary"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_update">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_update"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_set_tags">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_set_tags"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_note_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_note_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_note_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_note_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_note_update">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_note_update"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_relationship_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_relationship_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_relationship_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_relationship_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_attachment_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_attachment_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_attachment_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_attachment_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_attachment_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_attachment_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_update">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_update"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_id_from_name">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_id_from_name"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_issues_for_user">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_issues_for_user"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_issues">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_issues"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_issue_headers">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_issue_headers"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_users">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_users"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_projects_get_user_accessible">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_projects_get_user_accessible"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_categories">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_categories"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_add_category">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_add_category"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_delete_category">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_delete_category"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_rename_category_by_name">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_rename_category_by_name"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_versions">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_versions"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_version_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_version_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_version_update">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_version_update"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_version_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_version_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_released_versions">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_released_versions"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_unreleased_versions">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_unreleased_versions"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_attachments">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_attachments"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_custom_fields">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_custom_fields"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_attachment_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_attachment_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_attachment_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_attachment_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_attachment_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_attachment_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_project_get_all_subprojects">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_project_get_all_subprojects"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_get">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_get"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_get_issues">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_get_issues"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_get_issue_headers">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_get_issue_headers"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_search_issue_headers">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_search_issue_headers"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_search_issues">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_search_issues"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_filter_search_issue_ids">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_filter_search_issue_ids"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_config_get_string">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_config_get_string"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_issue_checkin">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_issue_checkin"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_user_pref_get_pref">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_user_pref_get_pref"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_user_profiles_get_all">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_user_profiles_get_all"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_tag_get_all">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_tag_get_all"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_tag_add">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_tag_add"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+		<operation name="mc_tag_delete">
+			<soapbind:operation style="rpc"
+					soapAction="http://fajno.men/api/soap/mantisconnect.php/mc_tag_delete"/>
+			<input>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</input>
+			<output>
+				<soapbind:body use="encoded"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						namespace="http://futureware.biz/mantisconnect"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="MantisConnect">
+		<port name="MantisConnectPort"
+				binding="tns:MantisConnectBinding">
+			<soapbind:address location="http://fajno.men/api/soap/mantisconnect.php"/>
+		</port>
+	</service>
+</definitions>

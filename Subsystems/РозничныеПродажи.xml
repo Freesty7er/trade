@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="9ed0fa56-f08e-4a91-aecd-9c239ecc687f">
+		<Properties>
+			<Name>РозничныеПродажи</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розничные продажи</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаРозничныеПродажи</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыДвижения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НаправленияДвижения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводОстатковПоМагазину</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Sequence.Розница</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоВзаиморасчетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОтделыВМагазинах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоКредитамПолученным</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоЗатратам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КассыККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВРознице</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетов_РозничныеПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.БухгалтерУчетРозницы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.УчетТоваровВНТТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СводныйДневнойОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредстваККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УстановкаЦенНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоТоварамВРознице</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВремяНачалаЗагрузкиЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрВедомостьПоВзаиморасчетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрВедомостьПоЗатратам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрВедомостьПоКредитамПолученным</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетВедомостьПоТоварамВРознице</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрСводныйДневнойОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрТоварныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоБонуснымКартам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СреднийЧекККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетСреднийЧекККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаРозничныеПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПодсистемуРозничныеПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаРозничныеПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПодсистемуРозничныеПродажи</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Закупки</Subsystem>
+			<Subsystem>ДокументыПоРознице</Subsystem>
+			<Subsystem>ResPOS</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>
