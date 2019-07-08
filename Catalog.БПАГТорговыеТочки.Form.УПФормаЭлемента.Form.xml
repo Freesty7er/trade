@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Владелец" id="5">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<CheckBoxField name="НеИспользовать" id="7">
+			<DataPath>Объект.НеИспользовать</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеИспользоватьКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НеИспользоватьРасширеннаяПодсказка" id="38"/>
+		</CheckBoxField>
+		<InputField name="Договор" id="9">
+			<DataPath>Объект.Договор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДоговорКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="Адрес" id="11">
+			<DataPath>Объект.Адрес</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АдресКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<InputField name="КонтактноеЛицо" id="13">
+			<DataPath>Объект.КонтактноеЛицо</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<InputField name="Телефон" id="15">
+			<DataPath>Объект.Телефон</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТелефонКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="EMail" id="33">
+			<DataPath>Объект.EMail</DataPath>
+			<ContextMenu name="EMailКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="EMailРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<InputField name="Широта" id="17">
+			<DataPath>Объект.Широта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ШиротаКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ШиротаРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<InputField name="Долгота" id="19">
+			<DataPath>Объект.Долгота</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолготаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДолготаРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="Комментарий" id="21">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<InputField name="Грузополучатель" id="23">
+			<DataPath>Объект.Грузополучатель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГрузополучательКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ГрузополучательРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="РежимКонтроляВзаиморасчетовВЗаявке" id="25">
+			<DataPath>Объект.РежимКонтроляВзаиморасчетовВЗаявке</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РежимКонтроляВзаиморасчетовВЗаявкеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="РежимКонтроляВзаиморасчетовВЗаявкеРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="РежимКонтроляВзаиморасчетовВРеализации" id="27">
+			<DataPath>Объект.РежимКонтроляВзаиморасчетовВРеализации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РежимКонтроляВзаиморасчетовВРеализацииКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="РежимКонтроляВзаиморасчетовВРеализацииРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="МаксимальнаяСуммаЗадолженности" id="31">
+			<DataPath>Объект.МаксимальнаяСуммаЗадолженности</DataPath>
+			<ContextMenu name="МаксимальнаяСуммаЗадолженностиКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="МаксимальнаяСуммаЗадолженностиРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="СообщениеБезусловногоЗапретаОтгрузки" id="29">
+			<DataPath>Объект.СообщениеБезусловногоЗапретаОтгрузки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СообщениеБезусловногоЗапретаОтгрузкиКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="СообщениеБезусловногоЗапретаОтгрузкиРасширеннаяПодсказка" id="51"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БПАГТорговыеТочки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

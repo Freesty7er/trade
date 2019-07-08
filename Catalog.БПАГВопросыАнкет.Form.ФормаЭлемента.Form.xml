@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Родитель" id="10">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Идентификатор" id="13">
+			<DataPath>Объект.Идентификатор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Тип" id="16">
+			<DataPath>Объект.Тип</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Подсказка" id="19">
+			<DataPath>Объект.Подсказка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодсказкаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ВыравниваниеВопроса" id="22">
+			<DataPath>Объект.ВыравниваниеВопроса</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВыравниваниеВопросаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВыравниваниеВопросаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<UsualGroup name="ГруппаЦветВопроса" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа цвет вопроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа цвет вопроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЦветВопросаРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНадписьЦветВопроса" id="82">
+					<Width>16</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет вопроса:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНадписьЦветВопросаКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ДекорацияНадписьЦветВопросаРасширеннаяПодсказка" id="84"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЦветВопроса" id="77">
+					<Width>10</Width>
+					<TextColor>web:Black</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать  цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>web:Black</BackColor>
+					<ContextMenu name="ДекорацияЦветВопросаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДекорацияЦветВопросаРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="Click">ДекорацияЦветВопросаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<InputField name="ЦветВопроса" id="25">
+					<DataPath>Объект.ЦветВопроса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RGB (если понимаете, что это такое)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦветВопросаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ЦветВопросаРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="TextEditEnd">ЦветВопросаОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЦветОтвета" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа цвет ответа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа цвет ответа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЦветОтветаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНадписьЦветответа" id="87">
+					<Width>16</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет ответа:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНадписьЦветответаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДекорацияНадписьЦветответаРасширеннаяПодсказка" id="89"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЦветОтвета" id="90">
+					<Width>10</Width>
+					<TextColor>web:Black</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать  цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<BackColor>web:Black</BackColor>
+					<ContextMenu name="ДекорацияЦветОтветаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДекорацияЦветОтветаРасширеннаяПодсказка" id="92"/>
+					<Events>
+						<Event name="Click">ДекорацияЦветОтветаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<InputField name="ЦветОтвета" id="37">
+					<DataPath>Объект.ЦветОтвета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RGB (если понимаете, что это такое)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦветОтветаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ЦветОтветаРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="TextEditEnd">ЦветОтветаОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="РазмерШрифтаВопроса" id="28">
+			<DataPath>Объект.РазмерШрифтаВопроса</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РазмерШрифтаВопросаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="РазмерШрифтаВопросаРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ПроцентШириныВопроса" id="31">
+			<DataPath>Объект.ПроцентШириныВопроса</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроцентШириныВопросаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПроцентШириныВопросаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ВыравниваниеОтвета" id="34">
+			<DataPath>Объект.ВыравниваниеОтвета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВыравниваниеОтветаКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ВыравниваниеОтветаРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="РазмерШрифтаОтвета" id="40">
+			<DataPath>Объект.РазмерШрифтаОтвета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РазмерШрифтаОтветаКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="РазмерШрифтаОтветаРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ЗначениеПоУмолчанию" id="43">
+			<DataPath>Объект.ЗначениеПоУмолчанию</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗначениеПоУмолчаниюКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ЗначениеПоУмолчаниюРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<CheckBoxField name="Обязательный" id="46">
+			<DataPath>Объект.Обязательный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбязательныйКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ОбязательныйРасширеннаяПодсказка" id="48"/>
+		</CheckBoxField>
+		<InputField name="Порядок" id="49">
+			<DataPath>Объект.Порядок</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПорядокКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<Table name="ВариантыОтвета" id="52">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ВариантыОтвета</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВариантыОтветаКонтекстноеМеню" id="53"/>
+			<AutoCommandBar name="ВариантыОтветаКоманднаяПанель" id="54"/>
+			<ExtendedTooltip name="ВариантыОтветаРасширеннаяПодсказка" id="55"/>
+			<SearchStringAddition name="ВариантыОтветаСтрокаПоиска" id="56">
+				<AdditionSource>
+					<Item>ВариантыОтвета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветаСтрокаПоискаКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ВариантыОтветаСтрокаПоискаРасширеннаяПодсказка" id="60"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВариантыОтветаСостояниеПросмотра" id="61">
+				<AdditionSource>
+					<Item>ВариантыОтвета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветаСостояниеПросмотраКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ВариантыОтветаСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВариантыОтветаУправлениеПоиском" id="66">
+				<AdditionSource>
+					<Item>ВариантыОтвета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветаУправлениеПоискомКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="ВариантыОтветаУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВариантыОтветаНомерСтроки" id="71">
+					<DataPath>Объект.ВариантыОтвета.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВариантыОтветаНомерСтрокиКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ВариантыОтветаНомерСтрокиРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+				<InputField name="ВариантыОтветаВариант" id="74">
+					<DataPath>Объект.ВариантыОтвета.Вариант</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВариантыОтветаВариантКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ВариантыОтветаВариантРасширеннаяПодсказка" id="76"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БПАГВопросыАнкет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

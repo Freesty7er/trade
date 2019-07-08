@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="144"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="145"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="146"/>
+		</InputField>
+		<InputField name="Партнер" id="128">
+			<DataPath>Объект.Партнер</DataPath>
+			<ContextMenu name="ПартнерКонтекстноеМеню" id="129"/>
+			<ExtendedTooltip name="ПартнерExtendedTooltip" id="147"/>
+		</InputField>
+		<Pages name="ГруппаСинхронизации" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа синхронизации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСинхронизацииExtendedTooltip" id="148"/>
+			<ChildItems>
+				<Page name="ГруппаТорговыеТочки" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Торговые точки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа торговые точки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТорговыеТочкиExtendedTooltip" id="149"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаТаблиц" id="126">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблиц</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицExtendedTooltip" id="150"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДоговоры" id="45">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Договоры</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договоры</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаДоговорыExtendedTooltip" id="151"/>
+									<ChildItems>
+										<Table name="ДоговорыКонтрагентов" id="46">
+											<Height>10</Height>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<DataPath>ДоговорыКонтрагентов</DataPath>
+											<RowPictureDataPath>ДоговорыКонтрагентов.DefaultPicture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ДоговорыКонтрагентовКонтекстноеМеню" id="47"/>
+											<AutoCommandBar name="ДоговорыКонтрагентовКоманднаяПанель" id="48"/>
+											<ExtendedTooltip name="ДоговорыКонтрагентовExtendedTooltip" id="152"/>
+											<SearchStringAddition name="ДоговорыКонтрагентовСтрокаПоиска" id="219">
+												<AdditionSource>
+													<Item>ДоговорыКонтрагентов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДоговорыКонтрагентовСтрокаПоискаКонтекстноеМеню" id="220"/>
+												<ExtendedTooltip name="ДоговорыКонтрагентовСтрокаПоискаРасширеннаяПодсказка" id="221"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДоговорыКонтрагентовСостояниеПросмотра" id="222">
+												<AdditionSource>
+													<Item>ДоговорыКонтрагентов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДоговорыКонтрагентовСостояниеПросмотраКонтекстноеМеню" id="223"/>
+												<ExtendedTooltip name="ДоговорыКонтрагентовСостояниеПросмотраРасширеннаяПодсказка" id="224"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДоговорыКонтрагентовУправлениеПоиском" id="225">
+												<AdditionSource>
+													<Item>ДоговорыКонтрагентов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДоговорыКонтрагентовУправлениеПоискомКонтекстноеМеню" id="226"/>
+												<ExtendedTooltip name="ДоговорыКонтрагентовУправлениеПоискомРасширеннаяПодсказка" id="227"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ДоговорыКонтрагентовНаименование" id="49">
+													<DataPath>ДоговорыКонтрагентов.Description</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовНаименованиеКонтекстноеМеню" id="50"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовНаименованиеExtendedTooltip" id="153"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовКод" id="51">
+													<DataPath>ДоговорыКонтрагентов.Code</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовКодКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовКодExtendedTooltip" id="154"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВладелец" id="53">
+													<DataPath>ДоговорыКонтрагентов.Owner</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВладелецКонтекстноеМеню" id="54"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВладелецExtendedTooltip" id="155"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВалютаВзаиморасчетов" id="55">
+													<DataPath>3/10</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВалютаВзаиморасчетовКонтекстноеМеню" id="56"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВалютаВзаиморасчетовExtendedTooltip" id="156"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВедениеВзаиморасчетов" id="57">
+													<DataPath>3/11</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВедениеВзаиморасчетовКонтекстноеМеню" id="58"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВедениеВзаиморасчетовExtendedTooltip" id="157"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВидВзаиморасчетов" id="59">
+													<DataPath>3/14</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВидВзаиморасчетовКонтекстноеМеню" id="60"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВидВзаиморасчетовExtendedTooltip" id="158"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВидУсловийДоговора" id="61">
+													<DataPath>3/16</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВидУсловийДоговораКонтекстноеМеню" id="62"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВидУсловийДоговораExtendedTooltip" id="159"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовДержатьРезервБезОплатыОграниченноеВремя" id="63">
+													<DataPath>3/18</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовДержатьРезервБезОплатыОграниченноеВремяКонтекстноеМеню" id="64"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовДержатьРезервБезОплатыОграниченноеВремяExtendedTooltip" id="160"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовДопустимаяСуммаЗадолженности" id="65">
+													<DataPath>3/19</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовДопустимаяСуммаЗадолженностиКонтекстноеМеню" id="66"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовДопустимаяСуммаЗадолженностиExtendedTooltip" id="161"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовДопустимоеЧислоДнейЗадолженности" id="67">
+													<DataPath>3/20</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовДопустимоеЧислоДнейЗадолженностиКонтекстноеМеню" id="68"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовДопустимоеЧислоДнейЗадолженностиExtendedTooltip" id="162"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовКомментарий" id="69">
+													<DataPath>3/21</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовКомментарийКонтекстноеМеню" id="70"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовКомментарийExtendedTooltip" id="163"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовКонтролироватьСуммуЗадолженности" id="71">
+													<DataPath>3/23</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовКонтролироватьСуммуЗадолженностиКонтекстноеМеню" id="72"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовКонтролироватьСуммуЗадолженностиExtendedTooltip" id="164"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДоговорыКонтрагентовКонтролироватьЧислоДнейЗадолженности" id="73">
+													<DataPath>3/24</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовКонтролироватьЧислоДнейЗадолженностиКонтекстноеМеню" id="74"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовКонтролироватьЧислоДнейЗадолженностиExtendedTooltip" id="165"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДоговорыКонтрагентовОбособленныйУчетТоваровПоЗаказамПокупателей" id="75">
+													<DataPath>3/28</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовОбособленныйУчетТоваровПоЗаказамПокупателейКонтекстноеМеню" id="76"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовОбособленныйУчетТоваровПоЗаказамПокупателейExtendedTooltip" id="166"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовОрганизация" id="77">
+													<DataPath>ДоговорыКонтрагентов.Организация</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовОрганизацияКонтекстноеМеню" id="78"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовОрганизацияExtendedTooltip" id="167"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовПроцентКомиссионногоВознаграждения" id="79">
+													<DataPath>3/33</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовПроцентКомиссионногоВознагражденияКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовПроцентКомиссионногоВознагражденияExtendedTooltip" id="168"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовПроцентПредоплаты" id="81">
+													<DataPath>3/34</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовПроцентПредоплатыКонтекстноеМеню" id="82"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовПроцентПредоплатыExtendedTooltip" id="169"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовСпособРасчетаКомиссионногоВознаграждения" id="83">
+													<DataPath>3/37</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовСпособРасчетаКомиссионногоВознагражденияКонтекстноеМеню" id="84"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовСпособРасчетаКомиссионногоВознагражденияExtendedTooltip" id="170"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовТипЦен" id="85">
+													<DataPath>3/39</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовТипЦенКонтекстноеМеню" id="86"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовТипЦенExtendedTooltip" id="171"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовЧислоДнейРезерваБезОплаты" id="87">
+													<DataPath>3/41</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовЧислоДнейРезерваБезОплатыКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовЧислоДнейРезерваБезОплатыExtendedTooltip" id="172"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовВидДоговора" id="89">
+													<DataPath>ДоговорыКонтрагентов.ВидДоговора</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВидДоговораКонтекстноеМеню" id="90"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВидДоговораExtendedTooltip" id="173"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовУчетАгентскогоНДС" id="91">
+													<DataPath>3/40</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовУчетАгентскогоНДСКонтекстноеМеню" id="92"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовУчетАгентскогоНДСExtendedTooltip" id="174"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовВидАгентскогоДоговора" id="93">
+													<DataPath>3/13</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовВидАгентскогоДоговораКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВидАгентскогоДоговораExtendedTooltip" id="175"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовКонтролироватьДенежныеСредстваКомитента" id="95">
+													<DataPath>3/22</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовКонтролироватьДенежныеСредстваКомитентаКонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовКонтролироватьДенежныеСредстваКомитентаExtendedTooltip" id="176"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДоговорыКонтрагентовРасчетыВУсловныхЕдиницах" id="97">
+													<DataPath>ДоговорыКонтрагентов.РасчетыВУсловныхЕдиницах</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовРасчетыВУсловныхЕдиницахКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовРасчетыВУсловныхЕдиницахExtendedTooltip" id="177"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовДата" id="99">
+													<DataPath>3/17</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовДатаКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовДатаExtendedTooltip" id="178"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовНомер" id="101">
+													<DataPath>3/27</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовНомерКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовНомерExtendedTooltip" id="179"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовРеализацияНаЭкспорт" id="103">
+													<DataPath>3/36</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовРеализацияНаЭкспортКонтекстноеМеню" id="104"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовРеализацияНаЭкспортExtendedTooltip" id="180"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДоговорыКонтрагентовВестиПоДокументамРасчетовСКонтрагентом" id="105">
+													<DataPath>3/12</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовВестиПоДокументамРасчетовСКонтрагентомКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовВестиПоДокументамРасчетовСКонтрагентомExtendedTooltip" id="181"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовОсновнойПроект" id="107">
+													<DataPath>3/31</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовОсновнойПроектКонтекстноеМеню" id="108"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовОсновнойПроектExtendedTooltip" id="182"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовОсновнаяСтатьяДвиженияДенежныхСредств" id="109">
+													<DataPath>3/30</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовОсновнаяСтатьяДвиженияДенежныхСредствКонтекстноеМеню" id="110"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовОсновнаяСтатьяДвиженияДенежныхСредствExtendedTooltip" id="183"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовСрокДействия" id="111">
+													<DataPath>3/38</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовСрокДействияКонтекстноеМеню" id="112"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовСрокДействияExtendedTooltip" id="184"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовПорядокРегистрацииСчетовФактурНаАвансПоДоговору" id="113">
+													<DataPath>3/32</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовПорядокРегистрацииСчетовФактурНаАвансПоДоговоруКонтекстноеМеню" id="114"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовПорядокРегистрацииСчетовФактурНаАвансПоДоговоруExtendedTooltip" id="185"/>
+												</LabelField>
+												<LabelField name="ДоговорыКонтрагентовНаименованиеДляСчетаФактурыНаАванс" id="115">
+													<DataPath>3/25</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовНаименованиеДляСчетаФактурыНаАвансКонтекстноеМеню" id="116"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовНаименованиеДляСчетаФактурыНаАвансExtendedTooltip" id="186"/>
+												</LabelField>
+												<CheckBoxField name="ДоговорыКонтрагентовНалоговыйАгентПоОплате" id="117">
+													<DataPath>3/26</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДоговорыКонтрагентовНалоговыйАгентПоОплатеКонтекстноеМеню" id="118"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовНалоговыйАгентПоОплатеExtendedTooltip" id="187"/>
+												</CheckBoxField>
+												<LabelField name="ДоговорыКонтрагентовСтандартнаяКартинка" id="130">
+													<DataPath>ДоговорыКонтрагентов.DefaultPicture</DataPath>
+													<ContextMenu name="ДоговорыКонтрагентовСтандартнаяКартинкаКонтекстноеМеню" id="131"/>
+													<ExtendedTooltip name="ДоговорыКонтрагентовСтандартнаяКартинкаExtendedTooltip" id="188"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТорговыхТочек" id="44">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Торговые точки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа торговых точек</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТорговыхТочекExtendedTooltip" id="189"/>
+									<ChildItems>
+										<Table name="ТорговыеТочки" id="7">
+											<Height>10</Height>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ТорговыеТочки</DataPath>
+											<RowPictureDataPath>ТорговыеТочки.DefaultPicture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ТорговыеТочкиКонтекстноеМеню" id="8"/>
+											<AutoCommandBar name="ТорговыеТочкиКоманднаяПанель" id="9"/>
+											<ExtendedTooltip name="ТорговыеТочкиExtendedTooltip" id="190"/>
+											<SearchStringAddition name="ТорговыеТочкиСтрокаПоиска" id="228">
+												<AdditionSource>
+													<Item>ТорговыеТочки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТорговыеТочкиСтрокаПоискаКонтекстноеМеню" id="229"/>
+												<ExtendedTooltip name="ТорговыеТочкиСтрокаПоискаРасширеннаяПодсказка" id="230"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТорговыеТочкиСостояниеПросмотра" id="231">
+												<AdditionSource>
+													<Item>ТорговыеТочки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТорговыеТочкиСостояниеПросмотраКонтекстноеМеню" id="232"/>
+												<ExtendedTooltip name="ТорговыеТочкиСостояниеПросмотраРасширеннаяПодсказка" id="233"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТорговыеТочкиУправлениеПоиском" id="234">
+												<AdditionSource>
+													<Item>ТорговыеТочки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТорговыеТочкиУправлениеПоискомКонтекстноеМеню" id="235"/>
+												<ExtendedTooltip name="ТорговыеТочкиУправлениеПоискомРасширеннаяПодсказка" id="236"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="DragCheck">ТорговыеТочкиПроверкаПеретаскивания</Event>
+												<Event name="Selection">ТорговыеТочкиВыбор</Event>
+												<Event name="Drag">ТорговыеТочкиПеретаскивание</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="ТорговыеТочкиНаименование" id="10">
+													<DataPath>ТорговыеТочки.Description</DataPath>
+													<ContextMenu name="ТорговыеТочкиНаименованиеКонтекстноеМеню" id="11"/>
+													<ExtendedTooltip name="ТорговыеТочкиНаименованиеExtendedTooltip" id="191"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиКод" id="12">
+													<DataPath>ТорговыеТочки.Code</DataPath>
+													<ContextMenu name="ТорговыеТочкиКодКонтекстноеМеню" id="13"/>
+													<ExtendedTooltip name="ТорговыеТочкиКодExtendedTooltip" id="192"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиДоговор" id="18">
+													<DataPath>ТорговыеТочки.Договор</DataPath>
+													<ContextMenu name="ТорговыеТочкиДоговорКонтекстноеМеню" id="19"/>
+													<ExtendedTooltip name="ТорговыеТочкиДоговорExtendedTooltip" id="193"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиАдрес" id="20">
+													<DataPath>ТорговыеТочки.Адрес</DataPath>
+													<ContextMenu name="ТорговыеТочкиАдресКонтекстноеМеню" id="21"/>
+													<ExtendedTooltip name="ТорговыеТочкиАдресExtendedTooltip" id="194"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиКонтактноеЛицо" id="22">
+													<DataPath>ТорговыеТочки.КонтактноеЛицо</DataPath>
+													<ContextMenu name="ТорговыеТочкиКонтактноеЛицоКонтекстноеМеню" id="23"/>
+													<ExtendedTooltip name="ТорговыеТочкиКонтактноеЛицоExtendedTooltip" id="195"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиТелефон" id="24">
+													<DataPath>ТорговыеТочки.Телефон</DataPath>
+													<ContextMenu name="ТорговыеТочкиТелефонКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="ТорговыеТочкиТелефонExtendedTooltip" id="196"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиEMail" id="142">
+													<DataPath>ТорговыеТочки.EMail</DataPath>
+													<ContextMenu name="ТорговыеТочкиEMailКонтекстноеМеню" id="143"/>
+													<ExtendedTooltip name="ТорговыеТочкиEMailExtendedTooltip" id="197"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиШирота" id="26">
+													<DataPath>ТорговыеТочки.Широта</DataPath>
+													<ContextMenu name="ТорговыеТочкиШиротаКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="ТорговыеТочкиШиротаExtendedTooltip" id="198"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиДолгота" id="28">
+													<DataPath>ТорговыеТочки.Долгота</DataPath>
+													<ContextMenu name="ТорговыеТочкиДолготаКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="ТорговыеТочкиДолготаExtendedTooltip" id="199"/>
+												</LabelField>
+												<CheckBoxField name="ТорговыеТочкиНеИспользовать" id="16">
+													<DataPath>ТорговыеТочки.НеИспользовать</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТорговыеТочкиНеИспользоватьКонтекстноеМеню" id="17"/>
+													<ExtendedTooltip name="ТорговыеТочкиНеИспользоватьExtendedTooltip" id="200"/>
+												</CheckBoxField>
+												<LabelField name="ТорговыеТочкиКомментарий" id="30">
+													<DataPath>ТорговыеТочки.Комментарий</DataPath>
+													<ContextMenu name="ТорговыеТочкиКомментарийКонтекстноеМеню" id="31"/>
+													<ExtendedTooltip name="ТорговыеТочкиКомментарийExtendedTooltip" id="201"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиГрузополучатель" id="132">
+													<DataPath>ТорговыеТочки.Грузополучатель</DataPath>
+													<ContextMenu name="ТорговыеТочкиГрузополучательКонтекстноеМеню" id="133"/>
+													<ExtendedTooltip name="ТорговыеТочкиГрузополучательExtendedTooltip" id="202"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВЗаявке" id="134">
+													<DataPath>ТорговыеТочки.РежимКонтроляВзаиморасчетовВЗаявке</DataPath>
+													<ContextMenu name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВЗаявкеКонтекстноеМеню" id="135"/>
+													<ExtendedTooltip name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВЗаявкеExtendedTooltip" id="203"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВРеализации" id="136">
+													<DataPath>ТорговыеТочки.РежимКонтроляВзаиморасчетовВРеализации</DataPath>
+													<ContextMenu name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВРеализацииКонтекстноеМеню" id="137"/>
+													<ExtendedTooltip name="ТорговыеТочкиРежимКонтроляВзаиморасчетовВРеализацииExtendedTooltip" id="204"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиМаксимальнаяСуммаЗадолженности" id="140">
+													<DataPath>ТорговыеТочки.МаксимальнаяСуммаЗадолженности</DataPath>
+													<ContextMenu name="ТорговыеТочкиМаксимальнаяСуммаЗадолженностиКонтекстноеМеню" id="141"/>
+													<ExtendedTooltip name="ТорговыеТочкиМаксимальнаяСуммаЗадолженностиExtendedTooltip" id="205"/>
+												</LabelField>
+												<LabelField name="ТорговыеТочкиСообщениеБезусловногоЗапретаОтгрузки" id="138">
+													<DataPath>ТорговыеТочки.СообщениеБезусловногоЗапретаОтгрузки</DataPath>
+													<ContextMenu name="ТорговыеТочкиСообщениеБезусловногоЗапретаОтгрузкиКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="ТорговыеТочкиСообщениеБезусловногоЗапретаОтгрузкиExtendedTooltip" id="206"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКартинок" id="119">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа картинок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаКартинокExtendedTooltip" id="207"/>
+							<ChildItems>
+								<UsualGroup name="Коллекция" id="120">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коллекция</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="КоллекцияExtendedTooltip" id="208"/>
+								</UsualGroup>
+								<CommandBar name="ГруппаПанельКартинок" id="121">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа панель картинок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа панель картинок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<ExtendedTooltip name="ГруппаПанельКартинокExtendedTooltip" id="209"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаКнопок" id="122">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа кнопок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаКнопокExtendedTooltip" id="210"/>
+											<ChildItems>
+												<Button name="КнопкаДобавитьКартинку" id="127">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьКартинку</CommandName>
+													<ExtendedTooltip name="КнопкаДобавитьКартинкуExtendedTooltip" id="211"/>
+												</Button>
+												<Button name="КнопкаНайтиВИнтернете" id="124">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.НайтиВИнтернете</CommandName>
+													<ExtendedTooltip name="КнопкаНайтиВИнтернетеExtendedTooltip" id="212"/>
+												</Button>
+												<Button name="КнопкаУдалитьКартинку" id="125">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УдалитьКартинку</CommandName>
+													<ExtendedTooltip name="КнопкаУдалитьКартинкуExtendedTooltip" id="213"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Цены" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цены</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цены</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЦеныExtendedTooltip" id="214"/>
+					<ChildItems>
+						<InputField name="ОсновнойТипЦен" id="42">
+							<DataPath>Объект.ОсновнойТипЦен</DataPath>
+							<ContextMenu name="ОсновнойТипЦенКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ОсновнойТипЦенExtendedTooltip" id="215"/>
+						</InputField>
+						<Table name="ТипыЦен" id="35">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТипыЦен</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТипыЦенКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="ТипыЦенКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="ТипыЦенExtendedTooltip" id="216"/>
+							<SearchStringAddition name="ТипыЦенСтрокаПоиска" id="237">
+								<AdditionSource>
+									<Item>ТипыЦен</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыЦенСтрокаПоискаКонтекстноеМеню" id="238"/>
+								<ExtendedTooltip name="ТипыЦенСтрокаПоискаРасширеннаяПодсказка" id="239"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТипыЦенСостояниеПросмотра" id="240">
+								<AdditionSource>
+									<Item>ТипыЦен</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыЦенСостояниеПросмотраКонтекстноеМеню" id="241"/>
+								<ExtendedTooltip name="ТипыЦенСостояниеПросмотраРасширеннаяПодсказка" id="242"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТипыЦенУправлениеПоиском" id="243">
+								<AdditionSource>
+									<Item>ТипыЦен</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыЦенУправлениеПоискомКонтекстноеМеню" id="244"/>
+								<ExtendedTooltip name="ТипыЦенУправлениеПоискомРасширеннаяПодсказка" id="245"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТипыЦенНомерСтроки" id="38">
+									<DataPath>Объект.ТипыЦен.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыЦенНомерСтрокиКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТипыЦенНомерСтрокиExtendedTooltip" id="217"/>
+								</LabelField>
+								<InputField name="ТипыЦенТипЦен" id="40">
+									<DataPath>Объект.ТипыЦен.ТипЦен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыЦенТипЦенКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ТипыЦенТипЦенExtendedTooltip" id="218"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БПАГКонтрагенты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТорговыеТочки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговые точки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникБПАГТорговыеТочки.Ссылка,
+	СправочникБПАГТорговыеТочки.ВерсияДанных,
+	СправочникБПАГТорговыеТочки.ПометкаУдаления,
+	СправочникБПАГТорговыеТочки.Предопределенный,
+	СправочникБПАГТорговыеТочки.Владелец,
+	СправочникБПАГТорговыеТочки.Код,
+	СправочникБПАГТорговыеТочки.Наименование,
+	СправочникБПАГТорговыеТочки.НеИспользовать,
+	СправочникБПАГТорговыеТочки.Договор,
+	СправочникБПАГТорговыеТочки.Адрес,
+	СправочникБПАГТорговыеТочки.КонтактноеЛицо,
+	СправочникБПАГТорговыеТочки.Телефон,
+	СправочникБПАГТорговыеТочки.Широта,
+	СправочникБПАГТорговыеТочки.Долгота,
+	СправочникБПАГТорговыеТочки.Комментарий,
+	СправочникБПАГТорговыеТочки.Картинки.(
+		Ссылка,
+		НомерСтроки,
+		Имя
+	),
+	СправочникБПАГТорговыеТочки.Грузополучатель,
+	СправочникБПАГТорговыеТочки.РежимКонтроляВзаиморасчетовВЗаявке,
+	СправочникБПАГТорговыеТочки.РежимКонтроляВзаиморасчетовВРеализации,
+	СправочникБПАГТорговыеТочки.СообщениеБезусловногоЗапретаОтгрузки,
+	СправочникБПАГТорговыеТочки.МаксимальнаяСуммаЗадолженности,
+	СправочникБПАГТорговыеТочки.EMail
+ИЗ
+	Справочник.БПАГТорговыеТочки КАК СправочникБПАГТорговыеТочки
+ГДЕ
+	СправочникБПАГТорговыеТочки.Владелец = &amp;ТекОбъект</QueryText>
+				<MainTable>Catalog.БПАГТорговыеТочки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоговорыКонтрагентов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ДоговорыКонтрагентов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьКартинку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКартинку</Action>
+		</Command>
+		<Command name="НайтиВИнтернете" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в интернете</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в интернете</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиВИнтернете</Action>
+		</Command>
+		<Command name="УдалитьКартинку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьКартинку</Action>
+		</Command>
+	</Commands>
+</Form>

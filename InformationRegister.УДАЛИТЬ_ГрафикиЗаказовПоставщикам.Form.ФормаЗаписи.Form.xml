@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Подразделение" id="1">
+			<DataPath>Запись.Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="НомерЗаказа" id="4">
+			<DataPath>Запись.НомерЗаказа</DataPath>
+			<ContextMenu name="НомерЗаказаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НомерЗаказаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Контрагент" id="7">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="СрокОбработкиЗаказаПоставщиком" id="64">
+			<DataPath>Запись.СрокОбработкиЗаказаПоставщиком</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка заказа, дн</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СрокОбработкиЗаказаПоставщикомКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="СрокОбработкиЗаказаПоставщикомРасширеннаяПодсказка" id="66"/>
+		</InputField>
+		<UsualGroup name="ГруппаДни" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>дни</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дни</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДниРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДниЗакза" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни закза</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дни закза</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаДниЗакзаРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<CheckBoxField name="ДНЗ_1" id="10">
+							<DataPath>Запись.ДНЗ_1</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_1КонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ДНЗ_1РасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_2" id="13">
+							<DataPath>Запись.ДНЗ_2</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_2КонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ДНЗ_2РасширеннаяПодсказка" id="15"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_3" id="16">
+							<DataPath>Запись.ДНЗ_3</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_3КонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДНЗ_3РасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_4" id="19">
+							<DataPath>Запись.ДНЗ_4</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_4КонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДНЗ_4РасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_5" id="22">
+							<DataPath>Запись.ДНЗ_5</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_5КонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДНЗ_5РасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_6" id="25">
+							<DataPath>Запись.ДНЗ_6</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_6КонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДНЗ_6РасширеннаяПодсказка" id="27"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНЗ_7" id="28">
+							<DataPath>Запись.ДНЗ_7</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНЗ_7КонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДНЗ_7РасширеннаяПодсказка" id="30"/>
+						</CheckBoxField>
+						<InputField name="ВремяЗаказа" id="31">
+							<DataPath>Запись.ВремяЗаказа</DataPath>
+							<ContextMenu name="ВремяЗаказаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ВремяЗаказаРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДниПоставки" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни поставки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дни поставки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаДниПоставкиРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<CheckBoxField name="ДНП_1" id="34">
+							<DataPath>Запись.ДНП_1</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_1КонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДНП_1РасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_2" id="37">
+							<DataPath>Запись.ДНП_2</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_2КонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДНП_2РасширеннаяПодсказка" id="39"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_3" id="40">
+							<DataPath>Запись.ДНП_3</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_3КонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДНП_3РасширеннаяПодсказка" id="42"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_4" id="43">
+							<DataPath>Запись.ДНП_4</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_4КонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДНП_4РасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_5" id="46">
+							<DataPath>Запись.ДНП_5</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_5КонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДНП_5РасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_6" id="49">
+							<DataPath>Запись.ДНП_6</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_6КонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ДНП_6РасширеннаяПодсказка" id="51"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДНП_7" id="52">
+							<DataPath>Запись.ДНП_7</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДНП_7КонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ДНП_7РасширеннаяПодсказка" id="54"/>
+						</CheckBoxField>
+						<InputField name="ВремяПоставки" id="61">
+							<DataPath>Запись.ВремяПоставки</DataPath>
+							<ContextMenu name="ВремяПоставкиКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ВремяПоставкиРасширеннаяПодсказка" id="63"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УДАЛИТЬ_ГрафикиЗаказовПоставщикам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Фотографии" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Фотографии</CommandName>
+				<ExtendedTooltip name="ФотографииРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаДата" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаДатаРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата загрузки в БД</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДатаВремяСоздания" id="7">
+					<DataPath>Запись.ДатаСоздания</DataPath>
+					<ContextMenu name="ДатаВремяСозданияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаВремяСозданияРасширеннаяПодсказка" id="29"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Документ" id="3">
+			<DataPath>Запись.Документ</DataPath>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="30"/>
+			<Events>
+				<Event name="ChoiceProcessing">ДокументОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Агент" id="5">
+			<DataPath>Запись.Агент</DataPath>
+			<ContextMenu name="АгентКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<UsualGroup name="ГруппаКатегория" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категории</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа категория</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаКатегорияРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<InputField name="Категория" id="13">
+					<DataPath>Запись.Категория</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КатегорияКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="33"/>
+					<Events>
+						<Event name="StartChoice">КатегорияНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КатегорияДляДолга" id="15">
+					<DataPath>Запись.КатегорияДолга</DataPath>
+					<ContextMenu name="КатегорияДляДолгаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="КатегорияДляДолгаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="StartChoice">КатегорияДляДолгаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоординаты" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Координаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа координаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаКоординатыРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="Широта" id="9">
+					<DataPath>Запись.Широта</DataPath>
+					<ContextMenu name="ШиротаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ШиротаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="Долгота" id="11">
+					<DataPath>Запись.Долгота</DataPath>
+					<ContextMenu name="ДолготаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДолготаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВремяРаботыСДокументом" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время работы с документом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа время работы с документом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаВремяРаботыСДокументомРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="ДатаНачала" id="22">
+					<DataPath>Запись.ДатаНачала</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="24">
+					<DataPath>Запись.ДатаОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание</v8:content>
+						</v8:item>
+					</Title>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.апЗагруженныеДокументы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Фотографии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фотографии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список фотографий документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Фотографии</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Added</Type>
+				<Attribute>Запись.Документ</Attribute>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

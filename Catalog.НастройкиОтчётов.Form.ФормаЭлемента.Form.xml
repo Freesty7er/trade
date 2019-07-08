@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="17"/>
+		</InputField>
+		<InputField name="КлючОбъекта" id="3">
+			<DataPath>Объект.КлючОбъекта</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КлючОбъектаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КлючОбъектаExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="Пользователь" id="5">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПользовательExtendedTooltip" id="19"/>
+		</InputField>
+		<Table name="ОбщийДоступ" id="7">
+			<TitleLocation>Top</TitleLocation>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>Объект.ОбщийДоступ</DataPath>
+			<RowPictureDataPath>Объект.ОбщийДоступ.ИндексКартинки</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбщийДоступКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ОбщийДоступКоманднаяПанель" id="9">
+				<ChildItems>
+					<Popup name="ОбщийДоступГруппаПодбор" id="15">
+						<EnableContentChange>true</EnableContentChange>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подбор</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОбщийДоступГруппаПодборExtendedTooltip" id="20"/>
+						<ChildItems>
+							<Button name="ОбщийДоступПодбор" id="14">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПодборПользователи</CommandName>
+								<ExtendedTooltip name="ОбщийДоступПодборExtendedTooltip" id="21"/>
+							</Button>
+							<Button name="ОбщийДоступПодборГруппыПользователей" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПодборГруппыПользователей</CommandName>
+								<ExtendedTooltip name="ОбщийДоступПодборГруппыПользователейExtendedTooltip" id="22"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОбщийДоступExtendedTooltip" id="23"/>
+			<SearchStringAddition name="ОбщийДоступСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>ОбщийДоступ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбщийДоступСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ОбщийДоступСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбщийДоступСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>ОбщийДоступ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбщийДоступСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ОбщийДоступСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбщийДоступУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>ОбщийДоступ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбщийДоступУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ОбщийДоступУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ОбщийДоступПередНачаломДобавления</Event>
+				<Event name="ChoiceProcessing">ОбщийДоступОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ОбщийДоступОбъектДоступа" id="12">
+					<DataPath>Объект.ОбщийДоступ.ОбъектДоступа</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбщийДоступОбъектДоступаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОбщийДоступОбъектДоступаExtendedTooltip" id="24"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиОтчётов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ОбщийДоступ">
+					<Column name="ИндексКартинки" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидыОбъектовДоступа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды объектов доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОбщийДоступОбъектДоступа</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ОбщийДоступ.ОбъектДоступа</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;Все пользователи&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборПользователи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор пользователей в список общего доступа.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПользователи</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПодборГруппыПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор групп пользователей в список общего доступа.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборГруппыПользователей</Action>
+		</Command>
+	</Commands>
+</Form>

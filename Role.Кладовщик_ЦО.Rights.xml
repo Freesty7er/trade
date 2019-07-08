@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Configuration.Конфигурация</name>
+		<right>
+			<name>ThinClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SaveUserData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Output</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратПоставщику</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеЧтение("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>false</value>
+			<restrictionByCondition>
+				<condition>ВозвратПоставщику ИЗ Документ.ВозвратПоставщику КАК ВозвратПоставщику, Константы КАК Константы
+ГДЕ ВозвратПоставщику.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)
+И ВЫБОР КОГДА ВозвратПоставщику.Подразделение.Код = "000000021" ТОГДА ВозвратПоставщику.Автор = &amp;ТекущийПользователь
+	  ИНАЧЕ ИСТИНА
+	  КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>false</value>
+			<restrictionByCondition>
+				<condition>ВозвратПоставщику ИЗ Документ.ВозвратПоставщику КАК ВозвратПоставщику, Константы КАК Константы
+ГДЕ ВозвратПоставщику.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)
+И ВЫБОР КОГДА ВозвратПоставщику.Подразделение.Код = "000000021" ТОГДА ВозвратПоставщику.Автор = &amp;ТекущийПользователь
+	  ИНАЧЕ ИСТИНА
+	  КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеЧтение("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Delete</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDeleteMarked</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePostingRegular</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВозвратОтПокупателя</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеЧтение("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.ОбластьДанных</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходнаяНакладная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеЧтение("Подразделение")</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПодразделениеВШапкеРедактирование()</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveUndoPosting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveChangeOfPosted</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ИзменениеДанныхДокументы</name>
+		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица, Константы КАК Константы
+ГДЕ ТекущаяТаблица.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ)</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПодразделениеВШапкеРедактирование</name>
+		<condition>    ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица, Константы КАК Константы
+
+ГДЕ
+	ТекущаяТаблица.Дата &gt; КОНЕЦПЕРИОДА(Константы.ДатаЗапретаРедактирования, ДЕНЬ) 
+	И ТекущаяТаблица.ОтметкаБухгалтераОПроверке = ЛОЖЬ
+	И ТекущаяТаблица.Автор.ОбластьДанных = &amp;ОбластьДанных
+</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ПодразделениеВШапкеЧтение</name>
+		<condition>    ТекущаяТаблица
+ИЗ
+    #ТекущаяТаблица КАК ТекущаяТаблица
+        
+ГДЕ
+    //ТекущаяТаблица.#Параметр(1).Код = "00000021"
+    //ТекущаяТаблица.Подразделение.Код = "000000021"
+    //И ТекущаяТаблица.Автор = &amp;ТекущийПользователь
+    ТекущаяТаблица.Автор.ОбластьДанных = &amp;ОбластьДанных</condition>
+	</restrictionTemplate>
+</Rights>

@@ -1,0 +1,1414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1Шапка" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1 шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1 шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ШапкаExtendedTooltip" id="76"/>
+			<ChildItems>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="77"/>
+				</InputField>
+				<InputField name="Подразделение" id="3">
+					<DataPath>Запись.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="78"/>
+				</InputField>
+				<InputField name="НоменклатурнаяГруппа" id="5">
+					<DataPath>Запись.НоменклатурнаяГруппа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Производитель</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НоменклатурнаяГруппаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="НоменклатурнаяГруппаExtendedTooltip" id="79"/>
+				</InputField>
+				<InputField name="ЦеноваяГруппа" id="74">
+					<DataPath>Запись.ЦеноваяГруппа</DataPath>
+					<ContextMenu name="ЦеноваяГруппаКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ЦеноваяГруппаExtendedTooltip" id="80"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1Данные" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1 данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1 данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ДанныеExtendedTooltip" id="81"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДанныеЛево" id="339">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>данные лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДанныеЛевоРасширеннаяПодсказка" id="340"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКатегория1" id="215">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория1РасширеннаяПодсказка" id="216"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать1" id="23">
+									<DataPath>Запись.НеРасчитыватьЦена1</DataPath>
+									<TitleHeight>1</TitleHeight>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать1КонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="НеРасчитывать1ExtendedTooltip" id="83"/>
+								</CheckBoxField>
+								<InputField name="Наценка1" id="7">
+									<DataPath>Запись.Наценка1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка1КонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="Наценка1ExtendedTooltip" id="94"/>
+								</InputField>
+								<InputField name="МетодРасчета1" id="46">
+									<DataPath>Запись.МетодРасчета1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета1КонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="МетодРасчета1ExtendedTooltip" id="105"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен1" id="117">
+									<DataPath>Запись.БазовыйТипЦен1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен1КонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="БзовыйТипЦен1РасширеннаяПодсказка" id="119"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория2" id="217">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория2РасширеннаяПодсказка" id="218"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать2" id="25">
+									<DataPath>Запись.НеРасчитыватьЦена2</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать2КонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="НеРасчитывать2ExtendedTooltip" id="84"/>
+								</CheckBoxField>
+								<InputField name="Наценка2" id="9">
+									<DataPath>Запись.Наценка2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка2КонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="Наценка2ExtendedTooltip" id="95"/>
+								</InputField>
+								<InputField name="МетодРасчета2" id="48">
+									<DataPath>Запись.МетодРасчета2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета2КонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="МетодРасчета2ExtendedTooltip" id="106"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен2" id="120">
+									<DataPath>Запись.БазовыйТипЦен2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен2КонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="БзовыйТипЦен2РасширеннаяПодсказка" id="122"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория3" id="219">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория3РасширеннаяПодсказка" id="220"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать3" id="27">
+									<DataPath>Запись.НеРасчитыватьЦена3</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать3КонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="НеРасчитывать3ExtendedTooltip" id="85"/>
+								</CheckBoxField>
+								<InputField name="Наценка3" id="11">
+									<DataPath>Запись.Наценка3</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка3КонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="Наценка3ExtendedTooltip" id="96"/>
+								</InputField>
+								<InputField name="МетодРасчета3" id="50">
+									<DataPath>Запись.МетодРасчета3</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета3КонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="МетодРасчета3ExtendedTooltip" id="107"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен3" id="123">
+									<DataPath>Запись.БазовыйТипЦен3</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен3КонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="БзовыйТипЦен3РасширеннаяПодсказка" id="125"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория4" id="221">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория4РасширеннаяПодсказка" id="222"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать4" id="29">
+									<DataPath>Запись.НеРасчитыватьЦена4</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать4КонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="НеРасчитывать4ExtendedTooltip" id="86"/>
+								</CheckBoxField>
+								<InputField name="Наценка4" id="13">
+									<DataPath>Запись.Наценка4</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка4КонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="Наценка4ExtendedTooltip" id="97"/>
+								</InputField>
+								<InputField name="МетодРасчета4" id="52">
+									<DataPath>Запись.МетодРасчета4</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета4КонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="МетодРасчета4ExtendedTooltip" id="108"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен4" id="126">
+									<DataPath>Запись.БазовыйТипЦен4</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен4КонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="БзовыйТипЦен4РасширеннаяПодсказка" id="128"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория5" id="223">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория5РасширеннаяПодсказка" id="224"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать5" id="31">
+									<DataPath>Запись.НеРасчитыватьЦена5</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать5КонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="НеРасчитывать5ExtendedTooltip" id="87"/>
+								</CheckBoxField>
+								<InputField name="Наценка5" id="15">
+									<DataPath>Запись.Наценка5</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка5КонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="Наценка5ExtendedTooltip" id="98"/>
+								</InputField>
+								<InputField name="МетодРасчета5" id="60">
+									<DataPath>Запись.МетодРасчета5</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета5КонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="МетодРасчета5ExtendedTooltip" id="109"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен5" id="129">
+									<DataPath>Запись.БазовыйТипЦен5</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен5КонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="БзовыйТипЦен5РасширеннаяПодсказка" id="131"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория6" id="225">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория6РасширеннаяПодсказка" id="226"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать6" id="33">
+									<DataPath>Запись.НеРасчитыватьЦена6</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать6КонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="НеРасчитывать6ExtendedTooltip" id="88"/>
+								</CheckBoxField>
+								<InputField name="Наценка6" id="17">
+									<DataPath>Запись.Наценка6</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка6КонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="Наценка6ExtendedTooltip" id="99"/>
+								</InputField>
+								<InputField name="МетодРасчета6" id="58">
+									<DataPath>Запись.МетодРасчета6</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета6КонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="МетодРасчета6ExtendedTooltip" id="110"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен6" id="132">
+									<DataPath>Запись.БазовыйТипЦен6</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен6КонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="БзовыйТипЦен6РасширеннаяПодсказка" id="134"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория7" id="227">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория7РасширеннаяПодсказка" id="228"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать7" id="35">
+									<DataPath>Запись.НеРасчитыватьЦена7</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать7КонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="НеРасчитывать7ExtendedTooltip" id="89"/>
+								</CheckBoxField>
+								<InputField name="Наценка7" id="19">
+									<DataPath>Запись.Наценка7</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка7КонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="Наценка7ExtendedTooltip" id="100"/>
+								</InputField>
+								<InputField name="МетодРасчета7" id="56">
+									<DataPath>Запись.МетодРасчета7</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета7КонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="МетодРасчета7ExtendedTooltip" id="111"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен7" id="135">
+									<DataPath>Запись.БазовыйТипЦен7</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен7КонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="БзовыйТипЦен7РасширеннаяПодсказка" id="137"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория8" id="229">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория8РасширеннаяПодсказка" id="230"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать8" id="37">
+									<DataPath>Запись.НеРасчитыватьЦена8</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать8КонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="НеРасчитывать8ExtendedTooltip" id="90"/>
+								</CheckBoxField>
+								<InputField name="Наценка8" id="21">
+									<DataPath>Запись.Наценка8</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка8КонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="Наценка8ExtendedTooltip" id="101"/>
+								</InputField>
+								<InputField name="МетодРасчета8" id="54">
+									<DataPath>Запись.МетодРасчета8</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета8КонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="МетодРасчета8ExtendedTooltip" id="112"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен8" id="138">
+									<DataPath>Запись.БазовыйТипЦен8</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен8КонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="БзовыйТипЦен8РасширеннаяПодсказка" id="140"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория9" id="231">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория9РасширеннаяПодсказка" id="232"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать9" id="62">
+									<DataPath>Запись.НеРасчитыватьЦена9</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать9КонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="НеРасчитывать9ExtendedTooltip" id="91"/>
+								</CheckBoxField>
+								<InputField name="Наценка9" id="66">
+									<DataPath>Запись.Наценка9</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка9КонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="Наценка9ExtendedTooltip" id="102"/>
+								</InputField>
+								<InputField name="МетодРасчета9" id="70">
+									<DataPath>Запись.МетодРасчета9</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета9КонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="МетодРасчета9ExtendedTooltip" id="113"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен9" id="141">
+									<DataPath>Запись.БазовыйТипЦен9</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен9КонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="БзовыйТипЦен9РасширеннаяПодсказка" id="143"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория10" id="233">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория10РасширеннаяПодсказка" id="234"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитывать10" id="64">
+									<DataPath>Запись.НеРасчитыватьЦена10</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитывать10КонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="НеРасчитывать10ExtendedTooltip" id="92"/>
+								</CheckBoxField>
+								<InputField name="Наценка10" id="68">
+									<DataPath>Запись.Наценка10</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка10КонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="Наценка10ExtendedTooltip" id="103"/>
+								</InputField>
+								<InputField name="МетодРасчета10" id="72">
+									<DataPath>Запись.МетодРасчета10</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета10КонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="МетодРасчета10ExtendedTooltip" id="114"/>
+								</InputField>
+								<InputField name="БзовыйТипЦен10" id="144">
+									<DataPath>Запись.БазовыйТипЦен10</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БзовыйТипЦен10КонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="БзовыйТипЦен10РасширеннаяПодсказка" id="146"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория11" id="235">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория11РасширеннаяПодсказка" id="236"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена11" id="179">
+									<DataPath>Запись.НеРасчитыватьЦена11</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена11КонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена11РасширеннаяПодсказка" id="181"/>
+								</CheckBoxField>
+								<InputField name="Наценка11" id="182">
+									<DataPath>Запись.Наценка11</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка11КонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="Наценка11РасширеннаяПодсказка" id="184"/>
+								</InputField>
+								<InputField name="МетодРасчета11" id="185">
+									<DataPath>Запись.МетодРасчета11</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета11КонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="МетодРасчета11РасширеннаяПодсказка" id="187"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен11" id="188">
+									<DataPath>Запись.БазовыйТипЦен11</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен11КонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="БазовыйТипЦен11РасширеннаяПодсказка" id="190"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория12" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория12РасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена12" id="191">
+									<DataPath>Запись.НеРасчитыватьЦена12</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена12КонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена12РасширеннаяПодсказка" id="193"/>
+								</CheckBoxField>
+								<InputField name="Наценка12" id="197">
+									<DataPath>Запись.Наценка12</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка12КонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="Наценка12РасширеннаяПодсказка" id="199"/>
+								</InputField>
+								<InputField name="МетодРасчета12" id="203">
+									<DataPath>Запись.МетодРасчета12</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета12КонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="МетодРасчета12РасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен12" id="209">
+									<DataPath>Запись.БазовыйТипЦен12</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен12КонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="БазовыйТипЦен12РасширеннаяПодсказка" id="211"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория13" id="239">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория13РасширеннаяПодсказка" id="240"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена13" id="194">
+									<DataPath>Запись.НеРасчитыватьЦена13</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена13КонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена13РасширеннаяПодсказка" id="196"/>
+								</CheckBoxField>
+								<InputField name="Наценка13" id="200">
+									<DataPath>Запись.Наценка13</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка13КонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="Наценка13РасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="МетодРасчета13" id="206">
+									<DataPath>Запись.МетодРасчета13</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета13КонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="МетодРасчета13РасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен13" id="212">
+									<DataPath>Запись.БазовыйТипЦен13</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен13КонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="БазовыйТипЦен13РасширеннаяПодсказка" id="214"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория14" id="241">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория14РасширеннаяПодсказка" id="242"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена14" id="243">
+									<DataPath>Запись.НеРасчитыватьЦена14</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена14КонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена14РасширеннаяПодсказка" id="245"/>
+								</CheckBoxField>
+								<InputField name="Наценка14" id="246">
+									<DataPath>Запись.Наценка14</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка14КонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="Наценка14РасширеннаяПодсказка" id="248"/>
+								</InputField>
+								<InputField name="МетодРасчета14" id="249">
+									<DataPath>Запись.МетодРасчета14</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета14КонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="МетодРасчета14РасширеннаяПодсказка" id="251"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен14" id="252">
+									<DataPath>Запись.БазовыйТипЦен14</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен14КонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="БазовыйТипЦен14РасширеннаяПодсказка" id="254"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория15" id="255">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория15РасширеннаяПодсказка" id="256"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена15" id="257">
+									<DataPath>Запись.НеРасчитыватьЦена15</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена15КонтекстноеМеню" id="258"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена15РасширеннаяПодсказка" id="259"/>
+								</CheckBoxField>
+								<InputField name="Наценка15" id="260">
+									<DataPath>Запись.Наценка15</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка15КонтекстноеМеню" id="261"/>
+									<ExtendedTooltip name="Наценка15РасширеннаяПодсказка" id="262"/>
+								</InputField>
+								<InputField name="МетодРасчета15" id="263">
+									<DataPath>Запись.МетодРасчета15</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета15КонтекстноеМеню" id="264"/>
+									<ExtendedTooltip name="МетодРасчета15РасширеннаяПодсказка" id="265"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен15" id="266">
+									<DataPath>Запись.БазовыйТипЦен15</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен15КонтекстноеМеню" id="267"/>
+									<ExtendedTooltip name="БазовыйТипЦен15РасширеннаяПодсказка" id="268"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДанныеПраво" id="341">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>данные право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДанныеПравоРасширеннаяПодсказка" id="342"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКатегория16" id="269">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория16РасширеннаяПодсказка" id="270"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена16" id="271">
+									<DataPath>Запись.НеРасчитыватьЦена16</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена16КонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена16РасширеннаяПодсказка" id="273"/>
+								</CheckBoxField>
+								<InputField name="Наценка16" id="274">
+									<DataPath>Запись.Наценка16</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка16КонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="Наценка16РасширеннаяПодсказка" id="276"/>
+								</InputField>
+								<InputField name="МетодРасчета16" id="277">
+									<DataPath>Запись.МетодРасчета16</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета16КонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="МетодРасчета16РасширеннаяПодсказка" id="279"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен16" id="280">
+									<DataPath>Запись.БазовыйТипЦен16</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен16КонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="БазовыйТипЦен16РасширеннаяПодсказка" id="282"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория17" id="283">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория17РасширеннаяПодсказка" id="284"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена17" id="285">
+									<DataPath>Запись.НеРасчитыватьЦена17</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена17КонтекстноеМеню" id="286"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена17РасширеннаяПодсказка" id="287"/>
+								</CheckBoxField>
+								<InputField name="Наценка17" id="288">
+									<DataPath>Запись.Наценка17</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка17КонтекстноеМеню" id="289"/>
+									<ExtendedTooltip name="Наценка17РасширеннаяПодсказка" id="290"/>
+								</InputField>
+								<InputField name="МетодРасчета17" id="291">
+									<DataPath>Запись.МетодРасчета17</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета17КонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="МетодРасчета17РасширеннаяПодсказка" id="293"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен17" id="294">
+									<DataPath>Запись.БазовыйТипЦен17</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен17КонтекстноеМеню" id="295"/>
+									<ExtendedTooltip name="БазовыйТипЦен17РасширеннаяПодсказка" id="296"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория18" id="297">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория18РасширеннаяПодсказка" id="298"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена18" id="299">
+									<DataPath>Запись.НеРасчитыватьЦена18</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена18КонтекстноеМеню" id="300"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена18РасширеннаяПодсказка" id="301"/>
+								</CheckBoxField>
+								<InputField name="Наценка18" id="302">
+									<DataPath>Запись.Наценка18</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка18КонтекстноеМеню" id="303"/>
+									<ExtendedTooltip name="Наценка18РасширеннаяПодсказка" id="304"/>
+								</InputField>
+								<InputField name="МетодРасчета18" id="305">
+									<DataPath>Запись.МетодРасчета18</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета18КонтекстноеМеню" id="306"/>
+									<ExtendedTooltip name="МетодРасчета18РасширеннаяПодсказка" id="307"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен18" id="308">
+									<DataPath>Запись.БазовыйТипЦен18</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен18КонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="БазовыйТипЦен18РасширеннаяПодсказка" id="310"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория19" id="311">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория19РасширеннаяПодсказка" id="312"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена19" id="313">
+									<DataPath>Запись.НеРасчитыватьЦена19</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена19КонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена19РасширеннаяПодсказка" id="315"/>
+								</CheckBoxField>
+								<InputField name="Наценка19" id="316">
+									<DataPath>Запись.Наценка19</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка19КонтекстноеМеню" id="317"/>
+									<ExtendedTooltip name="Наценка19РасширеннаяПодсказка" id="318"/>
+								</InputField>
+								<InputField name="МетодРасчета19" id="319">
+									<DataPath>Запись.МетодРасчета19</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета19КонтекстноеМеню" id="320"/>
+									<ExtendedTooltip name="МетодРасчета19РасширеннаяПодсказка" id="321"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен19" id="322">
+									<DataPath>Запись.БазовыйТипЦен19</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен19КонтекстноеМеню" id="323"/>
+									<ExtendedTooltip name="БазовыйТипЦен19РасширеннаяПодсказка" id="324"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория20" id="325">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория20РасширеннаяПодсказка" id="326"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена20" id="327">
+									<DataPath>Запись.НеРасчитыватьЦена20</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена20КонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена20РасширеннаяПодсказка" id="329"/>
+								</CheckBoxField>
+								<InputField name="Наценка20" id="330">
+									<DataPath>Запись.Наценка20</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка20КонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="Наценка20РасширеннаяПодсказка" id="332"/>
+								</InputField>
+								<InputField name="МетодРасчета20" id="333">
+									<DataPath>Запись.МетодРасчета20</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета20КонтекстноеМеню" id="334"/>
+									<ExtendedTooltip name="МетодРасчета20РасширеннаяПодсказка" id="335"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен20" id="336">
+									<DataPath>Запись.БазовыйТипЦен20</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен20КонтекстноеМеню" id="337"/>
+									<ExtendedTooltip name="БазовыйТипЦен20РасширеннаяПодсказка" id="338"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория21" id="343">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория21РасширеннаяПодсказка" id="344"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена21" id="345">
+									<DataPath>Запись.НеРасчитыватьЦена21</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена21КонтекстноеМеню" id="346"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена21РасширеннаяПодсказка" id="347"/>
+								</CheckBoxField>
+								<InputField name="Наценка21" id="348">
+									<DataPath>Запись.Наценка21</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка21КонтекстноеМеню" id="349"/>
+									<ExtendedTooltip name="Наценка21РасширеннаяПодсказка" id="350"/>
+								</InputField>
+								<InputField name="МетодРасчета21" id="351">
+									<DataPath>Запись.МетодРасчета21</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета21КонтекстноеМеню" id="352"/>
+									<ExtendedTooltip name="МетодРасчета21РасширеннаяПодсказка" id="353"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен21" id="354">
+									<DataPath>Запись.БазовыйТипЦен21</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен21КонтекстноеМеню" id="355"/>
+									<ExtendedTooltip name="БазовыйТипЦен21РасширеннаяПодсказка" id="356"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория22" id="357">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория22РасширеннаяПодсказка" id="358"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена22" id="359">
+									<DataPath>Запись.НеРасчитыватьЦена22</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена22КонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена22РасширеннаяПодсказка" id="361"/>
+								</CheckBoxField>
+								<InputField name="Наценка22" id="362">
+									<DataPath>Запись.Наценка22</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка22КонтекстноеМеню" id="363"/>
+									<ExtendedTooltip name="Наценка22РасширеннаяПодсказка" id="364"/>
+								</InputField>
+								<InputField name="МетодРасчета22" id="365">
+									<DataPath>Запись.МетодРасчета22</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета22КонтекстноеМеню" id="366"/>
+									<ExtendedTooltip name="МетодРасчета22РасширеннаяПодсказка" id="367"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен22" id="368">
+									<DataPath>Запись.БазовыйТипЦен22</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен22КонтекстноеМеню" id="369"/>
+									<ExtendedTooltip name="БазовыйТипЦен22РасширеннаяПодсказка" id="370"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория23" id="371">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория23РасширеннаяПодсказка" id="372"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена23" id="373">
+									<DataPath>Запись.НеРасчитыватьЦена23</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена23КонтекстноеМеню" id="374"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена23РасширеннаяПодсказка" id="375"/>
+								</CheckBoxField>
+								<InputField name="Наценка23" id="376">
+									<DataPath>Запись.Наценка23</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка23КонтекстноеМеню" id="377"/>
+									<ExtendedTooltip name="Наценка23РасширеннаяПодсказка" id="378"/>
+								</InputField>
+								<InputField name="МетодРасчета23" id="379">
+									<DataPath>Запись.МетодРасчета23</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета23КонтекстноеМеню" id="380"/>
+									<ExtendedTooltip name="МетодРасчета23РасширеннаяПодсказка" id="381"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен23" id="382">
+									<DataPath>Запись.БазовыйТипЦен23</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен23КонтекстноеМеню" id="383"/>
+									<ExtendedTooltip name="БазовыйТипЦен23РасширеннаяПодсказка" id="384"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория24" id="385">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория24РасширеннаяПодсказка" id="386"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена24" id="387">
+									<DataPath>Запись.НеРасчитыватьЦена24</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена24КонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена24РасширеннаяПодсказка" id="389"/>
+								</CheckBoxField>
+								<InputField name="Наценка24" id="390">
+									<DataPath>Запись.Наценка24</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка24КонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="Наценка24РасширеннаяПодсказка" id="392"/>
+								</InputField>
+								<InputField name="МетодРасчета24" id="393">
+									<DataPath>Запись.МетодРасчета24</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета24КонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="МетодРасчета24РасширеннаяПодсказка" id="395"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен24" id="396">
+									<DataPath>Запись.БазовыйТипЦен24</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен24КонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="БазовыйТипЦен24РасширеннаяПодсказка" id="398"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория25" id="399">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория25РасширеннаяПодсказка" id="400"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена25" id="401">
+									<DataPath>Запись.НеРасчитыватьЦена25</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена25КонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена25РасширеннаяПодсказка" id="403"/>
+								</CheckBoxField>
+								<InputField name="Наценка25" id="404">
+									<DataPath>Запись.Наценка25</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка25КонтекстноеМеню" id="405"/>
+									<ExtendedTooltip name="Наценка25РасширеннаяПодсказка" id="406"/>
+								</InputField>
+								<InputField name="МетодРасчета25" id="407">
+									<DataPath>Запись.МетодРасчета25</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета25КонтекстноеМеню" id="408"/>
+									<ExtendedTooltip name="МетодРасчета25РасширеннаяПодсказка" id="409"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен25" id="410">
+									<DataPath>Запись.БазовыйТипЦен25</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен25КонтекстноеМеню" id="411"/>
+									<ExtendedTooltip name="БазовыйТипЦен25РасширеннаяПодсказка" id="412"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория26" id="413">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория26РасширеннаяПодсказка" id="414"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена26" id="415">
+									<DataPath>Запись.НеРасчитыватьЦена26</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена26КонтекстноеМеню" id="416"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена26РасширеннаяПодсказка" id="417"/>
+								</CheckBoxField>
+								<InputField name="Наценка26" id="418">
+									<DataPath>Запись.Наценка26</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка26КонтекстноеМеню" id="419"/>
+									<ExtendedTooltip name="Наценка26РасширеннаяПодсказка" id="420"/>
+								</InputField>
+								<InputField name="МетодРасчета26" id="421">
+									<DataPath>Запись.МетодРасчета26</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета26КонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="МетодРасчета26РасширеннаяПодсказка" id="423"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен26" id="424">
+									<DataPath>Запись.БазовыйТипЦен26</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен26КонтекстноеМеню" id="425"/>
+									<ExtendedTooltip name="БазовыйТипЦен26РасширеннаяПодсказка" id="426"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория27" id="427">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория27РасширеннаяПодсказка" id="428"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена27" id="429">
+									<DataPath>Запись.НеРасчитыватьЦена27</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена27КонтекстноеМеню" id="430"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена27РасширеннаяПодсказка" id="431"/>
+								</CheckBoxField>
+								<InputField name="Наценка27" id="432">
+									<DataPath>Запись.Наценка27</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка27КонтекстноеМеню" id="433"/>
+									<ExtendedTooltip name="Наценка27РасширеннаяПодсказка" id="434"/>
+								</InputField>
+								<InputField name="МетодРасчета27" id="435">
+									<DataPath>Запись.МетодРасчета27</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета27КонтекстноеМеню" id="436"/>
+									<ExtendedTooltip name="МетодРасчета27РасширеннаяПодсказка" id="437"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен27" id="438">
+									<DataPath>Запись.БазовыйТипЦен27</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен27КонтекстноеМеню" id="439"/>
+									<ExtendedTooltip name="БазовыйТипЦен27РасширеннаяПодсказка" id="440"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория28" id="441">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория28РасширеннаяПодсказка" id="442"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена28" id="443">
+									<DataPath>Запись.НеРасчитыватьЦена28</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена28КонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена28РасширеннаяПодсказка" id="445"/>
+								</CheckBoxField>
+								<InputField name="Наценка28" id="446">
+									<DataPath>Запись.Наценка28</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка28КонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="Наценка28РасширеннаяПодсказка" id="448"/>
+								</InputField>
+								<InputField name="МетодРасчета28" id="449">
+									<DataPath>Запись.МетодРасчета28</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета28КонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="МетодРасчета28РасширеннаяПодсказка" id="451"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен28" id="452">
+									<DataPath>Запись.БазовыйТипЦен28</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен28КонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="БазовыйТипЦен28РасширеннаяПодсказка" id="454"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория29" id="455">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория29РасширеннаяПодсказка" id="456"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена29" id="457">
+									<DataPath>Запись.НеРасчитыватьЦена29</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена29КонтекстноеМеню" id="458"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена29РасширеннаяПодсказка" id="459"/>
+								</CheckBoxField>
+								<InputField name="Наценка29" id="460">
+									<DataPath>Запись.Наценка29</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка29КонтекстноеМеню" id="461"/>
+									<ExtendedTooltip name="Наценка29РасширеннаяПодсказка" id="462"/>
+								</InputField>
+								<InputField name="МетодРасчета29" id="463">
+									<DataPath>Запись.МетодРасчета29</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета29КонтекстноеМеню" id="464"/>
+									<ExtendedTooltip name="МетодРасчета29РасширеннаяПодсказка" id="465"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен29" id="466">
+									<DataPath>Запись.БазовыйТипЦен29</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен29КонтекстноеМеню" id="467"/>
+									<ExtendedTooltip name="БазовыйТипЦен29РасширеннаяПодсказка" id="468"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКатегория30" id="469">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа категория14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКатегория30РасширеннаяПодсказка" id="470"/>
+							<ChildItems>
+								<CheckBoxField name="НеРасчитыватьЦена30" id="471">
+									<DataPath>Запись.НеРасчитыватьЦена30</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеРасчитыватьЦена30КонтекстноеМеню" id="472"/>
+									<ExtendedTooltip name="НеРасчитыватьЦена30РасширеннаяПодсказка" id="473"/>
+								</CheckBoxField>
+								<InputField name="Наценка30" id="474">
+									<DataPath>Запись.Наценка30</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="Наценка30КонтекстноеМеню" id="475"/>
+									<ExtendedTooltip name="Наценка30РасширеннаяПодсказка" id="476"/>
+								</InputField>
+								<InputField name="МетодРасчета30" id="477">
+									<DataPath>Запись.МетодРасчета30</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="МетодРасчета30КонтекстноеМеню" id="478"/>
+									<ExtendedTooltip name="МетодРасчета30РасширеннаяПодсказка" id="479"/>
+								</InputField>
+								<InputField name="БазовыйТипЦен30" id="480">
+									<DataPath>Запись.БазовыйТипЦен30</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="БазовыйТипЦен30КонтекстноеМеню" id="481"/>
+									<ExtendedTooltip name="БазовыйТипЦен30РасширеннаяПодсказка" id="482"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Ценообразование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

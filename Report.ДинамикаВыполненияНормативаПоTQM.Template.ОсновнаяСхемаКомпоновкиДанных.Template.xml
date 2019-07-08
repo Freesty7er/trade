@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План_TQM_обяз</dataPath>
+			<field>План_TQM_обяз</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План TQM обяз</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.ТипСтруктурнойЕдиницы</dcscor:choiceParameter>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.ТипыСтруктурныхЕдиниц.Подразделение</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План_TQM_рек</dataPath>
+			<field>План_TQM_рек</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План TQM рек</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияТТ</dataPath>
+			<field>КатегорияТТ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период месяц</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сп_TQM_рек</dataPath>
+			<field>сп_TQM_рек</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп TQM рек</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сп_TQM_обяз</dataPath>
+			<field>сп_TQM_обяз</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп TQM обяз</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сч_TQM_рек</dataPath>
+			<field>сч_TQM_рек</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч TQM рек</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сч_TQM_обяз</dataPath>
+			<field>сч_TQM_обяз</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч TQM обяз</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План_TQM_обяз_пред</dataPath>
+			<field>План_TQM_обяз_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План TQM обяз пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План_TQM_рек_пред</dataPath>
+			<field>План_TQM_рек_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План TQM рек пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сп_TQM_рек_пред</dataPath>
+			<field>сп_TQM_рек_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп TQM рек пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сп_TQM_обяз_пред</dataPath>
+			<field>сп_TQM_обяз_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сп TQM обяз пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сч_TQM_обяз_пред</dataPath>
+			<field>сч_TQM_обяз_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч TQM обяз пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>сч_TQM_рек_пред</dataPath>
+			<field>сч_TQM_рек_пред</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч TQM рек пред</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ПланыПродаж</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>План_TQM_обяз</dataPath>
+				<field>План_TQM_обяз</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>План TQM обяз</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>План_TQM_рек</dataPath>
+				<field>План_TQM_рек</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>План TQM рек</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КатегорияТТ</dataPath>
+				<field>КатегорияТТ</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>План_TQM_обяз_пред</dataPath>
+				<field>План_TQM_обяз_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>План TQM обяз пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>План_TQM_рек_пред</dataPath>
+				<field>План_TQM_рек_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>План TQM рек пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ,
+	СУММА(ВложенныйЗапрос.План_TQM_обяз) КАК План_TQM_обяз,
+	СУММА(ВложенныйЗапрос.План_TQM_рек) КАК План_TQM_рек,
+	СУММА(ВложенныйЗапрос.План_TQM_обяз_пред) КАК План_TQM_обяз_пред,
+	СУММА(ВложенныйЗапрос.План_TQM_рек_пред) КАК План_TQM_рек_пред
+ИЗ
+	(ВЫБРАТЬ
+		НАЧАЛОПЕРИОДА(ПланыПродажНормативыПоTQM.Ссылка.Дата, МЕСЯЦ) КАК ПериодМесяц,
+		ПланыПродажНормативыПоTQM.Ссылка.Подразделение КАК Подразделение,
+		ПланыПродажНормативыПоTQM.КатегорияТТ КАК КатегорияТТ,
+		СРЕДНЕЕ(ПланыПродажНормативыПоTQM.TQM_обяз) КАК План_TQM_обяз,
+		СРЕДНЕЕ(ПланыПродажНормативыПоTQM.TQM_рек) КАК План_TQM_рек,
+		0 КАК План_TQM_обяз_пред,
+		0 КАК План_TQM_рек_пред
+	ИЗ
+		Документ.ПланыПродаж.НормативыПоTQM КАК ПланыПродажНормативыПоTQM
+	ГДЕ
+		ПланыПродажНормативыПоTQM.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	
+	СГРУППИРОВАТЬ ПО
+		НАЧАЛОПЕРИОДА(ПланыПродажНормативыПоTQM.Ссылка.Дата, МЕСЯЦ),
+		ПланыПродажНормативыПоTQM.Ссылка.Подразделение,
+		ПланыПродажНормативыПоTQM.КатегорияТТ
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(ПланыПродажНормативыПоTQM.Ссылка.Дата, МЕСЯЦ, 1), МЕСЯЦ),
+		ПланыПродажНормативыПоTQM.Ссылка.Подразделение,
+		ПланыПродажНормативыПоTQM.КатегорияТТ,
+		0,
+		0,
+		СРЕДНЕЕ(ПланыПродажНормативыПоTQM.TQM_обяз),
+		СРЕДНЕЕ(ПланыПродажНормативыПоTQM.TQM_рек)
+	ИЗ
+		Документ.ПланыПродаж.НормативыПоTQM КАК ПланыПродажНормативыПоTQM
+	ГДЕ
+		ПланыПродажНормативыПоTQM.Ссылка.Дата МЕЖДУ &amp;НачалоПериодаПред И &amp;КонецПериодаПред
+	
+	СГРУППИРОВАТЬ ПО
+		НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(ПланыПродажНормативыПоTQM.Ссылка.Дата, МЕСЯЦ, 1), МЕСЯЦ),
+		ПланыПродажНормативыПоTQM.Ссылка.Подразделение,
+		ПланыПродажНормативыПоTQM.КатегорияТТ) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>СтандартПрисутствия</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КатегорияТТ</dataPath>
+				<field>КатегорияТТ</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сп_TQM_рек</dataPath>
+				<field>сп_TQM_рек</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сп TQM рек</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сп_TQM_обяз</dataPath>
+				<field>сп_TQM_обяз</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сп TQM обяз</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сп_TQM_рек_пред</dataPath>
+				<field>сп_TQM_рек_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сп TQM рек пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сп_TQM_обяз_пред</dataPath>
+				<field>сп_TQM_обяз_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сп TQM обяз пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ,
+	СУММА(ВложенныйЗапрос.сп_TQM_обяз) КАК сп_TQM_обяз,
+	СУММА(ВложенныйЗапрос.сп_TQM_рек) КАК сп_TQM_рек,
+	СУММА(ВложенныйЗапрос.сп_TQM_обяз_пред) КАК сп_TQM_обяз_пред,
+	СУММА(ВложенныйЗапрос.сп_TQM_рек_пред) КАК сп_TQM_рек_пред
+ИЗ
+	(ВЫБРАТЬ
+		НАЧАЛОПЕРИОДА(КД_СтандартПрисутствия.Период, МЕСЯЦ) КАК ПериодМесяц,
+		КД_СтандартПрисутствия.Подразделение КАК Подразделение,
+		КД_СтандартПрисутствия.КатегорияТТ КАК КатегорияТТ,
+		СУММА(ВЫБОР
+				КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Обязательный)
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ) КАК сп_TQM_обяз,
+		СУММА(ВЫБОР
+				КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Рекомендуемый)
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ) КАК сп_TQM_рек,
+		0 КАК сп_TQM_обяз_пред,
+		0 КАК сп_TQM_рек_пред
+	ИЗ
+		РегистрСведений.КД_СтандартПрисутствия КАК КД_СтандартПрисутствия
+	ГДЕ
+		КД_СтандартПрисутствия.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И КД_СтандартПрисутствия.ТорговаяТочка = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+		И КД_СтандартПрисутствия.ТипПриоритета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.НеРекомендуемый)
+	
+	СГРУППИРОВАТЬ ПО
+		НАЧАЛОПЕРИОДА(КД_СтандартПрисутствия.Период, МЕСЯЦ),
+		КД_СтандартПрисутствия.Подразделение,
+		КД_СтандартПрисутствия.КатегорияТТ
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(КД_СтандартПрисутствия.Период, МЕСЯЦ, 1), МЕСЯЦ),
+		КД_СтандартПрисутствия.Подразделение,
+		КД_СтандартПрисутствия.КатегорияТТ,
+		0,
+		0,
+		СУММА(ВЫБОР
+				КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Обязательный)
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ),
+		СУММА(ВЫБОР
+				КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Рекомендуемый)
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ)
+	ИЗ
+		РегистрСведений.КД_СтандартПрисутствия КАК КД_СтандартПрисутствия
+	ГДЕ
+		КД_СтандартПрисутствия.Период МЕЖДУ &amp;НачалоПериодаПред И &amp;КонецПериодаПред
+		И КД_СтандартПрисутствия.ТорговаяТочка = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+		И КД_СтандартПрисутствия.ТипПриоритета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.НеРекомендуемый)
+	
+	СГРУППИРОВАТЬ ПО
+		НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(КД_СтандартПрисутствия.Период, МЕСЯЦ, 1), МЕСЯЦ),
+		КД_СтандартПрисутствия.Подразделение,
+		КД_СтандартПрисутствия.КатегорияТТ) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>СторЧек</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КатегорияТТ</dataPath>
+				<field>КатегорияТТ</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>Ссылка</field>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сч_TQM_рек</dataPath>
+				<field>сч_TQM_рек</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сч TQM рек</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сч_TQM_обяз</dataPath>
+				<field>сч_TQM_обяз</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сч TQM обяз</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сч_TQM_обяз_пред</dataPath>
+				<field>сч_TQM_обяз_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сч TQM обяз пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>сч_TQM_рек_пред</dataPath>
+				<field>сч_TQM_рек_пред</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сч TQM рек пред</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ,
+	СУММА(ВложенныйЗапрос.сч_TQM_обяз) КАК сч_TQM_обяз,
+	СУММА(ВложенныйЗапрос.сч_TQM_рек) КАК сч_TQM_рек,
+	СУММА(ВложенныйЗапрос.сч_TQM_обяз_пред) КАК сч_TQM_обяз_пред,
+	СУММА(ВложенныйЗапрос.сч_TQM_рек_пред) КАК сч_TQM_рек_пред
+ИЗ
+	(ВЫБРАТЬ
+		ВложенныйЗапрос.ПериодМесяц КАК ПериодМесяц,
+		ВложенныйЗапрос.Подразделение КАК Подразделение,
+		ВложенныйЗапрос.КатегорияТТ КАК КатегорияТТ,
+		СРЕДНЕЕ(ВложенныйЗапрос.сч_TQM_обяз) КАК сч_TQM_обяз,
+		СРЕДНЕЕ(ВложенныйЗапрос.сч_TQM_рек) КАК сч_TQM_рек,
+		0 КАК сч_TQM_обяз_пред,
+		0 КАК сч_TQM_рек_пред
+	ИЗ
+		(ВЫБРАТЬ
+			НАЧАЛОПЕРИОДА(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ) КАК ПериодМесяц,
+			БПАГСторЧекТовары.Ссылка КАК Ссылка,
+			БПАГСторЧекТовары.Ссылка.Подразделение КАК Подразделение,
+			БПАГСторЧекТовары.Ссылка.КатегорияТТ КАК КатегорияТТ,
+			СУММА(ВЫБОР
+					КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПРиоритетовПродукта.Обязательный)
+						ТОГДА 1
+					ИНАЧЕ 0
+				КОНЕЦ) КАК сч_TQM_обяз,
+			СУММА(ВЫБОР
+					КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПРиоритетовПродукта.Рекомендуемый)
+						ТОГДА 1
+					ИНАЧЕ 0
+				КОНЕЦ) КАК сч_TQM_рек
+		ИЗ
+			Документ.БПАГСторЧек.Товары КАК БПАГСторЧекТовары
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КД_СтандартПрисутствия КАК КД_СтандартПрисутствия
+				ПО (НАЧАЛОПЕРИОДА(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ) = НАЧАЛОПЕРИОДА(КД_СтандартПрисутствия.Период, МЕСЯЦ))
+					И (КД_СтандартПрисутствия.ТорговаяТочка = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка))
+					И (КД_СтандартПрисутствия.ТипПриоритета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.НеРекомендуемый))
+					И БПАГСторЧекТовары.Ссылка.Подразделение = КД_СтандартПрисутствия.Подразделение
+					И БПАГСторЧекТовары.Ссылка.КатегорияТТ = КД_СтандартПрисутствия.КатегорияТТ
+					И БПАГСторЧекТовары.Номенклатура = КД_СтандартПрисутствия.Номенклатура
+		ГДЕ
+			БПАГСторЧекТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		
+		СГРУППИРОВАТЬ ПО
+			НАЧАЛОПЕРИОДА(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ),
+			БПАГСторЧекТовары.Ссылка,
+			БПАГСторЧекТовары.Ссылка.Подразделение,
+			БПАГСторЧекТовары.Ссылка.КатегорияТТ) КАК ВложенныйЗапрос
+	
+	СГРУППИРОВАТЬ ПО
+		ВложенныйЗапрос.ПериодМесяц,
+		ВложенныйЗапрос.Подразделение,
+		ВложенныйЗапрос.КатегорияТТ
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ВложенныйЗапрос.ПериодМесяц,
+		ВложенныйЗапрос.Подразделение,
+		ВложенныйЗапрос.КатегорияТТ,
+		0,
+		0,
+		СРЕДНЕЕ(ВложенныйЗапрос.сч_TQM_обяз_пред),
+		СРЕДНЕЕ(ВложенныйЗапрос.сч_TQM_рек_пред)
+	ИЗ
+		(ВЫБРАТЬ
+			НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ, 1), МЕСЯЦ) КАК ПериодМесяц,
+			БПАГСторЧекТовары.Ссылка КАК Ссылка,
+			БПАГСторЧекТовары.Ссылка.Подразделение КАК Подразделение,
+			БПАГСторЧекТовары.Ссылка.КатегорияТТ КАК КатегорияТТ,
+			СУММА(ВЫБОР
+					КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПРиоритетовПродукта.Обязательный)
+						ТОГДА 1
+					ИНАЧЕ 0
+				КОНЕЦ) КАК сч_TQM_обяз_пред,
+			СУММА(ВЫБОР
+					КОГДА КД_СтандартПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПРиоритетовПродукта.Рекомендуемый)
+						ТОГДА 1
+					ИНАЧЕ 0
+				КОНЕЦ) КАК сч_TQM_рек_пред
+		ИЗ
+			Документ.БПАГСторЧек.Товары КАК БПАГСторЧекТовары
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КД_СтандартПрисутствия КАК КД_СтандартПрисутствия
+				ПО (НАЧАЛОПЕРИОДА(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ) = НАЧАЛОПЕРИОДА(КД_СтандартПрисутствия.Период, МЕСЯЦ))
+					И (КД_СтандартПрисутствия.ТорговаяТочка = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка))
+					И (КД_СтандартПрисутствия.ТипПриоритета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.НеРекомендуемый))
+					И БПАГСторЧекТовары.Ссылка.Подразделение = КД_СтандартПрисутствия.Подразделение
+					И БПАГСторЧекТовары.Ссылка.КатегорияТТ = КД_СтандартПрисутствия.КатегорияТТ
+					И БПАГСторЧекТовары.Номенклатура = КД_СтандартПрисутствия.Номенклатура
+		ГДЕ
+			БПАГСторЧекТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериодаПред И &amp;КонецПериодаПред
+		
+		СГРУППИРОВАТЬ ПО
+			НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(БПАГСторЧекТовары.Ссылка.Дата, МЕСЯЦ, 1), МЕСЯЦ),
+			БПАГСторЧекТовары.Ссылка,
+			БПАГСторЧекТовары.Ссылка.Подразделение,
+			БПАГСторЧекТовары.Ссылка.КатегорияТТ) КАК ВложенныйЗапрос
+	
+	СГРУППИРОВАТЬ ПО
+		ВложенныйЗапрос.ПериодМесяц,
+		ВложенныйЗапрос.Подразделение,
+		ВложенныйЗапрос.КатегорияТТ) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ПериодМесяц,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.КатегорияТТ</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>TQM_обяз</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз &lt;&gt; 0 И сп_TQM_обяз &lt;&gt; 0 ТОГДА (сч_TQM_обяз / сп_TQM_обяз * 100) / План_TQM_обяз * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TQM обяз, %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TQM_рек</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек &lt;&gt; 0 И сп_TQM_рек &lt;&gt; 0 ТОГДА (сч_TQM_рек / сп_TQM_рек * 100) / План_TQM_рек * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TQM рек, %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TQM_обяз_пред</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз_пред &lt;&gt; 0 И сп_TQM_обяз_пред &lt;&gt; 0 ТОГДА (сч_TQM_обяз_пред / сп_TQM_обяз_пред * 100) / План_TQM_обяз_пред * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TQM обяз, % (пред)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TQM_рек_пред</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек_пред &lt;&gt; 0 И сп_TQM_рек_пред &lt;&gt; 0 ТОГДА (сч_TQM_рек_пред / сп_TQM_рек_пред * 100) / План_TQM_рек_пред * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TQM рек, % (пред)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Динамика_обяз</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз &lt;&gt; 0 И сп_TQM_обяз &lt;&gt; 0 И План_TQM_обяз_пред &lt;&gt; 0 И сп_TQM_обяз_пред &lt;&gt; 0 ТОГДА ((сч_TQM_обяз / сп_TQM_обяз * 100) / План_TQM_обяз * 100) - ((сч_TQM_обяз_пред / сп_TQM_обяз_пред * 100) / План_TQM_обяз_пред * 100) ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Динамика обяз, %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Динамика_рек</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек &lt;&gt; 0 И сп_TQM_рек &lt;&gt; 0 И План_TQM_рек_пред &lt;&gt; 0 И сп_TQM_рек_пред &lt;&gt; 0 ТОГДА ((сч_TQM_рек / сп_TQM_рек * 100) / План_TQM_рек * 100) - ((сч_TQM_рек_пред / сп_TQM_рек_пред * 100) / План_TQM_рек_пред * 100) ИНАЧЕ 0 КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Динамика рек, %</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>TQM_обяз</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз &lt;&gt; 0 И СУММА(сп_TQM_обяз) &lt;&gt; 0 ТОГДА (СУММА(сч_TQM_обяз) / СУММА(сп_TQM_обяз) * 100) / План_TQM_обяз * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<totalField>
+		<dataPath>TQM_рек</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек &lt;&gt; 0 И СУММА(сп_TQM_рек) &lt;&gt; 0 ТОГДА (СУММА(сч_TQM_рек) / СУММА(сп_TQM_рек) * 100) / План_TQM_рек * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<totalField>
+		<dataPath>TQM_обяз_пред</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз_пред &lt;&gt; 0 И СУММА(сп_TQM_обяз_пред) &lt;&gt; 0 ТОГДА (СУММА(сч_TQM_обяз_пред) / СУММА(сп_TQM_обяз_пред) * 100) / План_TQM_обяз_пред * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<totalField>
+		<dataPath>TQM_рек_пред</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек_пред &lt;&gt; 0 И СУММА(сп_TQM_рек_пред) &lt;&gt; 0 ТОГДА (СУММА(сч_TQM_рек_пред) / СУММА(сп_TQM_рек_пред) * 100) / План_TQM_рек_пред * 100 ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<totalField>
+		<dataPath>Динамика_обяз</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_обяз &lt;&gt; 0 И СУММА(сп_TQM_обяз_пред) &lt;&gt; 0 И План_TQM_обяз_пред &lt;&gt; 0 И СУММА(сп_TQM_обяз_пред) &lt;&gt; 0 ТОГДА ((СУММА(сч_TQM_обяз) / СУММА(сп_TQM_обяз) * 100) / План_TQM_обяз * 100) - ((СУММА(сч_TQM_обяз_пред) / СУММА(сп_TQM_обяз_пред) * 100) / План_TQM_обяз_пред * 100) ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<totalField>
+		<dataPath>Динамика_рек</dataPath>
+		<expression>ВЫБОР КОГДА План_TQM_рек &lt;&gt; 0 И СУММА(сп_TQM_рек) &lt;&gt; 0 И План_TQM_рек_пред &lt;&gt; 0 И СУММА(сп_TQM_рек_пред) &lt;&gt; 0 ТОГДА ((СУММА(сч_TQM_рек) / СУММА(сп_TQM_рек) * 100) / План_TQM_рек * 100) - ((СУММА(сч_TQM_рек_пред) / СУММА(сп_TQM_рек_пред) * 100) / План_TQM_рек_пред * 100) ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>КатегорияТТ</group>
+		<group>ПериодМесяц</group>
+		<group>Подразделение</group>
+	</totalField>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НАЧАЛОПЕРИОДА(&amp;ПериодОтчета.ДатаНачала, "МЕСЯЦ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;ПериодОтчета.ДатаОкончания, "МЕСЯЦ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериодаПред</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода пред</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(&amp;ПериодОтчета.ДатаНачала, "МЕСЯЦ", -1), "МЕСЯЦ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериодаПред</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода пред</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(ДОБАВИТЬКДАТЕ(&amp;ПериодОтчета.ДатаОкончания, "МЕСЯЦ", -1), "МЕСЯЦ")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQM_обяз</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQM_рек</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQM_обяз_пред</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQM_рек_пред</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Динамика_обяз</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Динамика_рек</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>7c78630a-76d4-4bcb-a2a4-590a5f01fc79</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>6d9560b7-a496-4a89-afb0-c6972bcac701</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>56383466-da0e-41b7-9fee-60f0b955b5aa</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>a6c66ff8-c92b-4bcd-8a39-f2d6b5f96a42</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>d5de80fd-a382-44d7-9527-ebe7bdb7a4aa</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8ecae7ab-32ae-423e-8b42-92b7d426ea5f</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПериодМесяц</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КатегорияТТ</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:columnsViewMode>Normal</dcsset:columnsViewMode>
+				<dcsset:columnsUserSettingID>20dc7af3-975e-4c49-b830-f51e6fb951c9</dcsset:columnsUserSettingID>
+				<dcsset:rowsViewMode>Normal</dcsset:rowsViewMode>
+				<dcsset:rowsUserSettingID>742d0d77-95f4-4ee6-81c2-0ca95e3590de</dcsset:rowsUserSettingID>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>079477c1-f998-428a-8a2b-d1c7d71ea5be</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

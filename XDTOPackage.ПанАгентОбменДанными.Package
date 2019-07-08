@@ -1,0 +1,64 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<objectType name="plist">
+		<property xmlns:d3p1="http://www.apple.com/DTDs/PropertyList-1.0.dtd" name="array" type="d3p1:array"/>
+		<property name="version" default="1.0" form="Attribute"/>
+	</objectType>
+	<objectType name="array">
+		<property xmlns:d3p1="http://www.apple.com/DTDs/PropertyList-1.0.dtd" name="dict" type="d3p1:dict" upperBound="-1"/>
+	</objectType>
+	<objectType name="dict" sequenced="true">
+		<property name="key" type="xs:string" upperBound="-1"/>
+		<property name="string" type="xs:string" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.apple.com/DTDs/PropertyList-1.0.dtd" name="array" type="d3p1:array"/>
+	</objectType>
+	<objectType name="questionGroups">
+		<property name="uniqueID" type="xs:string"/>
+		<property name="identifier" type="xs:string"/>
+		<property name="name" type="xs:string"/>
+		<property name="description" type="xs:string"/>
+		<property name="sort" type="xs:string"/>
+	</objectType>
+	<objectType name="questionnaireTypes">
+		<property name="uniqueID" type="xs:string"/>
+		<property name="name" type="xs:string"/>
+		<property name="comment" type="xs:string"/>
+	</objectType>
+	<objectType name="questions">
+		<property name="uniqueID"/>
+		<property name="identifier"/>
+		<property name="name"/>
+		<property name="placeholder"/>
+		<property name="nameColor"/>
+		<property name="nameSize"/>
+		<property name="nameWidthPercent"/>
+		<property name="valueAlign"/>
+		<property name="valueColor"/>
+		<property name="valueSize"/>
+		<property name="defaultValue"/>
+		<property name="required"/>
+		<property name="questionnaireTypeID"/>
+		<property name="questionGroupID"/>
+		<property name="sort"/>
+		<property name="nameAlign"/>
+		<property name="type"/>
+		<property xmlns:d3p1="http://www.apple.com/DTDs/PropertyList-1.0.dtd" name="values" type="d3p1:questionsValues"/>
+	</objectType>
+	<objectType name="questionsValues">
+		<property name="sort"/>
+		<property name="value"/>
+	</objectType>
+	<objectType name="questionnaires">
+		<property name="uniqueID"/>
+		<property name="date"/>
+		<property name="questionnaireTypeID"/>
+		<property name="clientID"/>
+		<property name="posID"/>
+		<property xmlns:d3p1="http://www.apple.com/DTDs/PropertyList-1.0.dtd" name="rows" type="d3p1:questionnairesRows"/>
+		<property name="status"/>
+	</objectType>
+	<objectType name="questionnairesRows">
+		<property name="questionID"/>
+		<property name="value"/>
+		<property name="goodID"/>
+	</objectType>
+</package>

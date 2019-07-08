@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименованиеКод" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВладелецКарты" id="13">
+			<DataPath>Объект.ВладелецКарты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКартыКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВладелецКартыРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Реферал" id="74">
+			<DataPath>Объект.Реферал</DataPath>
+			<ContextMenu name="РефералКонтекстноеМеню" id="75"/>
+			<ExtendedTooltip name="РефералРасширеннаяПодсказка" id="76"/>
+		</InputField>
+		<InputField name="ВидКарты" id="22">
+			<DataPath>Объект.ВидКарты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидКартыКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВидКартыРасширеннаяПодсказка" id="24"/>
+			<Events>
+				<Event name="OnChange">ВидКартыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="КодКарты" id="10">
+			<DataPath>Объект.КодКарты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКартыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КодКартыРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">КодКартыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ТипШтрихКода" id="28">
+			<DataPath>Объект.ТипШтрихКода</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ТипШтрихКодаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ТипШтрихКодаРасширеннаяПодсказка" id="30"/>
+			<Events>
+				<Event name="OnChange">ТипШтрихКодаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ТипКарты" id="25">
+			<DataPath>Объект.ТипКарты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипКартыКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТипКартыРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="OnChange">ТипКартыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаДействиеКарты" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>действие карты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа действие карты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаДействиеКартыРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<InputField name="Р_ДатаНачалаДействия" id="34">
+					<DataPath>Объект.Р_ДатаНачалаДействия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Р_ДатаНачалаДействияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="Р_ДатаНачалаДействияРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="Р_ДатаОкончанияДействия" id="37">
+					<DataPath>Объект.Р_ДатаОкончанияДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>окончание</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Р_ДатаОкончанияДействияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="Р_ДатаОкончанияДействияРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВидДисконтнойКарты" id="31">
+			<DataPath>Объект.ВидДисконтнойКарты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидДисконтнойКартыКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ВидДисконтнойКартыРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<UsualGroup name="ГруппаРегистрация" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>регистрация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа регистрация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаРегистрацияРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<InputField name="Р_НомерЧекаРегистрации" id="40">
+					<DataPath>Объект.Р_НомерЧекаРегистрации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер чека</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Р_НомерЧекаРегистрацииКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="Р_НомерЧекаРегистрацииРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<Button name="Регистрация" id="72">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Регистрация</CommandName>
+					<ExtendedTooltip name="РегистрацияРасширеннаяПодсказка" id="73"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРучнойПроцент" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ручной процент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ручной процент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРучнойПроцентРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<CheckBoxField name="Р_ФиксированныйПроцентДисконта" id="52">
+					<DataPath>Объект.Р_ФиксированныйПроцентДисконта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="Р_ФиксированныйПроцентДисконтаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="Р_ФиксированныйПроцентДисконтаРасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
+				<InputField name="Р_РучнойПроцентБонуса" id="49">
+					<DataPath>Объект.Р_РучнойПроцентБонуса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ручной процент:</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="Р_РучнойПроцентБонусаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="Р_РучнойПроцентБонусаРасширеннаяПодсказка" id="51"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа6" id="65">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<CheckBoxField name="Р_ВыгружатьНаПОС" id="43">
+					<DataPath>Объект.Р_ВыгружатьНаПОС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="Р_ВыгружатьНаПОСКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="Р_ВыгружатьНаПОСРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="Р_Заблокирована" id="46">
+					<DataPath>Объект.Р_Заблокирована</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="Р_ЗаблокированаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="Р_ЗаблокированаРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ИнформационныеКарты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Регистрация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Регистрация</Action>
+		</Command>
+	</Commands>
+</Form>

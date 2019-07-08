@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="ДатаСоздания" id="5">
+			<DataPath>Объект.ДатаСоздания</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ДатаСозданияExtendedTooltip" id="20"/>
+		</InputField>
+		<InputField name="Документ" id="7">
+			<DataPath>Объект.Документ</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДокументExtendedTooltip" id="21"/>
+		</InputField>
+		<CheckBoxField name="ВыгружатьВКПК" id="9">
+			<DataPath>Объект.ВыгружатьВКПК</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыгружатьВКПККонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВыгружатьВКПКExtendedTooltip" id="22"/>
+		</CheckBoxField>
+		<Table name="Агенты" id="11">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Агенты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="АгентыКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="АгентыКоманднаяПанель" id="13"/>
+			<ExtendedTooltip name="АгентыExtendedTooltip" id="23"/>
+			<SearchStringAddition name="АгентыСтрокаПоиска" id="26">
+				<AdditionSource>
+					<Item>Агенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АгентыСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="АгентыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="АгентыСостояниеПросмотра" id="29">
+				<AdditionSource>
+					<Item>Агенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АгентыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="АгентыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="АгентыУправлениеПоиском" id="32">
+				<AdditionSource>
+					<Item>Агенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="АгентыУправлениеПоискомКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="АгентыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="АгентыНомерСтроки" id="14">
+					<DataPath>Объект.Агенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АгентыНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="АгентыНомерСтрокиExtendedTooltip" id="24"/>
+				</LabelField>
+				<InputField name="АгентыАгент" id="16">
+					<DataPath>Объект.Агенты.Агент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АгентыАгентКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="АгентыАгентExtendedTooltip" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Удалить_кпкТемыСообщений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

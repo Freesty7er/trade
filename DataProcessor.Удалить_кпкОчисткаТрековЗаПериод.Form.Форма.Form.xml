@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКнопка1" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьОчистку</CommandName>
+				<ExtendedTooltip name="ФормаКнопка1ExtendedTooltip" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="14">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="22"/>
+			<ChildItems>
+				<InputField name="НачПериода" id="1">
+					<DataPath>Объект.НачПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачПериодаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НачПериодаExtendedTooltip" id="23"/>
+				</InputField>
+				<InputField name="КонПериода" id="3">
+					<DataPath>Объект.КонПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КонПериодаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КонПериодаExtendedTooltip" id="24"/>
+				</InputField>
+				<Button name="КнопкаУстановитьИнтервал" id="15">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КнопкаУстановитьИнтервалExtendedTooltip" id="25"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Агенты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="26"/>
+			<ChildItems>
+				<Table name="ТаблицаАгентов" id="5">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ТаблицаАгентов</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаАгентовКонтекстноеМеню" id="6"/>
+					<AutoCommandBar name="ТаблицаАгентовКоманднаяПанель" id="7">
+						<ChildItems>
+							<Button name="ТаблицаАгентовКнопка1" id="18">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьПометки</CommandName>
+								<ExtendedTooltip name="ТаблицаАгентовКнопка1ExtendedTooltip" id="27"/>
+							</Button>
+							<Button name="ТаблицаАгентовКнопка2" id="19">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СнытьПометки</CommandName>
+								<ExtendedTooltip name="ТаблицаАгентовКнопка2ExtendedTooltip" id="28"/>
+							</Button>
+							<Button name="ТаблицаАгентовКнопкаЗаполнить" id="17">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.Заполнить</CommandName>
+								<ExtendedTooltip name="ТаблицаАгентовКнопкаЗаполнитьExtendedTooltip" id="29"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаАгентовExtendedTooltip" id="30"/>
+					<SearchStringAddition name="ТаблицаАгентовСтрокаПоиска" id="33">
+						<AdditionSource>
+							<Item>ТаблицаАгентов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаАгентовСтрокаПоискаКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ТаблицаАгентовСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаАгентовСостояниеПросмотра" id="36">
+						<AdditionSource>
+							<Item>ТаблицаАгентов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаАгентовСостояниеПросмотраКонтекстноеМеню" id="37"/>
+						<ExtendedTooltip name="ТаблицаАгентовСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаАгентовУправлениеПоиском" id="39">
+						<AdditionSource>
+							<Item>ТаблицаАгентов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаАгентовУправлениеПоискомКонтекстноеМеню" id="40"/>
+						<ExtendedTooltip name="ТаблицаАгентовУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаАгентовПометка" id="12">
+							<DataPath>Объект.ТаблицаАгентов.Пометка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаАгентовПометкаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ТаблицаАгентовПометкаExtendedTooltip" id="31"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаАгентовАгент" id="10">
+							<DataPath>Объект.ТаблицаАгентов.Агент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаАгентовАгентКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ТаблицаАгентовАгентExtendedTooltip" id="32"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Удалить_кпкОчисткаТрековЗаПериод</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="УстановитьИнтервал" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьИнтервал</Action>
+		</Command>
+		<Command name="УстановитьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнытьПометки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сныть пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сныть пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнытьПометки</Action>
+		</Command>
+		<Command name="ВыполнитьОчистку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить очистку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОчистку</Action>
+		</Command>
+	</Commands>
+</Form>

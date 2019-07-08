@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СтандартПрисутствия</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период год</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>ОтчётыСервер.ПредставлениеПолейПериодов(ПериодГод, "Год")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияТТИзКарточки</dataPath>
+			<field>КатегорияТТИзКарточки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>4</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>ОтчётыСервер.ПредставлениеПолейПериодов(ПериодМесяц, "Месяц")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщКоличествоSKU</dataPath>
+			<field>ОбщКоличествоSKU</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактSKUНаПолке</dataPath>
+			<field>ФактSKUНаПолке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт SKUНа полке</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период неделя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<presentationExpression>ОтчётыСервер.ПредставлениеПолейПериодов(ПериодНеделя, "Неделя")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяТочка</dataPath>
+			<field>ТорговаяТочка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияТТ</dataPath>
+			<field>КатегорияТТ</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактSKUОбязательный</dataPath>
+			<field>ФактSKUОбязательный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт SKUОбязательный</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактSKUНеРекомендуемый</dataPath>
+			<field>ФактSKUНеРекомендуемый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт SKUНе рекомендуемый</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактSKUРекомендуемый</dataPath>
+			<field>ФактSKUРекомендуемый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт SKUРекомендуемый</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаSKUОбязательный</dataPath>
+			<field>НормаSKUОбязательный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма SKUОбязательный</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОтчетаПоСтандарту</dataPath>
+			<field>ВидОтчетаПоСтандарту</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаПродукта</dataPath>
+			<field>ГруппаПродукта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаSKUРекомендуемый</dataPath>
+			<field>НормаSKUРекомендуемый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма SKUРекомендуемый</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаSKUНаПолке</dataPath>
+			<field>НормаSKUНаПолке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма SKUНа полке</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСтандартаПрисутствия</dataPath>
+			<field>ТипСтандартаПрисутствия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип стандарта присутствия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналСбыта</dataPath>
+			<field>КаналСбыта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал сбыта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ движения (регистратор)</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСекунда</dataPath>
+			<field>ПериодСекунда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период секунда</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорийнаяГруппа</dataPath>
+			<field>КатегорийнаяГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Супервайзер</dataPath>
+			<field>Супервайзер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Супервайзер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриоритетПродукта</dataPath>
+			<field>ПриоритетПродукта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПриоритета</dataPath>
+			<field>ТипПриоритета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TQMОбязательный</dataPath>
+			<field>TQMОбязательный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TQMОбязательный</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоказательДолиПолки</dataPath>
+			<field>ПоказательДолиПолки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель доли полки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоляПолкиФакт</dataPath>
+			<field>ДоляПолкиФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доля полки факт</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TQMРекомендуемый</dataPath>
+			<field>TQMРекомендуемый</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TQMРекомендуемый</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПроверок</dataPath>
+			<field>КоличествоПроверок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество проверок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДетальныеЗаписи.ПериодСекунда,
+	ДетальныеЗаписи.ПериодНеделя,
+	ДетальныеЗаписи.ПериодМесяц,
+	ДетальныеЗаписи.ПериодГод,
+	ДетальныеЗаписи.ТорговаяТочка,
+	ДетальныеЗаписи.КатегорияТТ,
+	ДетальныеЗаписи.КатегорияТТИзКарточки,
+	ДетальныеЗаписи.Менеджер,
+	ДетальныеЗаписи.Супервайзер,
+	ДетальныеЗаписи.ОбщКоличествоSKU,
+	ДетальныеЗаписи.ФактSKUНаПолке,
+	ДетальныеЗаписи.ФактSKUОбязательный,
+	ДетальныеЗаписи.ФактSKUРекомендуемый,
+	ДетальныеЗаписи.ФактSKUНеРекомендуемый,
+	ДетальныеЗаписи.НормаSKUНаПолке,
+	ДетальныеЗаписи.НормаSKUОбязательный,
+	ДетальныеЗаписи.НормаSKUРекомендуемый,
+	ДетальныеЗаписи.Подразделение,
+	ДетальныеЗаписи.ГруппаПродукта,
+	ДетальныеЗаписи.ВидОтчетаПоСтандарту,
+	ДетальныеЗаписи.КаналСбыта,
+	ДетальныеЗаписи.ТипСтандартаПрисутствия,
+	ДетальныеЗаписи.Регистратор,
+	ДетальныеЗаписи.КатегорийнаяГруппа,
+	ДетальныеЗаписи.ПриоритетПродукта,
+	ДетальныеЗаписи.ТипПриоритета,
+	ВЫБОР
+		КОГДА ДетальныеЗаписи.ОбщКоличествоSKU = 0
+			ТОГДА 0
+		ИНАЧЕ ДетальныеЗаписи.ФактSKUНаПолке / ДетальныеЗаписи.ОбщКоличествоSKU * 100
+	КОНЕЦ КАК ДоляПолкиФакт,
+	ВЫБОР
+		КОГДА ДетальныеЗаписи.НормаSKUНаПолке = 0
+			ТОГДА 0
+		ИНАЧЕ ДетальныеЗаписи.ФактSKUНаПолке / ДетальныеЗаписи.НормаSKUНаПолке * 100
+	КОНЕЦ КАК ПоказательДолиПолки,
+	ВЫБОР
+		КОГДА ДетальныеЗаписи.НормаSKUОбязательный = 0
+			ТОГДА 0
+		ИНАЧЕ ДетальныеЗаписи.ФактSKUОбязательный / ДетальныеЗаписи.НормаSKUОбязательный * 100
+	КОНЕЦ КАК TQMОбязательный,
+	ВЫБОР
+		КОГДА ДетальныеЗаписи.НормаSKUРекомендуемый = 0
+			ТОГДА 0
+		ИНАЧЕ ДетальныеЗаписи.ФактSKUРекомендуемый / ДетальныеЗаписи.НормаSKUРекомендуемый * 100
+	КОНЕЦ КАК TQMРекомендуемый,
+	КОЛИЧЕСТВО(ДетальныеЗаписи.Регистратор) КАК КоличествоПроверок
+ИЗ
+	(ВЫБРАТЬ
+		СтандартПрисутствияПоПриоритетам.ПериодСекунда КАК ПериодСекунда,
+		СтандартПрисутствияПоПриоритетам.ПериодНеделя КАК ПериодНеделя,
+		СтандартПрисутствияПоПриоритетам.ПериодМесяц КАК ПериодМесяц,
+		СтандартПрисутствияПоПриоритетам.ПериодГод КАК ПериодГод,
+		СтандартПрисутствияПоПриоритетам.ТорговаяТочка КАК ТорговаяТочка,
+		СтандартПрисутствияПоПриоритетам.КатегорияТТ КАК КатегорияТТ,
+		СтандартПрисутствияПоПриоритетам.КатегорияТТИзКарточки КАК КатегорияТТИзКарточки,
+		СтандартПрисутствияПоПриоритетам.Менеджер КАК Менеджер,
+		СтандартПрисутствияПоПриоритетам.Супервайзер КАК Супервайзер,
+		МАКСИМУМ(СтандартПрисутствияПоПриоритетам.ОбщКоличествоSKU) КАК ОбщКоличествоSKU,
+		СУММА(СтандартПрисутствияПоПриоритетам.ФактSKUНаПолке) КАК ФактSKUНаПолке,
+		СУММА(СтандартПрисутствияПоПриоритетам.ФактSKUОбязательный) КАК ФактSKUОбязательный,
+		СУММА(СтандартПрисутствияПоПриоритетам.ФактSKUРекомендуемый) КАК ФактSKUРекомендуемый,
+		СУММА(СтандартПрисутствияПоПриоритетам.ФактSKUНеРекомендуемый) КАК ФактSKUНеРекомендуемый,
+		СУММА(СтандартПрисутствияПоПриоритетам.НормаSKUНаПолке) КАК НормаSKUНаПолке,
+		СУММА(СтандартПрисутствияПоПриоритетам.НормаSKUОбязательный) КАК НормаSKUОбязательный,
+		СУММА(СтандартПрисутствияПоПриоритетам.НормаSKUРекомендуемый) КАК НормаSKUРекомендуемый,
+		СтандартПрисутствияПоПриоритетам.Подразделение КАК Подразделение,
+		СтандартПрисутствияПоПриоритетам.ГруппаПродукта КАК ГруппаПродукта,
+		СтандартПрисутствияПоПриоритетам.ВидОтчетаПоСтандарту КАК ВидОтчетаПоСтандарту,
+		СтандартПрисутствияПоПриоритетам.КаналСбыта КАК КаналСбыта,
+		СтандартПрисутствияПоПриоритетам.ТипСтандартаПрисутствия КАК ТипСтандартаПрисутствия,
+		СтандартПрисутствияПоПриоритетам.Регистратор КАК Регистратор,
+		СтандартПрисутствияПоПриоритетам.КатегорийнаяГруппа КАК КатегорийнаяГруппа,
+		СтандартПрисутствияПоПриоритетам.ПриоритетПродукта КАК ПриоритетПродукта,
+		СтандартПрисутствияПоПриоритетам.ТипПриоритета КАК ТипПриоритета
+	ИЗ
+		(ВЫБРАТЬ
+			КД_ВыполнениеСтандартаПрисутствия.Период КАК ПериодСекунда,
+			НАЧАЛОПЕРИОДА(КД_ВыполнениеСтандартаПрисутствия.Период, НЕДЕЛЯ) КАК ПериодНеделя,
+			НАЧАЛОПЕРИОДА(КД_ВыполнениеСтандартаПрисутствия.Период, МЕСЯЦ) КАК ПериодМесяц,
+			НАЧАЛОПЕРИОДА(КД_ВыполнениеСтандартаПрисутствия.Период, ГОД) КАК ПериодГод,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка КАК ТорговаяТочка,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорияТТ КАК КатегорияТТ,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорияТТИзКарточки КАК КатегорияТТИзКарточки,
+			КД_ВыполнениеСтандартаПрисутствия.Менеджер КАК Менеджер,
+			КД_ВыполнениеСтандартаПрисутствия.Менеджер.Родитель КАК Супервайзер,
+			МАКСИМУМ(КД_ВыполнениеСтандартаПрисутствия.ОбщКоличествоSKU) КАК ОбщКоличествоSKU,
+			СУММА(КД_ВыполнениеСтандартаПрисутствия.ФактКоличествоSKUПоПриоритету) КАК ФактSKUНаПолке,
+			СУММА(ВЫБОР
+					КОГДА КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Обязательный)
+						ТОГДА КД_ВыполнениеСтандартаПрисутствия.ФактКоличествоSKUПоПриоритету
+					ИНАЧЕ 0
+				КОНЕЦ) КАК ФактSKUОбязательный,
+			СУММА(ВЫБОР
+					КОГДА КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Рекомендуемый)
+						ТОГДА КД_ВыполнениеСтандартаПрисутствия.ФактКоличествоSKUПоПриоритету
+					ИНАЧЕ 0
+				КОНЕЦ) КАК ФактSKUРекомендуемый,
+			СУММА(ВЫБОР
+					КОГДА КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.НеРекомендуемый)
+						ТОГДА КД_ВыполнениеСтандартаПрисутствия.ФактКоличествоSKUПоПриоритету
+					ИНАЧЕ 0
+				КОНЕЦ) КАК ФактSKUНеРекомендуемый,
+			МАКСИМУМ(КД_ВыполнениеСтандартаПрисутствия.НормаКоличествоSKUПоПриоритету) КАК НормаSKUНаПолке,
+			МАКСИМУМ(ВЫБОР
+					КОГДА КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Обязательный)
+						ТОГДА КД_ВыполнениеСтандартаПрисутствия.НормаКоличествоSKUПоПриоритету
+					ИНАЧЕ 0
+				КОНЕЦ) КАК НормаSKUОбязательный,
+			МАКСИМУМ(ВЫБОР
+					КОГДА КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета = ЗНАЧЕНИЕ(Перечисление.КД_ТипыПриоритетовПродукта.Рекомендуемый)
+						ТОГДА КД_ВыполнениеСтандартаПрисутствия.НормаКоличествоSKUПоПриоритету
+					ИНАЧЕ 0
+				КОНЕЦ) КАК НормаSKUРекомендуемый,
+			КД_ВыполнениеСтандартаПрисутствия.Подразделение КАК Подразделение,
+			КД_ВыполнениеСтандартаПрисутствия.ГруппаПродукта КАК ГруппаПродукта,
+			КД_ВыполнениеСтандартаПрисутствия.ВидОтчетаПоСтандарту КАК ВидОтчетаПоСтандарту,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка.КД_КаналСбыта КАК КаналСбыта,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка.КД_ТипСтандартаПрисутствия КАК ТипСтандартаПрисутствия,
+			КД_ВыполнениеСтандартаПрисутствия.Регистратор КАК Регистратор,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорийнаяГруппа КАК КатегорийнаяГруппа,
+			КД_ВыполнениеСтандартаПрисутствия.ПриоритетПродукта КАК ПриоритетПродукта,
+			КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета КАК ТипПриоритета
+		ИЗ
+			РегистрСведений.КД_ВыполнениеСтандартаПрисутствия КАК КД_ВыполнениеСтандартаПрисутствия
+		ГДЕ
+			КД_ВыполнениеСтандартаПрисутствия.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+		
+		СГРУППИРОВАТЬ ПО
+			КД_ВыполнениеСтандартаПрисутствия.Период,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорияТТ,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорияТТИзКарточки,
+			КД_ВыполнениеСтандартаПрисутствия.Подразделение,
+			КД_ВыполнениеСтандартаПрисутствия.ГруппаПродукта,
+			КД_ВыполнениеСтандартаПрисутствия.Менеджер,
+			КД_ВыполнениеСтандартаПрисутствия.ВидОтчетаПоСтандарту,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка.КД_КаналСбыта,
+			КД_ВыполнениеСтандартаПрисутствия.ТорговаяТочка.КД_ТипСтандартаПрисутствия,
+			КД_ВыполнениеСтандартаПрисутствия.Регистратор,
+			КД_ВыполнениеСтандартаПрисутствия.КатегорийнаяГруппа,
+			КД_ВыполнениеСтандартаПрисутствия.Менеджер.Родитель,
+			КД_ВыполнениеСтандартаПрисутствия.ПриоритетПродукта,
+			КД_ВыполнениеСтандартаПрисутствия.ТипПриоритета) КАК СтандартПрисутствияПоПриоритетам
+	
+	СГРУППИРОВАТЬ ПО
+		СтандартПрисутствияПоПриоритетам.ПериодСекунда,
+		СтандартПрисутствияПоПриоритетам.ПериодНеделя,
+		СтандартПрисутствияПоПриоритетам.ПериодМесяц,
+		СтандартПрисутствияПоПриоритетам.ПериодГод,
+		СтандартПрисутствияПоПриоритетам.ТорговаяТочка,
+		СтандартПрисутствияПоПриоритетам.КатегорияТТ,
+		СтандартПрисутствияПоПриоритетам.КатегорияТТИзКарточки,
+		СтандартПрисутствияПоПриоритетам.Менеджер,
+		СтандартПрисутствияПоПриоритетам.Супервайзер,
+		СтандартПрисутствияПоПриоритетам.Подразделение,
+		СтандартПрисутствияПоПриоритетам.ГруппаПродукта,
+		СтандартПрисутствияПоПриоритетам.ВидОтчетаПоСтандарту,
+		СтандартПрисутствияПоПриоритетам.КаналСбыта,
+		СтандартПрисутствияПоПриоритетам.ТипСтандартаПрисутствия,
+		СтандартПрисутствияПоПриоритетам.Регистратор,
+		СтандартПрисутствияПоПриоритетам.КатегорийнаяГруппа,
+		СтандартПрисутствияПоПриоритетам.ПриоритетПродукта,
+		СтандартПрисутствияПоПриоритетам.ТипПриоритета) КАК ДетальныеЗаписи
+
+СГРУППИРОВАТЬ ПО
+	ДетальныеЗаписи.ПериодСекунда,
+	ДетальныеЗаписи.ПериодНеделя,
+	ДетальныеЗаписи.ПериодМесяц,
+	ДетальныеЗаписи.ПериодГод,
+	ДетальныеЗаписи.ТорговаяТочка,
+	ДетальныеЗаписи.КатегорияТТ,
+	ДетальныеЗаписи.КатегорияТТИзКарточки,
+	ДетальныеЗаписи.Менеджер,
+	ДетальныеЗаписи.Супервайзер,
+	ДетальныеЗаписи.ОбщКоличествоSKU,
+	ДетальныеЗаписи.ФактSKUНаПолке,
+	ДетальныеЗаписи.ФактSKUОбязательный,
+	ДетальныеЗаписи.ФактSKUРекомендуемый,
+	ДетальныеЗаписи.ФактSKUНеРекомендуемый,
+	ДетальныеЗаписи.НормаSKUНаПолке,
+	ДетальныеЗаписи.НормаSKUОбязательный,
+	ДетальныеЗаписи.НормаSKUРекомендуемый,
+	ДетальныеЗаписи.Подразделение,
+	ДетальныеЗаписи.ГруппаПродукта,
+	ДетальныеЗаписи.ВидОтчетаПоСтандарту,
+	ДетальныеЗаписи.КаналСбыта,
+	ДетальныеЗаписи.ТипСтандартаПрисутствия,
+	ДетальныеЗаписи.Регистратор,
+	ДетальныеЗаписи.КатегорийнаяГруппа,
+	ДетальныеЗаписи.ПриоритетПродукта,
+	ДетальныеЗаписи.ТипПриоритета,
+	ДетальныеЗаписи.Регистратор</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>TQMСводный</dataPath>
+		<expression>(TQMОбязательный + TQMРекомендуемый) / 2</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TQM (сводный)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НужноОбновитьКатегориюТТ</dataPath>
+		<expression>ВЫБОР КОГДА КатегорияТТ = КатегорияТТИзКарточки ТОГДА ЛОЖЬ ИНАЧЕ ИСТИНА КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нужно обновить категорию ТТ</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">БЛ=Нет; БИ=Да</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>ОбщКоличествоSKU</dataPath>
+		<expression>Сумма(ОбщКоличествоSKU)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактSKUНаПолке</dataPath>
+		<expression>Сумма(ФактSKUНаПолке)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактSKUНеРекомендуемый</dataPath>
+		<expression>Сумма(ФактSKUНеРекомендуемый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактSKUОбязательный</dataPath>
+		<expression>Сумма(ФактSKUОбязательный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактSKUРекомендуемый</dataPath>
+		<expression>Сумма(ФактSKUРекомендуемый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаSKUНаПолке</dataPath>
+		<expression>Сумма(НормаSKUНаПолке)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаSKUОбязательный</dataPath>
+		<expression>Сумма(НормаSKUОбязательный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаSKUРекомендуемый</dataPath>
+		<expression>Сумма(НормаSKUРекомендуемый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>TQMСводный</dataPath>
+		<expression>Среднее(TQMСводный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>TQMОбязательный</dataPath>
+		<expression>Среднее(TQMОбязательный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>TQMРекомендуемый</dataPath>
+		<expression>Среднее(TQMРекомендуемый)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДоляПолкиФакт</dataPath>
+		<expression>Среднее(ДоляПолкиФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПоказательДолиПолки</dataPath>
+		<expression>Среднее(ПоказательДолиПолки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПроверок</dataPath>
+		<expression>Сумма(КоличествоПроверок)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодСекунда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодМесяц</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТорговаяТочка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория ТТ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КатегорияТТ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КатегорияТТИзКарточки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НужноОбновитьКатегориюТТ</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПроверок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Менеджер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Супервайзер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбщКоличествоSKU</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт SKU на полке</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактSKUНаПолке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактSKUОбязательный</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактSKUРекомендуемый</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактSKUНеРекомендуемый</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма SKU на полке</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормаSKUНаПолке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормаSKUОбязательный</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормаSKUРекомендуемый</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоляПолкиФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоказательДолиПолки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMОбязательный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMРекомендуемый</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMСводный</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ed5695d5-beb7-4945-9ad2-3e46eb9ac208</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>c35b501e-bd7e-4d35-8ee6-2cfce2ac1e27</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КатегорияТТ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>bfa878b9-890b-43a9-8bba-81a770e322f0</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>df59e106-d281-4b62-9313-f179149b026b</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ГруппаПродукта</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>06eff227-ee7f-4958-b332-d087fa88c653</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТипСтандартаПрисутствия</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>b71cbbfa-bfa4-42ff-aba4-e3cf1331e947</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КаналСбыта</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9f715770-e34e-4873-9d2a-270b79ff676b</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидОтчетаПоСтандарту</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>9ea14a1c-f2ad-4243-8600-eb922d374447</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>a7ea4a88-dc8c-4d8e-bd7d-c860e4273ac4</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>fc9b007f-9ce2-4050-a4a6-5f570a3154cd</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>7f5dddbb-f26f-4c91-9484-e021971fa96f</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КатегорияТТ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КатегорияТТИзКарточки</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НужноОбновитьКатегориюТТ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>12b6b1e5-4eae-4f5b-8820-326e2c234f79</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>ca32dc65-b69d-4b28-81a3-550fb046440c</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СводныйОтчет</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводный отчет</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПроверок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоляПолкиФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоказательДолиПолки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMОбязательный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMРекомендуемый</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TQMСводный</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>7ad6a065-28d7-4669-9249-cc7f32eb80c1</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>863acd5d-7fae-47a0-a67f-580b5386fdf3</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КатегорияТТ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>c863e806-3e91-4585-9e7b-fadf750687a5</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>f6afb4cc-add1-49ce-aceb-fa78f5ca269a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидОтчетаПоСтандарту</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>67c360fe-b1ed-41a8-8dcc-6c877b953896</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>79294214-b710-4913-bd6b-0e44e83340e8</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>3012eec7-a807-463c-b937-27578cc4dedd</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>7b25f9a6-05ba-432d-9a2f-1477e4a0c14d</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8ef99dab-bf97-4fff-ac76-471abcdcf574</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПериодНеделя</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Супервайзер</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Менеджер</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>3bd7965f-f481-4e0b-bc4d-8db86d98b3c5</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

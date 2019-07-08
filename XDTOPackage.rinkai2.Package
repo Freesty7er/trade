@@ -1,0 +1,374 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://webservice.riro.rinkai/">
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllLocationsAndOrders2" type="d2p1:DeleteAllLocationsAndOrders2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllLocationsAndOrders2Response" type="d2p1:DeleteAllLocationsAndOrders2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllPlans2" type="d2p1:DeleteAllPlans2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllPlans2Response" type="d2p1:DeleteAllPlans2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllVehicles2" type="d2p1:DeleteAllVehicles2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteAllVehicles2Response" type="d2p1:DeleteAllVehicles2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteLocationsAndOrders2" type="d2p1:DeleteLocationsAndOrders2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteLocationsAndOrders2Response" type="d2p1:DeleteLocationsAndOrders2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeletePlans2" type="d2p1:DeletePlans2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeletePlans2Response" type="d2p1:DeletePlans2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteVehicles2" type="d2p1:DeleteVehicles2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="DeleteVehicles2Response" type="d2p1:DeleteVehicles2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetActualsForMultipleDepots2" type="d2p1:GetActualsForMultipleDepots2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetActualsForMultipleDepots2Response" type="d2p1:GetActualsForMultipleDepots2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetLocationsAndOrders2" type="d2p1:GetLocationsAndOrders2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetLocationsAndOrders2Response" type="d2p1:GetLocationsAndOrders2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetPlans2" type="d2p1:GetPlans2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetPlans2Response" type="d2p1:GetPlans2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetPlansWithRouteSections2" type="d2p1:GetPlansWithRouteSections2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetPlansWithRouteSections2Response" type="d2p1:GetPlansWithRouteSections2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetVehicles2" type="d2p1:GetVehicles2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetVehicles2Response" type="d2p1:GetVehicles2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetVersion2" type="d2p1:GetVersion2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="GetVersion2Response" type="d2p1:GetVersion2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertLocationsAndOrders2" type="d2p1:InsertLocationsAndOrders2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertLocationsAndOrders2Response" type="d2p1:InsertLocationsAndOrders2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertLocationsAndOrdersForMultipleDepots2" type="d2p1:InsertLocationsAndOrdersForMultipleDepots2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertLocationsAndOrdersForMultipleDepots2Response" type="d2p1:InsertLocationsAndOrdersForMultipleDepots2Response"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertVehicles2" type="d2p1:InsertVehicles2"/>
+	<property xmlns:d2p1="http://webservice.riro.rinkai/" name="InsertVehicles2Response" type="d2p1:InsertVehicles2Response"/>
+	<objectType name="DeleteAllLocationsAndOrders2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DeleteAllLocationsAndOrders2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="DeleteAllPlans2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DeleteAllPlans2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="DeleteAllVehicles2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="DeleteAllVehicles2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="DeleteLocationsAndOrders2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="orderIds" type="xs:string" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="DeleteLocationsAndOrders2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="DeletePlans2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="planIds" type="xs:string" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="DeletePlans2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="DeleteVehicles2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="vehicleIds" type="xs:string" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="DeleteVehicles2Response">
+		<property name="return" type="xs:int"/>
+	</objectType>
+	<objectType name="GetActualsForMultipleDepots2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedIds" type="xs:string" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property name="dateFrom" type="xs:int"/>
+		<property name="dateTo" type="xs:int"/>
+		<property name="notExportedOnly" type="xs:boolean"/>
+	</objectType>
+	<objectType name="GetActualsForMultipleDepots2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:getActualsForMultipleDepots2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetLocationsAndOrders2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetLocationsAndOrders2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:getLocationsAndOrders2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetPlans2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetPlans2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:getPlans2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetPlansWithRouteSections2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetPlansWithRouteSections2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:getPlans2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetVehicles2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetVehicles2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:getVehicles2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="GetVersion2"/>
+	<objectType name="GetVersion2Response">
+		<property name="return" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="InsertLocationsAndOrders2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="locationsAndOrders" type="d3p1:wsLocationAndOrder2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="InsertLocationsAndOrders2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:insertLocationsAndOrders2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="InsertLocationsAndOrdersForMultipleDepots2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="locationsAndOrders" type="d3p1:wsLocationAndOrder2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="InsertLocationsAndOrdersForMultipleDepots2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:insertLocationsAndOrders2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="InsertVehicles2">
+		<property name="wsKey" type="xs:string" lowerBound="0"/>
+		<property name="depotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="vehicles" type="d3p1:wsVehicle2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="InsertVehicles2Response">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="return" type="d3p1:insertVehicles2Result" lowerBound="0"/>
+	</objectType>
+	<objectType name="actualActual">
+		<property name="DepotDescription" type="xs:string" lowerBound="0"/>
+		<property name="Date" type="xs:int"/>
+		<property name="NoOfVehicles" type="xs:int"/>
+		<property name="NoOfVehiclesWithGPS" type="xs:int"/>
+		<property name="RoutesKm" type="xs:double"/>
+		<property name="PositionsKm" type="xs:double"/>
+		<property name="NoOfCustomers" type="xs:int"/>
+		<property name="NoOfVisitedCustomers" type="xs:int"/>
+		<property name="NoOfVisitedCustomersBeforeTimeWindow" type="xs:int"/>
+		<property name="NoOfVisitedCustomersAfterTimeWindow" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Tracks" type="d3p1:actualTrack" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Plans" type="d3p1:actualPlan" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="actualPlan">
+		<property name="PlanDescription" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="actualRoute">
+		<property name="RouteUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="CarrierUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="CarrierName" type="xs:string" lowerBound="0"/>
+		<property name="DriverUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="DriverName" type="xs:string" lowerBound="0"/>
+		<property name="DriverSurname" type="xs:string" lowerBound="0"/>
+		<property name="StartTime" type="xs:int"/>
+		<property name="EndTime" type="xs:int"/>
+		<property name="DepartureTime" type="xs:int"/>
+		<property name="GPSLatestLoadingDepartureTime" type="xs:int"/>
+		<property name="DepartureDelay" type="xs:int"/>
+		<property name="ArrivalTime" type="xs:int"/>
+		<property name="GPSEarliestUnloadingArrivalTime" type="xs:int"/>
+		<property name="TimeAtCustomer" type="xs:int"/>
+		<property name="TimeAtCustomerDelay" type="xs:int"/>
+		<property name="Duration" type="xs:int"/>
+		<property name="DurationDelay" type="xs:int"/>
+		<property name="Km" type="xs:double"/>
+		<property name="PositionsKm" type="xs:double"/>
+		<property name="Costs" type="xs:double"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Stops" type="d3p1:actualStop" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="actualStop">
+		<property name="StopOrder" type="xs:int"/>
+		<property name="GPSStopOrder" type="xs:int"/>
+		<property name="Km" type="xs:double"/>
+		<property name="KmFromDepot" type="xs:double"/>
+		<property name="TimeFromDepot" type="xs:int"/>
+		<property name="UserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Name" type="xs:string" lowerBound="0"/>
+		<property name="Street" type="xs:string" lowerBound="0"/>
+		<property name="HouseNumber" type="xs:string" lowerBound="0"/>
+		<property name="PostCode" type="xs:string" lowerBound="0"/>
+		<property name="City" type="xs:string" lowerBound="0"/>
+		<property name="Country" type="xs:string" lowerBound="0"/>
+		<property name="OrderUserDefinedIds" type="xs:string" lowerBound="0"/>
+		<property name="GeoX" type="xs:double"/>
+		<property name="GeoY" type="xs:double"/>
+		<property name="GPSPairingPrecision" type="xs:int"/>
+		<property name="TW1F" type="xs:int"/>
+		<property name="TW1T" type="xs:int"/>
+		<property name="TW2F" type="xs:int"/>
+		<property name="TW2T" type="xs:int"/>
+		<property name="ArrivalTime" type="xs:int"/>
+		<property name="GPSEarliestArrivalTime" type="xs:int"/>
+		<property name="ArrivalDelay" type="xs:int"/>
+		<property name="DepartureTime" type="xs:int"/>
+		<property name="GPSLatestDepartureTime" type="xs:int"/>
+		<property name="DepartureDelay" type="xs:int"/>
+		<property name="Duration" type="xs:int"/>
+		<property name="DurationDelay" type="xs:int"/>
+		<property name="Weight" type="xs:double"/>
+		<property name="Volume" type="xs:double"/>
+		<property name="Other" type="xs:double"/>
+		<property name="WeightBack" type="xs:double"/>
+		<property name="VolumeBack" type="xs:double"/>
+		<property name="OtherBack" type="xs:double"/>
+		<property name="Costs" type="xs:double"/>
+		<property name="Visited" type="xs:boolean"/>
+		<property name="VisitedBeforeTimeWindow" type="xs:boolean"/>
+		<property name="VisitedAfterTimeWindow" type="xs:boolean"/>
+		<property name="Date" type="xs:int"/>
+	</objectType>
+	<objectType name="actualTrack">
+		<property name="PositionsKm" type="xs:double"/>
+		<property name="VehicleUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="VehiclePlateNumber" type="xs:string" lowerBound="0"/>
+		<property name="VehicleWeight" type="xs:double"/>
+		<property name="VehicleVolume" type="xs:double"/>
+		<property name="VehicleOther" type="xs:double"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Routes" type="d3p1:actualRoute" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="getActuals2Result">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Actuals" type="d3p1:actualActual" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="getActualsForMultipleDepots2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="GetActualsResults" type="d3p1:getActuals2Result" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="getLocationsAndOrders2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="LocationsAndOrders" type="d3p1:wsLocationAndOrder2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="getPlans2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Plans" type="d3p1:wsPlan2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="getVehicles2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Vehicles" type="d3p1:wsVehicle2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="insertLocationsAndOrders2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property name="InsertResults" type="xs:int" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="insertVehicles2Result">
+		<property name="CallResult" type="xs:int"/>
+		<property name="InsertResults" type="xs:int" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="routeSection">
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Waypoints" type="d3p1:routeWaypoint" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="routeWaypoint">
+		<property name="GeoX" type="xs:double"/>
+		<property name="GeoY" type="xs:double"/>
+	</objectType>
+	<objectType name="wsLocationAndOrder2">
+		<property name="DepotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="LocationUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Name" type="xs:string" lowerBound="0"/>
+		<property name="Country" type="xs:string" lowerBound="0"/>
+		<property name="City" type="xs:string" lowerBound="0"/>
+		<property name="Street" type="xs:string" lowerBound="0"/>
+		<property name="HouseNumber" type="xs:string" lowerBound="0"/>
+		<property name="PostCode" type="xs:string" lowerBound="0"/>
+		<property name="LocationComment" type="xs:string" lowerBound="0"/>
+		<property name="Mail" type="xs:string" lowerBound="0"/>
+		<property name="Phone" type="xs:string" lowerBound="0"/>
+		<property name="TW1F" type="xs:int"/>
+		<property name="TW1T" type="xs:int"/>
+		<property name="TW2F" type="xs:int"/>
+		<property name="TW2T" type="xs:int"/>
+		<property name="LoadingStartTimeFrom" type="xs:int"/>
+		<property name="LoadingStartTimeTo" type="xs:int"/>
+		<property name="GeoX" type="xs:double"/>
+		<property name="GeoY" type="xs:double"/>
+		<property name="TimeAtCustomer" type="xs:int"/>
+		<property name="AdminTimeAtCustomer" type="xs:int"/>
+		<property name="WeightLimit" type="xs:float"/>
+		<property name="VehicleTypeRestriction" type="xs:long"/>
+		<property name="OrderUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Date" type="xs:int"/>
+		<property name="OrderComment" type="xs:string" lowerBound="0"/>
+		<property name="Items" type="xs:string" lowerBound="0"/>
+		<property name="VehicleUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="RouteUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="RouteStartTime" type="xs:int"/>
+		<property name="StopOrder" type="xs:int"/>
+		<property name="StopWaitingTime" type="xs:int"/>
+	</objectType>
+	<objectType name="wsPlan2">
+		<property name="PlanId" type="xs:string" lowerBound="0"/>
+		<property name="DepotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Description" type="xs:string" lowerBound="0"/>
+		<property name="CreationDate" type="xs:int"/>
+		<property name="CreationTime" type="xs:int"/>
+		<property name="Costs" type="xs:double"/>
+		<property name="Km" type="xs:double"/>
+		<property name="Time" type="xs:int"/>
+		<property name="NoOfRoutes" type="xs:int"/>
+		<property name="NoOfUnplannedOrders" type="xs:int"/>
+		<property name="NoOfOrders" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Routes" type="d3p1:wsRoute2" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="wsRoute2">
+		<property name="UserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Comment" type="xs:string" lowerBound="0"/>
+		<property name="VehicleUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="CarrierUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="DriverUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="Costs" type="xs:double"/>
+		<property name="Km" type="xs:double"/>
+		<property name="Time" type="xs:int"/>
+		<property name="NoOfStops" type="xs:int"/>
+		<property name="Date" type="xs:int"/>
+		<property name="StartTime" type="xs:int"/>
+		<property name="EndTime" type="xs:int"/>
+		<property name="WaitingTime" type="xs:int"/>
+		<property name="DepartureTime" type="xs:int"/>
+		<property name="ArrivalTime" type="xs:int"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="Stops" type="d3p1:wsStop2" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://webservice.riro.rinkai/" name="RouteSections" type="d3p1:routeSection" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="wsStop2">
+		<property name="StopNo" type="xs:int"/>
+		<property name="OrderUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="ArrivalTime" type="xs:int"/>
+		<property name="DepartureTime" type="xs:int"/>
+		<property name="WaitingTime" type="xs:int"/>
+		<property name="Km" type="xs:double"/>
+		<property name="GeoX" type="xs:double"/>
+		<property name="GeoY" type="xs:double"/>
+		<property name="KmFromDepot" type="xs:double"/>
+		<property name="TimeFromDepot" type="xs:int"/>
+	</objectType>
+	<objectType name="wsVehicle2">
+		<property name="DepotUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="VehicleUserDefinedId" type="xs:string" lowerBound="0"/>
+		<property name="GPSId" type="xs:string" lowerBound="0"/>
+		<property name="PlateNumber" type="xs:string" lowerBound="0"/>
+		<property name="Weight" type="xs:float"/>
+		<property name="Volume" type="xs:float"/>
+		<property name="Other" type="xs:float"/>
+		<property name="Active" type="xs:boolean"/>
+		<property name="AvailableFrom" type="xs:int"/>
+		<property name="AvailableTo" type="xs:int"/>
+		<property name="FixedCosts" type="xs:float"/>
+		<property name="CostsPerKm" type="xs:float"/>
+		<property name="CostsPerSecond" type="xs:float"/>
+		<property name="CostsPerStop" type="xs:float"/>
+		<property name="CostsPerWeight" type="xs:float"/>
+		<property name="CostsPerVolume" type="xs:float"/>
+		<property name="CostsPerOther" type="xs:float"/>
+		<property name="CostsPerWeightBack" type="xs:float"/>
+		<property name="CostsPerVolumeBack" type="xs:float"/>
+		<property name="CostsPerOtherBack" type="xs:float"/>
+		<property name="UsageTimeLimited" type="xs:boolean"/>
+		<property name="UsageTimeLimit" type="xs:int"/>
+		<property name="VehicleType" type="xs:long"/>
+		<property name="FirstLoadingWithoutDepotCapacityAllocation" type="xs:boolean"/>
+		<property name="Comment" type="xs:string" lowerBound="0"/>
+		<property name="Mail" type="xs:string" lowerBound="0"/>
+		<property name="Phone" type="xs:string" lowerBound="0"/>
+	</objectType>
+</package>

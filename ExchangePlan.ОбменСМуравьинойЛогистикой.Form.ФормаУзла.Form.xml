@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="ГруппаОсновные" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<InputField name="Подразделение" id="16">
+							<DataPath>Объект.Подразделение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ИмяПользователя" id="7">
+							<DataPath>Объект.ИмяПользователя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИмяПользователяКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИмяПользователяРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ПарольПользователя" id="13">
+							<DataPath>Объект.ПарольПользователя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольПользователяКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПарольПользователяРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<CheckBoxField name="РежимОтладки" id="19">
+							<DataPath>Объект.РежимОтладки</DataPath>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Выключено; БИ=Включено</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<InputField name="ИнтервалВыгрузки" id="10">
+							<DataPath>Объект.ИнтервалВыгрузки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИнтервалВыгрузкиКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ИнтервалВыгрузкиРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРегистрацияИзменений" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация изменений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа регистрация изменений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРегистрацияИзмененийРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Table name="СписокРегистрации" id="28">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокРегистрации</DataPath>
+							<RowPictureDataPath>СписокРегистрации.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокРегистрацииКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="СписокРегистрацииКоманднаяПанель" id="30"/>
+							<ExtendedTooltip name="СписокРегистрацииРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="СписокРегистрацииСтрокаПоиска" id="32">
+								<AdditionSource>
+									<Item>СписокРегистрации</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРегистрацииСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="СписокРегистрацииСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокРегистрацииСостояниеПросмотра" id="35">
+								<AdditionSource>
+									<Item>СписокРегистрации</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРегистрацииСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="СписокРегистрацииСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокРегистрацииУправлениеПоиском" id="38">
+								<AdditionSource>
+									<Item>СписокРегистрации</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРегистрацииУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="СписокРегистрацииУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокРегистрацииСсылка" id="44">
+									<DataPath>СписокРегистрации.Ref</DataPath>
+									<ContextMenu name="СписокРегистрацииСсылкаКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СписокРегистрацииСсылкаРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.ОбменСМуравьинойЛогистикой</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокРегистрации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	КпкЗаявкаИзменения.Ссылка,
+	КпкЗаявкаИзменения.Узел
+ИЗ
+	Документ.КпкЗаявка.Изменения КАК КпкЗаявкаИзменения</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Продажи</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураРодитель</dataPath>
+			<field>НоменклатураРодитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦены</dataPath>
+			<field>ТипЦены</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПродажРазрешенВозврат</dataPath>
+			<field>СуммаПродажРазрешенВозврат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма продаж разрешен возврат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПродажНеРазрешенВозврат</dataPath>
+			<field>СуммаПродажНеРазрешенВозврат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма продаж не разрешен возврат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЛимитАкция</dataPath>
+			<field>СуммаЛимитАкция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма лимит акция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЛимитРазрешенВозврат</dataPath>
+			<field>СуммаЛимитРазрешенВозврат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма лимит разрешен возврат</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПродажиАкция</dataPath>
+			<field>СуммаПродажиАкция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма продажи акция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВозвратАкция</dataPath>
+			<field>СуммаВозвратАкция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма возврат акция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВозвратНаЗавод</dataPath>
+			<field>СуммаВозвратНаЗавод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма возврат на завод</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВозвратНаСкладВозвратовРазрешенные</dataPath>
+			<field>СуммаВозвратНаСкладВозвратовРазрешенные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма возврат на склад возвратов разрешенные</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦен</dataPath>
+			<field>ТипЦен</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВозвратНаСкладВозвратовНеРазрешенные</dataPath>
+			<field>СуммаВозвратНаСкладВозвратовНеРазрешенные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма возврат на склад возвратов не разрешенные</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентНормыВозвратов</dataPath>
+			<field>ПроцентНормыВозвратов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент нормы возвратов</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СтратегияПродвиженияАссортимент.Ссылка.Подразделение,
+	СтратегияПродвиженияАссортимент.Номенклатура,
+	СтратегияПродвиженияАссортимент.Номенклатура.Родитель,
+	СтратегияПродвиженияАссортимент.ПроцентЛимитВозвратов
+ПОМЕСТИТЬ ВТ_АкционныеПозиции
+ИЗ
+	Документ.СтратегияПродвижения.Ассортимент КАК СтратегияПродвиженияАссортимент
+ГДЕ
+	СтратегияПродвиженияАссортимент.Ссылка.ДатаНачала &gt;= &amp;ДатаНачалаПродаж
+	И СтратегияПродвиженияАссортимент.Ссылка.ДатаОкончания &lt;= &amp;ДатаОкончанияПродаж
+	И СтратегияПродвиженияАссортимент.Ссылка.Проведен = ИСТИНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.Менеджер,
+	ВложенныйЗапрос.НоменклатураРодитель,
+	ВложенныйЗапрос.СуммаПродажРазрешенВозврат,
+	ВложенныйЗапрос.СуммаПродажНеРазрешенВозврат,
+	ВложенныйЗапрос.СуммаПродажРазрешенВозврат * ВложенныйЗапрос.НоменклатураРодитель.НормаПроцентаВозвратов / 100 КАК СуммаЛимитРазрешенВозврат,
+	ВложенныйЗапрос.СуммаПродажиАкция,
+	ВложенныйЗапрос.СуммаЛимитАкция,
+	ВложенныйЗапрос.ТипЦены КАК ТипЦен
+ПОМЕСТИТЬ ВТ_Продажи
+ИЗ
+	(ВЫБРАТЬ
+		Продажи.Подразделение КАК Подразделение,
+		Продажи.Менеджер КАК Менеджер,
+		Продажи.Номенклатура.Родитель КАК НоменклатураРодитель,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА ВЫБОР
+							КОГДА ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РазрешеныВозвратыОтПокупателей, ЛОЖЬ)
+									И Продажи.Номенклатура.Родитель.НормаПроцентаВозвратов &lt;&gt; 0
+								ТОГДА Продажи.ПродСтоимость
+							ИНАЧЕ 0
+						КОНЕЦ
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаПродажРазрешенВозврат,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА ВЫБОР
+							КОГДА ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РазрешеныВозвратыОтПокупателей, ЛОЖЬ)
+									И Продажи.Номенклатура.Родитель.НормаПроцентаВозвратов &lt;&gt; 0
+								ТОГДА 0
+							ИНАЧЕ Продажи.ПродСтоимость
+						КОНЕЦ
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаПродажНеРазрешенВозврат,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА 0
+				ИНАЧЕ Продажи.ПродСтоимость
+			КОНЕЦ) КАК СуммаПродажиАкция,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА 0
+				ИНАЧЕ Продажи.ПродСтоимость * ВТ_АкционныеПозиции.ПроцентЛимитВозвратов / 100
+			КОНЕЦ) КАК СуммаЛимитАкция,
+		Продажи.ТипЦены КАК ТипЦены
+	ИЗ
+		РегистрНакопления.Продажи КАК Продажи
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыУчетаПоТипамЦен.СрезПоследних({(&amp;ДатаСреза)}, ) КАК ПараметрыУчетаПоТипамЦенСрезПоследних
+			ПО Продажи.Подразделение = ПараметрыУчетаПоТипамЦенСрезПоследних.Подразделение
+				И Продажи.ТипЦены = ПараметрыУчетаПоТипамЦенСрезПоследних.ТипЦен
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_АкционныеПозиции КАК ВТ_АкционныеПозиции
+			ПО Продажи.Подразделение = ВТ_АкционныеПозиции.Подразделение
+				И Продажи.Номенклатура = ВТ_АкционныеПозиции.Номенклатура
+	ГДЕ
+		Продажи.Период МЕЖДУ &amp;ДатаНачалаПродаж И &amp;ДатаОкончанияПродаж
+		И Продажи.ЭтоВозврат = ЛОЖЬ
+		И Продажи.Номенклатура.Родитель.Возврат100Процентов = ЛОЖЬ
+		И ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РекомендуемыйЗаказПокупателя, ЛОЖЬ) = ЛОЖЬ
+	{ГДЕ
+		Продажи.Подразделение,
+		Продажи.Менеджер,
+		Продажи.Номенклатура.Родитель,
+		Продажи.ТипЦены}
+	
+	СГРУППИРОВАТЬ ПО
+		Продажи.Подразделение,
+		Продажи.Менеджер,
+		Продажи.Номенклатура.Родитель,
+		Продажи.ТипЦены) КАК ВложенныйЗапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.Менеджер,
+	ВложенныйЗапрос.НоменклатураРодитель,
+	ВложенныйЗапрос.СуммаВозвратНаЗавод,
+	ВложенныйЗапрос.СуммаВозвратНаСкладВозвратовРазрешнные,
+	ВложенныйЗапрос.СуммаВозвратНаСкладВозвратовНеРазрешнные,
+	ВложенныйЗапрос.СуммаВозвратАкция,
+	ВложенныйЗапрос.ТипЦен
+ПОМЕСТИТЬ ВТ_Возвраты
+ИЗ
+	(ВЫБРАТЬ
+		ВозвратОтПокупателяЗапасы.Ссылка.Подразделение КАК Подразделение,
+		ВозвратОтПокупателяЗапасы.Ссылка.Менеджер КАК Менеджер,
+		ВозвратОтПокупателяЗапасы.Номенклатура.Родитель КАК НоменклатураРодитель,
+		СУММА(ВЫБОР
+				КОГДА ВозвратОтПокупателяЗапасы.СтруктурнаяЕдиница = ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.Склад
+					ТОГДА ВозвратОтПокупателяЗапасы.Сумма
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаВозвратНаЗавод,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА ВЫБОР
+							КОГДА ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РазрешеныВозвратыОтПокупателей, ЛОЖЬ)
+									И ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.НормаПроцентаВозвратов &lt;&gt; 0
+								ТОГДА ВЫБОР
+										КОГДА ВозвратОтПокупателяЗапасы.СтруктурнаяЕдиница = ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.Склад
+											ТОГДА 0
+										ИНАЧЕ ВозвратОтПокупателяЗапасы.Сумма
+									КОНЕЦ
+							ИНАЧЕ 0
+						КОНЕЦ
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаВозвратНаСкладВозвратовРазрешнные,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА ВЫБОР
+							КОГДА ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РазрешеныВозвратыОтПокупателей, ЛОЖЬ)
+									И ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.НормаПроцентаВозвратов &lt;&gt; 0
+								ТОГДА 0
+							ИНАЧЕ ВЫБОР
+									КОГДА ВозвратОтПокупателяЗапасы.СтруктурнаяЕдиница = ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.Склад
+										ТОГДА 0
+									ИНАЧЕ ВозвратОтПокупателяЗапасы.Сумма
+								КОНЕЦ
+						КОНЕЦ
+				ИНАЧЕ 0
+			КОНЕЦ) КАК СуммаВозвратНаСкладВозвратовНеРазрешнные,
+		СУММА(ВЫБОР
+				КОГДА ВТ_АкционныеПозиции.ПроцентЛимитВозвратов ЕСТЬ NULL 
+					ТОГДА 0
+				ИНАЧЕ ВозвратОтПокупателяЗапасы.Сумма
+			КОНЕЦ) КАК СуммаВозвратАкция,
+		ВозвратОтПокупателяЗапасы.Ссылка.ТипЦен КАК ТипЦен
+	ИЗ
+		Документ.ВозвратОтПокупателя.Запасы КАК ВозвратОтПокупателяЗапасы
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПараметрыУчетаПоТипамЦен.СрезПоследних({(&amp;ДатаСреза)}, ) КАК ПараметрыУчетаПоТипамЦенСрезПоследних
+			ПО ВозвратОтПокупателяЗапасы.Ссылка.Подразделение = ПараметрыУчетаПоТипамЦенСрезПоследних.Подразделение
+				И ВозвратОтПокупателяЗапасы.Ссылка.ТипЦен = ПараметрыУчетаПоТипамЦенСрезПоследних.ТипЦен
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_АкционныеПозиции КАК ВТ_АкционныеПозиции
+			ПО ВозвратОтПокупателяЗапасы.Ссылка.Подразделение = ВТ_АкционныеПозиции.Подразделение
+				И ВозвратОтПокупателяЗапасы.Номенклатура = ВТ_АкционныеПозиции.Номенклатура
+	ГДЕ
+		ВозвратОтПокупателяЗапасы.Ссылка.Дата МЕЖДУ &amp;ДатаНачалаВозвратов И &amp;ДатаОкончанияВозвратов
+		И ВозвратОтПокупателяЗапасы.Ссылка.Проведен = ИСТИНА
+		И ВозвратОтПокупателяЗапасы.Номенклатура.Родитель.Возврат100Процентов = ЛОЖЬ
+		И ЕСТЬNULL(ПараметрыУчетаПоТипамЦенСрезПоследних.РекомендуемыйЗаказПокупателя, ЛОЖЬ) = ЛОЖЬ
+	{ГДЕ
+		ВозвратОтПокупателяЗапасы.Ссылка.Подразделение,
+		ВозвратОтПокупателяЗапасы.Ссылка.Менеджер,
+		ВозвратОтПокупателяЗапасы.Ссылка.ТипЦен,
+		ВозвратОтПокупателяЗапасы.Номенклатура.Родитель}
+	
+	СГРУППИРОВАТЬ ПО
+		ВозвратОтПокупателяЗапасы.Ссылка.Подразделение,
+		ВозвратОтПокупателяЗапасы.Ссылка.Менеджер,
+		ВозвратОтПокупателяЗапасы.Номенклатура.Родитель,
+		ВозвратОтПокупателяЗапасы.Ссылка.ТипЦен) КАК ВложенныйЗапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Продажи.Подразделение,
+	ВТ_Продажи.Менеджер,
+	ВТ_Продажи.НоменклатураРодитель,
+	ВТ_Продажи.СуммаПродажРазрешенВозврат,
+	ВТ_Продажи.СуммаПродажНеРазрешенВозврат,
+	ВТ_Продажи.СуммаЛимитРазрешенВозврат,
+	ВТ_Продажи.СуммаПродажиАкция,
+	ВТ_Продажи.СуммаЛимитАкция,
+	0 КАК СуммаВозвратНаЗавод,
+	0 КАК СуммаВозвратНаСкладВозвратовРазрешенные,
+	0 КАК СуммаВозвратНаСкладВозвратовНеРазрешенные,
+	0 КАК СуммаВозвратАкция,
+	ВТ_Продажи.НоменклатураРодитель.НормаПроцентаВозвратов КАК ПроцентНормыВозвратов,
+	ВТ_Продажи.ТипЦен КАК ТипЦен
+ИЗ
+	ВТ_Продажи КАК ВТ_Продажи
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Возвраты.Подразделение,
+	ВТ_Возвраты.Менеджер,
+	ВТ_Возвраты.НоменклатураРодитель,
+	0,
+	0,
+	0,
+	0,
+	0,
+	ВТ_Возвраты.СуммаВозвратНаЗавод,
+	ВТ_Возвраты.СуммаВозвратНаСкладВозвратовРазрешнные,
+	ВТ_Возвраты.СуммаВозвратНаСкладВозвратовНеРазрешнные,
+	ВТ_Возвраты.СуммаВозвратАкция,
+	ВТ_Возвраты.НоменклатураРодитель.НормаПроцентаВозвратов,
+	ВТ_Возвраты.ТипЦен
+ИЗ
+	ВТ_Возвраты КАК ВТ_Возвраты</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Перелимит</dataPath>
+		<expression>СуммаЛимитРазрешенВозврат - СуммаВозвратНаСкладВозвратовРазрешенные</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Перелимит</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПерелимитАкция</dataPath>
+		<expression>СуммаЛимитАкция - СуммаВозвратАкция</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Перелимит, акция</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>СуммаПродажиАкция</dataPath>
+		<expression>Сумма(СуммаПродажиАкция)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПродажНеРазрешенВозврат</dataPath>
+		<expression>Сумма(СуммаПродажНеРазрешенВозврат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПродажРазрешенВозврат</dataPath>
+		<expression>Сумма(СуммаПродажРазрешенВозврат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВозвратАкция</dataPath>
+		<expression>Сумма(СуммаВозвратАкция)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВозвратНаЗавод</dataPath>
+		<expression>Сумма(СуммаВозвратНаЗавод)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВозвратНаСкладВозвратовНеРазрешенные</dataPath>
+		<expression>Сумма(СуммаВозвратНаСкладВозвратовНеРазрешенные)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВозвратНаСкладВозвратовРазрешенные</dataPath>
+		<expression>Сумма(СуммаВозвратНаСкладВозвратовРазрешенные)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЛимитАкция</dataPath>
+		<expression>Сумма(СуммаЛимитАкция)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЛимитРазрешенВозврат</dataPath>
+		<expression>Сумма(СуммаЛимитРазрешенВозврат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентНормыВозвратов</dataPath>
+		<expression>Максимум(ПроцентНормыВозвратов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Перелимит</dataPath>
+		<expression>сумма(СуммаЛимитРазрешенВозврат) - сумма(СуммаВозвратНаСкладВозвратовРазрешенные)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПерелимитАкция</dataPath>
+		<expression>сумма(СуммаЛимитАкция) - сумма(СуммаВозвратАкция)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачалаВозвратов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала возвратов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияВозвратов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания возвратов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаНачалаПродаж</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала продаж</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияПродаж</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания продаж</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаСреза</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата среза</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВозвратНаЗавод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СуммаПродажНеРазрешенВозврат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВозвратНаСкладВозвратовНеРазрешенные</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешен возврат</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПродажРазрешенВозврат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентНормыВозвратов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаЛимитРазрешенВозврат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВозвратНаСкладВозвратовРазрешенные</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Перелимит</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акция</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПродажиАкция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаЛимитАкция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВозвратАкция</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПерелимитАкция</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>2dee6ef2-688b-48ea-b210-d8cdfc7bdab3</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>6a892f57-3549-4ca5-8b8f-53ce391bee59</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>1ea00b14-6e93-415c-885d-d0657987a0be</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f895533a-0f4c-4ab6-9c46-90773e3e4882</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2018-05-01T00:00:00</v8:startDate>
+						<v8:endDate>2018-05-31T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>64bcfab3-d73a-432a-a757-c54e2d2ae7ed</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>73bdc251-bf83-4972-aae2-f5a6a6af6d17</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>997cb06f-98ee-4e26-a15d-fec83edd7406</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОсновнойМакетОформленияОтчётов</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Менеджер.Родитель</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Менеджер</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>НоменклатураРодитель</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>e03ca8ea-002a-46e2-a5f6-141d099f7bac</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

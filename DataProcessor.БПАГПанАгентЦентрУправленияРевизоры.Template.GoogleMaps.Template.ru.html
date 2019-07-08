@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>Карты Google</title><meta name="viewport" content="initial-scale=1.0, user-scalable=no"></meta><meta content="text/html; charset=UTF-8" http-equiv="content-type"></meta><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><script type="text/javascript">
+	var map;
+	var glRes;
+	
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(54.7293248,20.4963464);
+    var myOptions = {
+      zoom: 10,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  }
+  
+  function addmarker(Att,Lat,Name,Descr){
+	 var myLatlng = new google.maps.LatLng(Att,Lat);
+     var marker = new google.maps.Marker({
+        position: myLatlng, 
+        map: map,
+        visible: true,
+        title:Name,
+        comment:Descr
+    });
+	map.setCenter(myLatlng);
+   } 
+    
+  function setcenter(Att,Lat){
+	 var myLatlng = new google.maps.LatLng(Att,Lat);
+	 map.setCenter(myLatlng);
+  } 
+  
+  function getaddress(address){
+  	geocoder = new google.maps.Geocoder();
+     geocoder.geocode( {'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          map.setCenter(results[0].geometry.location);
+          var marker = new google.maps.Marker({
+              map: map, 
+              position: results[0].geometry.location              
+          });
+          glRes = results[0].geometry.location;
+        } else {
+		   alert("Адрес не найден!");
+          glRes = 'nf';
+        }
+      });  
+      return glRes;
+  }
+
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+  document.body.appendChild(script);
+}
+  
+window.onload = loadScript;  
+
+</script><meta name="GENERATOR" content="MSHTML 8.00.7601.17514"></meta></head><body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+<div style="WIDTH: 100%; HEIGHT: 100%" id="map_canvas"></div></body></html>

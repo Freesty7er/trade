@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="32"/>
+		</InputField>
+		<InputField name="ВидДокумента" id="3">
+			<DataPath>Запись.ВидДокумента</DataPath>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВидДокументаExtendedTooltip" id="33"/>
+		</InputField>
+		<InputField name="Агент" id="48">
+			<DataPath>Запись.Агент</DataPath>
+			<ContextMenu name="АгентКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="Профиль" id="51">
+			<DataPath>Запись.Профиль</DataPath>
+			<ContextMenu name="ПрофильКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ПрофильРасширеннаяПодсказка" id="53"/>
+		</InputField>
+		<CheckBoxField name="ПерезаписыватьНепроведенные" id="5">
+			<DataPath>Запись.ПерезаписыватьНепроведенные</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерезаписыватьНепроведенныеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПерезаписыватьНепроведенныеExtendedTooltip" id="34"/>
+		</CheckBoxField>
+		<CheckBoxField name="Проводить" id="7">
+			<DataPath>Запись.Проводить</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПроводитьКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПроводитьExtendedTooltip" id="35"/>
+		</CheckBoxField>
+		<CheckBoxField name="Перепроводить" id="9">
+			<DataPath>Запись.Перепроводить</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерепроводитьКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПерепроводитьExtendedTooltip" id="36"/>
+		</CheckBoxField>
+		<CheckBoxField name="НеПоказыватьНаУстройстве" id="17">
+			<DataPath>Запись.НеПоказыватьНаУстройстве</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеПоказыватьНаУстройствеКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="НеПоказыватьНаУстройствеExtendedTooltip" id="37"/>
+		</CheckBoxField>
+		<InputField name="СрокХранения" id="19">
+			<DataPath>Запись.СрокХранения</DataPath>
+			<ContextMenu name="СрокХраненияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СрокХраненияExtendedTooltip" id="38"/>
+		</InputField>
+		<CheckBoxField name="РазрешатьИзменятьДату" id="21">
+			<DataPath>Запись.РазрешатьИзменятьДату</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РазрешатьИзменятьДатуКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="РазрешатьИзменятьДатуExtendedTooltip" id="39"/>
+		</CheckBoxField>
+		<CheckBoxField name="РучныеСкидкиРазрешены" id="23">
+			<DataPath>Запись.РучныеСкидкиРазрешены</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РучныеСкидкиРазрешеныКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="РучныеСкидкиРазрешеныExtendedTooltip" id="40"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЗапрещатьУдалятьНаУстройстве" id="26">
+			<DataPath>Запись.ЗапрещатьУдалятьНаУстройстве</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗапрещатьУдалятьНаУстройствеКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ЗапрещатьУдалятьНаУстройствеExtendedTooltip" id="41"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОбратнаяВыгрузкаИз1С" id="28">
+			<DataPath>Запись.ОбратнаяВыгрузкаИз1С</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбратнаяВыгрузкаИз1СКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОбратнаяВыгрузкаИз1СExtendedTooltip" id="42"/>
+		</CheckBoxField>
+		<InputField name="ПериодОбратнойВыгрузки" id="30">
+			<DataPath>Запись.ПериодОбратнойВыгрузки</DataPath>
+			<ContextMenu name="ПериодОбратнойВыгрузкиКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ПериодОбратнойВыгрузкиExtendedTooltip" id="43"/>
+		</InputField>
+		<UsualGroup name="ГруппаОтражениеВУчете" id="25">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отражение в учете</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОтражениеВУчетеExtendedTooltip" id="44"/>
+			<ChildItems>
+				<CheckBoxField name="ОтражатьВУУ" id="11">
+					<DataPath>Запись.ОтражатьВУУ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВУУКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ОтражатьВУУExtendedTooltip" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтражатьВБУ" id="13">
+					<DataPath>Запись.ОтражатьВБУ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВБУКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ОтражатьВБУExtendedTooltip" id="46"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтражатьВНУ" id="15">
+					<DataPath>Запись.ОтражатьВНУ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВНУКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ОтражатьВНУExtendedTooltip" id="47"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.БПАГНастройкиДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

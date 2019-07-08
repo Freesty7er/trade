@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="226c607f-abe5-4942-94bb-8b7c4c737bbb">
+		<Properties>
+			<Name>Планирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планирование</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаЗарплатаИПерсоналПланирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ЛистЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеЛистаЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_УстановкаПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ЛистЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ЛистЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоДолеПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоTQM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеЛистаЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеЛистаЗадач</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоУЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоЗаносуДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_ВыполнениеПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_ВыполнениеПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СозданиеИзменениеДокументПланирование_УстановкаПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрДокументПланирование_УстановкаПлановПоПродажам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПросмотрРегистрСоответствиеПоказательКПИВидРасчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеРедактированиеРегистрСоответствиеПоказательКПИВидРасчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СводНачисленийПоТорговым</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетСводНачисленийПоТорговым</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ВыполнениеЗаданияСкладу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Планирование_ЗаданиеСкладу</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="17"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="18"/>
+		</InputField>
+		<CheckBoxField name="Bluetooth" id="5">
+			<DataPath>Объект.Bluetooth</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="BluetoothКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="BluetoothExtendedTooltip" id="19"/>
+		</CheckBoxField>
+		<CheckBoxField name="WiFi" id="7">
+			<DataPath>Объект.WiFi</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="WiFiКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="WiFiExtendedTooltip" id="20"/>
+		</CheckBoxField>
+		<CheckBoxField name="Коммуникатор" id="9">
+			<DataPath>Объект.Коммуникатор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="КоммуникаторКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КоммуникаторExtendedTooltip" id="21"/>
+		</CheckBoxField>
+		<InputField name="ОбъемОЗУ" id="11">
+			<DataPath>Объект.ОбъемОЗУ</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбъемОЗУКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОбъемОЗУExtendedTooltip" id="22"/>
+		</InputField>
+		<InputField name="ВерсияОС" id="13">
+			<DataPath>Объект.ВерсияОС</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВерсияОСКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВерсияОСExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="ПапкаКартыПамяти" id="15">
+			<DataPath>Объект.ПапкаКартыПамяти</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПапкаКартыПамятиКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ПапкаКартыПамятиExtendedTooltip" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Удалить_кпкМоделиКПК</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

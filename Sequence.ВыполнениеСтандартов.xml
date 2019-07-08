@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Sequence uuid="b968222b-a425-47a2-8b8b-e3ba3677139f">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.ВыполнениеСтандартов" category="Record">
+				<xr:TypeId>e0bbc29b-1c9e-48a9-a720-a766a541eea8</xr:TypeId>
+				<xr:ValueId>8671f303-c5f7-4b1a-9a33-c8353079e159</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.ВыполнениеСтандартов" category="Manager">
+				<xr:TypeId>b9164322-5247-4339-8092-1b876caf97c1</xr:TypeId>
+				<xr:ValueId>f3ff3e78-42d5-438c-b5dc-eb0c2438edad</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.ВыполнениеСтандартов" category="RecordSet">
+				<xr:TypeId>78ac2b8b-9b4d-43af-8688-bef6135ffa64</xr:TypeId>
+				<xr:ValueId>2856f3d7-b15f-4986-8ac1-537fceb60edc</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВыполнениеСтандартов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение стандартов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>DontMove</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БПАГСторЧек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БПАГМерчандайзинг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УстановкаПланаДолиВитрины</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.БПАГСтандартПрисутствия</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_СтандартПрисутствия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_ПланыДолиВитрины</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Managed</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="694a44fe-b072-4fc0-88d0-56b3be0bc8d3">
+				<Properties>
+					<Name>СтруктурнаяЕдиница</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Структурная единица</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+					</Type>
+					<DocumentMap/>
+					<RegisterRecordsMap/>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="3a2940fc-3ebf-4f50-a29f-65dbc2194c5f">
+				<Properties>
+					<Name>ГруппаПродукта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продукта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КД_ГруппыНоменклатуры</v8:Type>
+					</Type>
+					<DocumentMap/>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_СтандартПрисутствия.Dimension.ГруппаПродукции</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_ПланыДолиВитрины.Dimension.ГруппаПродукции</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="9fffca21-aae2-4742-9872-1b5bee236422">
+				<Properties>
+					<Name>КатегорийнаяГруппа</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категорийная группа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КД_КатегорииТТ</v8:Type>
+					</Type>
+					<DocumentMap/>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_СтандартПрисутствия.Attribute.КатегорийнаяГруппа</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КД_ПланыДолиВитрины.Attribute.КатегорийнаяГруппа</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Sequence>
+</MetaDataObject>

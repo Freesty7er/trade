@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номенклатура" id="1">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="ГруппаДанные" id="115">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаДанныеРасширеннаяПодсказка" id="116"/>
+			<ChildItems>
+				<Page name="ГруппаОсновные" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<InputField name="АктуальныйПериод" id="4">
+							<DataPath>Запись.АктуальныйПериод</DataPath>
+							<ContextMenu name="АктуальныйПериодКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="АктуальныйПериодРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="НовыйТовар" id="7">
+							<DataPath>Запись.НовыйТовар</DataPath>
+							<ContextMenu name="НовыйТоварКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НовыйТоварРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="СрокГодности" id="16">
+							<DataPath>Запись.СрокГодности</DataPath>
+							<ContextMenu name="СрокГодностиКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СрокГодностиРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="МинимальноеЧислоДнейПродаж" id="13">
+							<DataPath>Запись.МинимальноеЧислоДнейПродаж</DataPath>
+							<ContextMenu name="МинимальноеЧислоДнейПродажКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="МинимальноеЧислоДнейПродажРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ИерархияСкладов" id="19">
+							<DataPath>Запись.ИерархияСкладов</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ИерархияСкладовКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ИерархияСкладовРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<CheckBoxField name="УчитыватьКалендарь" id="22">
+							<DataPath>Запись.УчитыватьКалендарь</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьКалендарьКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="УчитыватьКалендарьРасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+						<InputField name="УчитыватьПродажиДочернихСкладов" id="10">
+							<DataPath>Запись.УчитыватьПродажиДочернихСкладов</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="УчитыватьПродажиДочернихСкладовКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="УчитыватьПродажиДочернихСкладовРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОсобенностиПоставок" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Особенности поставок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОсобенностиПоставокРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<InputField name="МаксимальныйЗаказ" id="25">
+							<DataPath>Запись.МаксимальныйЗаказ</DataPath>
+							<ContextMenu name="МаксимальныйЗаказКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="МаксимальныйЗаказРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="ДобавлятьКЗаказу" id="28">
+							<DataPath>Запись.ДобавлятьКЗаказу</DataPath>
+							<ContextMenu name="ДобавлятьКЗаказуКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДобавлятьКЗаказуРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="МинимальнаяПартия" id="31">
+							<DataPath>Запись.МинимальнаяПартия</DataPath>
+							<ContextMenu name="МинимальнаяПартияКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="МинимальнаяПартияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="МаксимальныйЗапас" id="34">
+							<DataPath>Запись.МаксимальныйЗапас</DataPath>
+							<ContextMenu name="МаксимальныйЗапасКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="МаксимальныйЗапасРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="МинимальныйЗапас" id="40">
+							<DataPath>Запись.МинимальныйЗапас</DataPath>
+							<ContextMenu name="МинимальныйЗапасКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="МинимальныйЗапасРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="Кратность" id="37">
+							<DataPath>Запись.Кратность</DataPath>
+							<ContextMenu name="КратностьКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КратностьРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРасписаниеПоставок" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание поставок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРасписаниеПоставокРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<InputField name="ГоризонтПланирования" id="43">
+							<DataPath>Запись.ГоризонтПланирования</DataPath>
+							<ContextMenu name="ГоризонтПланированияКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ГоризонтПланированияРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="ТочкаЗаказа" id="46">
+							<DataPath>Запись.ТочкаЗаказа</DataPath>
+							<ContextMenu name="ТочкаЗаказаКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ТочкаЗаказаРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ПериодичностьВДнях" id="49">
+							<DataPath>Запись.ПериодичностьВДнях</DataPath>
+							<ContextMenu name="ПериодичностьВДняхКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ПериодичностьВДняхРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="СрокДоставкиВДнях" id="52">
+							<DataPath>Запись.СрокДоставкиВДнях</DataPath>
+							<ContextMenu name="СрокДоставкиВДняхКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СрокДоставкиВДняхРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="СрокИзготовленияВДнях" id="55">
+							<DataPath>Запись.СрокИзготовленияВДнях</DataPath>
+							<ContextMenu name="СрокИзготовленияВДняхКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СрокИзготовленияВДняхРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<InputField name="РасписаниеЗаказов" id="58">
+							<DataPath>Запись.РасписаниеЗаказов</DataPath>
+							<ContextMenu name="РасписаниеЗаказовКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="РасписаниеЗаказовРасширеннаяПодсказка" id="60"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПрогнозирование" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прогнозирование</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПрогнозированиеРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<CheckBoxField name="УчитыватьУпущенныйСпрос" id="61">
+							<DataPath>Запись.УчитыватьУпущенныйСпрос</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьУпущенныйСпросКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="УчитыватьУпущенныйСпросРасширеннаяПодсказка" id="63"/>
+						</CheckBoxField>
+						<InputField name="ВременнаяКорзина" id="64">
+							<DataPath>Запись.ВременнаяКорзина</DataPath>
+							<ContextMenu name="ВременнаяКорзинаКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ВременнаяКорзинаРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<CheckBoxField name="ВосстанавливатьСпросПоОстаткам" id="67">
+							<DataPath>Запись.ВосстанавливатьСпросПоОстаткам</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВосстанавливатьСпросПоОстаткамКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ВосстанавливатьСпросПоОстаткамРасширеннаяПодсказка" id="69"/>
+						</CheckBoxField>
+						<InputField name="ФильтрацияВыбросов" id="70">
+							<DataPath>Запись.ФильтрацияВыбросов</DataPath>
+							<ContextMenu name="ФильтрацияВыбросовКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ФильтрацияВыбросовРасширеннаяПодсказка" id="72"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСезонность" id="125">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сезонность</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСезонностьРасширеннаяПодсказка" id="126"/>
+					<ChildItems>
+						<CheckBoxField name="НормироватьСезонность" id="73">
+							<DataPath>Запись.НормироватьСезонность</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НормироватьСезонностьКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="НормироватьСезонностьРасширеннаяПодсказка" id="75"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчитыватьСезонность" id="76">
+							<DataPath>Запись.УчитыватьСезонность</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьСезонностьКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="УчитыватьСезонностьРасширеннаяПодсказка" id="78"/>
+						</CheckBoxField>
+						<InputField name="Янв" id="106">
+							<DataPath>Запись.Янв</DataPath>
+							<ContextMenu name="ЯнвКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ЯнвРасширеннаяПодсказка" id="108"/>
+						</InputField>
+						<InputField name="Фев" id="82">
+							<DataPath>Запись.Фев</DataPath>
+							<ContextMenu name="ФевКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ФевРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<InputField name="Мар" id="88">
+							<DataPath>Запись.Мар</DataPath>
+							<ContextMenu name="МарКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="МарРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="Апр" id="91">
+							<DataPath>Запись.Апр</DataPath>
+							<ContextMenu name="АпрКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="АпрРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="Май" id="79">
+							<DataPath>Запись.Май</DataPath>
+							<ContextMenu name="МайКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="МайРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="Июн" id="100">
+							<DataPath>Запись.Июн</DataPath>
+							<ContextMenu name="ИюнКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ИюнРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="Июл" id="85">
+							<DataPath>Запись.Июл</DataPath>
+							<ContextMenu name="ИюлКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ИюлРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="Авг" id="94">
+							<DataPath>Запись.Авг</DataPath>
+							<ContextMenu name="АвгКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="АвгРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="Сен" id="97">
+							<DataPath>Запись.Сен</DataPath>
+							<ContextMenu name="СенКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="СенРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="Окт" id="103">
+							<DataPath>Запись.Окт</DataPath>
+							<ContextMenu name="ОктКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ОктРасширеннаяПодсказка" id="105"/>
+						</InputField>
+						<InputField name="Ноя" id="109">
+							<DataPath>Запись.Ноя</DataPath>
+							<ContextMenu name="НояКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="НояРасширеннаяПодсказка" id="111"/>
+						</InputField>
+						<InputField name="Дек" id="112">
+							<DataPath>Запись.Дек</DataPath>
+							<ContextMenu name="ДекКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ДекРасширеннаяПодсказка" id="114"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Форкаст_ПараметрыForecastNOW</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

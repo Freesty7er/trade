@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОткрытьДокумент" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОткрытьДокумент</CommandName>
+				<ExtendedTooltip name="ОткрытьДокументРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="Фотографии" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Фотографии</CommandName>
+				<ExtendedTooltip name="ФотографииРасширеннаяПодсказка" id="35"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="36"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="37">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="40">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="43">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">СписокПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>1/1</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Документ" id="6">
+					<DataPath>1/17</DataPath>
+					<ContextMenu name="ДокументКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="Агент" id="8">
+					<DataPath>1/2</DataPath>
+					<ContextMenu name="АгентКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="ДатаСоздания" id="12">
+					<DataPath>1/11</DataPath>
+					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="Клиент" id="29">
+					<DataPath>1/22</DataPath>
+					<ContextMenu name="КлиентКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="31">
+					<DataPath>1/23</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="Широта" id="14">
+					<DataPath>1/14</DataPath>
+					<ContextMenu name="ШиротаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ШиротаРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Долгота" id="16">
+					<DataPath>1/16</DataPath>
+					<ContextMenu name="ДолготаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДолготаРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<LabelField name="Категория" id="18">
+					<DataPath>1/5</DataPath>
+					<ContextMenu name="КатегорияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="КатегорияДолга" id="20">
+					<DataPath>1/18</DataPath>
+					<ContextMenu name="КатегорияДолгаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КатегорияДолгаРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="ВидДокумента" id="23">
+					<DataPath>1/19</DataPath>
+					<ContextMenu name="ВидДокументаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<LabelField name="ДатаНачала" id="25">
+					<DataPath>1/20</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время начала</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="ДатаОкончания" id="27">
+					<DataPath>1/21</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийапЗагруженныеДокументы.Период,
+	РегистрСведенийапЗагруженныеДокументы.Документ,
+	РегистрСведенийапЗагруженныеДокументы.Агент,
+	РегистрСведенийапЗагруженныеДокументы.ДатаСоздания,
+	РегистрСведенийапЗагруженныеДокументы.Категория,
+	РегистрСведенийапЗагруженныеДокументы.КатегорияДолга,
+	РегистрСведенийапЗагруженныеДокументы.Широта,
+	РегистрСведенийапЗагруженныеДокументы.Долгота,
+	РегистрСведенийапЗагруженныеДокументы.ВидДокумента,
+	РегистрСведенийапЗагруженныеДокументы.ДатаНачала,
+	РегистрСведенийапЗагруженныеДокументы.ДатаОкончания,
+	РегистрСведенийапЗагруженныеДокументы.Документ.Партнер КАК Клиент,
+	РегистрСведенийапЗагруженныеДокументы.Документ.СуммаДокумента КАК СуммаДокумента
+ИЗ
+	РегистрСведений.апЗагруженныеДокументы КАК РегистрСведенийапЗагруженныеДокументы</QueryText>
+				<MainTable>InformationRegister.апЗагруженныеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДокумент</Action>
+		</Command>
+		<Command name="Фотографии" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фотографии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список фотографий документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Фотографии</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Агент">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="День">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

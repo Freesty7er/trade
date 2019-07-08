@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Subsystem uuid="b45d10a9-b1a4-4ea5-b2bf-e9ce0de07d84">
+		<Properties>
+			<Name>АнализИПланирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ и планирование</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПланыПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализВыполненияПлановПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Анализ_Продажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.КатегорияТорговойТочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусТорговойТочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияТорговыхТочек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Удалить_АудитТорговыхТочек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Анализ_НумерическиеПоказатели</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Удалить_АнализСостоянияТорговыхТочек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоМерчендайзингу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АнализИПланированиеПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КаналыПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БПАГРайоны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализПосещений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СравнительныйАнализАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.МерчендайзингИПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ГлубинаПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Удалить_ОпределениеСпискаКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Удалить_ОпределениеСпискаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетАнализ_НумерическиеПоказатели</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрАнализВыполненияПлановПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетАнализПосещений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетГлубинаПолки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетМерчендайзингИПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетПоМерчендайзингу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетСравнительныйАнализАКБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеПросмотрОтчетОтчетПоРасчетнойРентабельностиМаршрутовДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоРасчетнойРентабельностиМаршрутовДоставки</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
